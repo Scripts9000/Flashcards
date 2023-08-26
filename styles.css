@@ -31,22 +31,6 @@ body {
     transition: transform 0.6s, box-shadow 0.5s;
     border-radius: 10px;
   }
-
-  @media (max-width: 480px) {
-    /* Styles for landscape mode on mobile phones */
-    .card {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px auto;
-    }
-    .card-front,
-    .card-back {
-      font-size: 18px;
-    }
-    .card-container {
-      margin-bottom: 20px;
-    }
-  }
   
   .card.flipped {
     transform: rotateY(180deg);

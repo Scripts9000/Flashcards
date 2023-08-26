@@ -16,13 +16,9 @@ body {
     perspective: 1000px;
     display: flex; 
   }
-<<<<<<< HEAD
-
-=======
   
->>>>>>> parent of d480156 (adding @media before because there was no changes)
   .card {
-    width: 0px;
+    width: 250px;
     height: 150px;
     border: 1px solid #3498db;
     display: flex;

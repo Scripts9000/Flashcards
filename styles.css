@@ -18,6 +18,9 @@ body {
   }
   
   .card {
+    width: 100%; /* Make the card take full width on small screens */
+    max-width: 300px; /* Limit the maximum width */
+    margin: 10px auto; /* Center the card horizontally with spacing */
     width: 200px;
     height: 150px;
     border: 1px solid #3498db;

@@ -16,30 +16,6 @@ body {
     perspective: 1000px;
     display: flex; 
   }
-  
-  @media (max-width: 480px) {
-    /* Adjustments for screens up to 480px wide (portrait mobile phones) */
-  
-    /* Full-width cards with centered alignment */
-    .card {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px auto;
-    }
-  
-    /* Increase font sizes for better readability */
-    .card-front,
-    .card-back {
-      font-size: 18px;
-    }
-  
-    /* Adjust padding or margin for spacing between cards */
-    .card-container {
-      margin-bottom: 20px;
-    }
-  
-    /* Any other adjustments specific to small screens */
-  }
 
   .card {
     width: 200px;

@@ -42,6 +42,9 @@ body {
     .card-back {
       font-size: 18px;
     }
+    .card-container {
+      margin-bottom: 20px;
+    }
   }
 
   

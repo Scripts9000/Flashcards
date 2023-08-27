@@ -6,6 +6,40 @@ body {
     height: 100vh;
     margin: 0;
     padding-top: 10px;
+
+    /* Navigation bar styles */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-item a:hover {
+  color: #3498db;
+}
+
   }
   
   .card-container {

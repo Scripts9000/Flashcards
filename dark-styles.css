@@ -1,6 +1,13 @@
 /* dark-styles.css */
 
 body {
+    font-family: Noto Serif Hebrew, Arial, sans-seriff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 10px;
     background-color: #1a1a1a;
     color: #e0e0e0;
   }

@@ -32,7 +32,7 @@ body {
     border-radius: 10px;
   }
 
-    @media (max-width: 480px) {
+    @media (max-width: 380px) {
   /* Adjustments for screens up to 480px wide (portrait mobile phones) */
 
   /* Full-width cards with centered alignment */
@@ -55,7 +55,7 @@ body {
 
 
 
-    @media (max-width: 480px) and (max-height: 320px) {
+    @media (max-width: 380px) and (max-height: 320px) {
   /* Styles for landscape mode on mobile phones */
 
   .card {

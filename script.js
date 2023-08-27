@@ -19,5 +19,10 @@ cardContainers.forEach(container => {
       isFlipped = !isFlipped;
     });
   });
-});
+  // Toggle dark mode
+const toggleButton = document.getElementById('toggle-button');
 
+toggleButton.addEventListener('click', () => {
+  const body = document.body;
+  body.classList.toggle('dark-mode'); // Add or remove the 'dark-mode' class
+});

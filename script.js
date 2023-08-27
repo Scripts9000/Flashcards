@@ -1,5 +1,6 @@
 const cardContainers = document.querySelectorAll('.card-container');
 
+// Your existing card flipping code
 cardContainers.forEach(container => {
   const cards = container.querySelectorAll('.card'); // Select all cards within the container
 
@@ -21,3 +22,16 @@ cardContainers.forEach(container => {
   });
 });
 
+// Dark mode toggle functionality
+const toggleButton = document.getElementById('dark-mode-toggle');
+let isDarkMode = false;
+
+toggleButton.addEventListener('click', () => {
+  isDarkMode = !isDarkMode;
+
+  if (isDarkMode) {
+    document.getElementById('stylesheet-link').href = 'dark-styles.css';
+  } else {
+    document.getElementById('stylesheet-link').href = 'styles.css';
+  }
+});

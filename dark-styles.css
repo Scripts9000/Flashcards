@@ -13,6 +13,12 @@ body {
   }
   
   .card-container {
+    perspective: 1000px;
+    cursor: default;
+    flex-wrap: wrap;
+    gap: 10px;
+    perspective: 1000px;
+    display: flex; 
     background-color: #262626;
     border: 1px solid #444;
   }

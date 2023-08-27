@@ -55,17 +55,45 @@ body {
   .card-front {
     background-color: #555;
     color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
   }
   
   .card-back {
     background-color: #800000;
     color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    transform: rotateY(180deg);
+  }
+
+  .card.flipped .card-front {
+    display: none;
+  }
+
+  .card.flipped .card-back {
+    display: block;
+    transform: rotateY(180deg); 
   }
   
   .card:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
+  /* Style for the toggle button */
+#dark-mode-toggle {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
   /* Style for the toggle button when hovered */
-#dark-mode-toggle:hover {
+  #dark-mode-toggle:hover {
     background-color: #2980b9;
+  
 }

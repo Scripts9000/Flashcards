@@ -22,16 +22,18 @@ cardContainers.forEach(container => {
   });
 });
 
-// Dark mode toggle functionality
-const toggleButton = document.getElementById('dark-mode-toggle');
-const stylesheetLink = document.getElementById('stylesheet-link');
-let isDarkMode = false;
+// Toggle button for dark mode2 
+const toggleButton2  = document.getElementById('switch');
+const stylesheetLink2 = document.getElementById('stylesheet-link');
+let isDarkMode2 = false;
 
-toggleButton.addEventListener('click', () => {
-  isDarkMode = !isDarkMode;
-  if (isDarkMode) {
-    stylesheetLink.href = 'dark-styles.css';
+toggleButton2.addEventListener('click', () => {
+  isDarkMode2 = !isDarkMode2;
+  if (isDarkMode2) {
+    stylesheetLink2.href = 'dark-styles.css';
   } else {
-    stylesheetLink.href = 'styles.css';
+    stylesheetLink2.href = 'styles.css';
   }
 });
+
+//--------------------------------

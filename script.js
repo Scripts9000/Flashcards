@@ -24,7 +24,7 @@ cardContainers.forEach(container => {
           card.classList.remove('flipped');
           cardBack.style.display = 'none';
           isFlipped = false;
-        }, 5000); // 5000 milliseconds = 5 seconds
+        }, 3000); // 5000 milliseconds = 5 seconds
       }
     });
   });

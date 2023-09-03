@@ -30,6 +30,7 @@ body {
 nav {
   display: flex;
   align-items: center;
+  
 }
 
 .logo {
@@ -333,3 +334,7 @@ transition: .4s;
   margin-bottom: 0px;
 }
 
+/* icons */
+.fa-heart {
+  color: red;
+}

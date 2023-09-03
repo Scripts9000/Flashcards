@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet-link" rel="stylesheet" href="dark-styles.css">
+    <title>Hebrewy</title>
 </head>
 <body>
-  <h1>Index:</h1>
-  <h2>This vocabulary will update daily</h2>
-  <ul>
-    <h3>Book 1 Vocabulary</h3>
-    <li><a href="b1u1.html">Book 1 Unit 1 Words</a></li>
-    <li><a href="b1u2.html">Book 1 Unit 2 Words</a></li>
-    <li><a href="b1u3.html">Book 1 Unit 3 Words</a></li>
-    <li><a href="b1u4.html">Book 1 Unit 4 Words</a></li>
-    <li><a href="b1u5.html">Book 1 Unit 5 Words</a></li>
-    <li><a href="b1u6.html">Book 1 Unit 6 Words</a></li>
-    <li><a href="b1u7.html">Book 1 Unit 7 Words</a></li>
-    <li><a href="b1u8.html">Book 1 Unit 8 Words</a></li>
-    <li><a href="b1u9.html">Book 1 Unit 9 Words</a></li>
-    <li><a href="b1u10.html">Book 1 Unit 10 Words</a></li>
-    <li><a href="b1u11.html">Book 1 Unit 11 Words</a></li>
-    <li><a href="b1u12.html">Book 1 Unit 12 Words</a></li>
-    <li><a href="b1u13.html">Book 1 Unit 13 Words</a></li>
-  </ul>
-  <ul>
-    <h3>Book 2 Vocabulary</h3>
-    <li><a href="b2u1.html">Book 2 Unit 1 Words</a></li>
-    <li><a href="b2u2.html">Book 2 Unit 2 Words</a></li>
-    <li><a href="b2u3.html">Book 2 Unit 3 Words</a></li>
-    <li><a href="b2u4.html">Book 2 Unit 4 Words</a></li>
-    <li><a href="b2u5.html">Book 2 Unit 5 Words</a></li>
-  </ul>
-  <ul>
-    <h3>Extra Vocabulary</h3>
-    <li><a href="random.html">Random Words</a></li>
-  </ul>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Hebrewy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="submenu-trigger">Vocabulary</a>
+                    <ul class="submenu">
+                            <a href="b1u1.html">Book 1 unit 1 words</a>
+                            <a href="b1u2.html"disabled>Book 1 unit 2 words</a>
+                            <a href="b1u3.html">Book 1 unit 3 words</a>
+                            <a href="b1u4.html">Book 1 unit 4 words</a>
+                            <a href="b1u5.html">Book 1 unit 5 words</a>
+                            <a href="b1u6.html">Book 1 unit 6 words</a>
+                            <a href="b1u7.html">Book 1 unit 7 words</a>
+                            <a href="b1u8.html">Book 1 unit 8 words</a>
+                            <a href="b1u9.html">Book 1 unit 9 words</a>
+                            <a href="b1u10.html">Book 1 unit 10 words</a>
+                            <a href="b1u11.html">Book 1 unit 11 words</a>
+                            <a href="b1u12.html">Book 1 unit 12 words</a>
+                            <a href="b1u13.html">Book 1 unit 13 words</a>
+                            <a href="b2u1.html">Book 2 Unit 1 Vocabulary</a>
+                            <a href="b2u1.html">Book 2 Unit 2 Vocabulary</a>
+                            <a href="b2u1.html">Book 2 Unit 3 Vocabulary</a>
+                            <a href="b2u1.html">Book 2 Unit 4 Vocabulary</a>
+                            <a href="b2u1.html">Book 2 Unit 5 Vocabulary</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="support.html" class="submenu-trigger">Support</a>
+                    <ul class="submenu">
+                        <a href="#">Paypal</a>
+                        <a href="#">Bank</a>
+                        <a href="#">Wise</a>
+                        <a href="#">Monero</a>
+                        <a href="#">BTC</a>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Toggle button for dark mode2 -->
+			<div class="switches-container">
+				<div class="switch">
+				  <label for="switch">
+					<input type="checkbox" id="switch">
+					<span class="slider round"></span>
+				  </label>
+				</div>
+			</div>
+        </nav>
+    </header>
+
+    <h1 class="my-heading">Updates:</h1>
+    <p class="my-paragraph">09/03/23 - Improved home page - At the moment only the Vocabulary section and all the cards are working</p>
+    
+    
+
+    <section class="content">
+        <!-- Your main content goes here -->
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

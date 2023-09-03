@@ -358,4 +358,7 @@ ul li a:hover{
     margin-bottom: 0px;
   }
   
-  
+  /* icons */
+.fa-heart {
+    color: red;
+  }

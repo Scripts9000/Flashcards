@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");
   const submenus = document.querySelectorAll(".submenu");
+  
+
+  
 
   // Function to close all submenus
   function closeAllSubmenus() {
@@ -91,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Set a timeout to display the popup after 2 seconds
       popupTimeout = setTimeout(() => {
         popup.style.display = 'block';
-      }, 1000); // 1000 milliseconds = 1 seconds
+      }, 500); // 500 milliseconds = 0.5 seconds
     });
 
     // Add mouseout event listener to hide the pop-up when the user moves away from the card

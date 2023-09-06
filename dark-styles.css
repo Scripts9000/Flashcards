@@ -337,10 +337,11 @@ transition: .4s;
   color: #e6e6e6; 
   margin-bottom: 30px;
   margin-top: 50px; 
+  text-align: left;
 }
 
 .container {
-  max-width: 1000px; 
+  max-width: 1100px; 
   margin: 0 auto; 
   margin-top: 30px;
   padding: 0 0; 
@@ -378,3 +379,38 @@ transition: .4s;
     padding: 20px; /* Reduced padding for small screens */
   }
 }
+
+
+.popup {
+  display: none;
+  position: absolute;
+  color: #1a1a1a;
+  top: 0%;
+  left: 40%;
+  right: auto; /* Position it in the top-right corner */
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: auto; /* Adjust the width as needed */
+  max-width: 300px; /* Maximum width for the bubble */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc; /* Add a border for better separation */
+}
+
+.popup::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.9); /* Triangle pointer with same color as bubble background */
+  transform: translateX(-50%);
+}
+
+

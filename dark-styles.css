@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
@@ -323,19 +322,59 @@ transition: .4s;
 /* --------------------------- */
 }
 
-.my-heading {
-  margin-left: 30px;
+.hero-heading {
+  font-size: 48px; 
+  font-weight: bold; 
+  color: #e6e6e6; 
   margin-top: 30px;
+  margin-bottom: 20px; 
+  position: relative;
 }
 
-.my-paragraph {
-  margin-left: 30px;
-  margin-top: 50px;
-  margin-bottom: 0px;
+.hero-paragraph {
+  font-size: 20px; 
+  line-height: 1.6; 
+  color: #e6e6e6; 
+  margin-bottom: 30px;
+  margin-top: 50px; 
 }
 
-/* icons */
-.fa-heart {
-  color: red;
+.container {
+  max-width: 1000px; 
+  margin: 0 auto; 
+  margin-top: 30px;
+  padding: 0 0; 
+  background-color: #555; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+  padding: 40px; /* Increase padding for better spacing */
 }
 
+.container:hover {
+  box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
+  transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
+}
+
+.post-date {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #e6e6e6; 
+  position: absolute; /* Position the date element */
+  bottom: -25px; /* Adjust the vertical position as needed */
+  left: 0; /* Position it at the left side */
+
+  }
+
+  /* icons */
+  .fa-heart {
+    color: red;
+  }
+
+  /* Styles for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%; /* Full width for small screens */
+    border-radius: 0; /* No border radius */
+    box-shadow: none; /* No box shadow */
+    padding: 20px; /* Reduced padding for small screens */
+  }
+}

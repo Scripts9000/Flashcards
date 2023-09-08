@@ -55,6 +55,7 @@ nav {
   position: relative;
 }
 
+
 .submenu {
   display: none;
   position: absolute;
@@ -194,6 +195,14 @@ ul li a:hover{
     border-radius: 10px;
     background-color: #333;
     border: 1px solid #555;
+  }
+
+  .large-font .card {
+    font-size: 65px; /* Adjust the font size as desired */
+  }
+
+  .right-to-left-container {
+    flex-direction: row-reverse;
   }
   
   .card.flipped {
@@ -338,6 +347,12 @@ transition: .4s;
   margin-bottom: 30px;
   margin-top: 50px; 
   text-align: left;
+}
+
+.example {
+  font-size: 80px;
+  color: #e6e6e6;
+  text-align: center;
 }
 
 .container {

@@ -1,0 +1,405 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: lato Serif Hebrew, Arial, sans-serif;
+    /* display: flex; */
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 10px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    z-index: 2; /* Adjust the z-index as needed */
+}
+
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+}
+
+.content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+/* ... (previous code) ... */
+
+/* Style for sub-submenu items */
+.sub-submenu {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin-left: 0px; /* Adjust the distance from the parent */
+    padding: 10px 10px;
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.submenu:hover .sub-submenu {
+    display: block;
+}
+
+
+ul li {
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+ul li a{
+    padding: 5px 20px;
+    border: 5px solid transparent;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color: #cdcdcd;
+    color: #000;
+}
+
+.sub-item.active {
+    background-color: #ff0000; /* Change the background color as desired */
+}
+
+.sub-item:hover .sub-submenu {
+    display: none; /* Remove this line */
+}
+
+.sub-item.open .sub-submenu {
+    display: block;
+}
+
+.sub-item a{
+    white-space: nowrap;
+}
+
+
+.submenu a {
+    white-space: nowrap;
+    display: block;
+    padding: 5px 20px;
+    transition: 0.2s ease;
+    text-decoration: none;
+    padding-right:0px;
+}
+
+.submenu a:hover {
+    background-color: #cdcdcd;
+    color: #000;
+}
+
+/* Style for sub-submenu items */
+.sub-submenu a {
+    white-space: nowrap;
+    display: block;
+    padding: 5px 20px;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.sub-submenu a:hover {
+    background-color: #6d6d6d;
+    color: #000;
+}
+
+/* ---------------------- */
+
+.card-inner {
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+
+  .card-container {
+    margin-top: 20px;
+    justify-content: center;
+    perspective: 1000px;
+    cursor: default;
+    flex-wrap: wrap;
+    gap: 10px;
+    perspective: 1000px;
+    display: flex; 
+    align-items: center;
+  }
+
+  .card {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #3498db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    background-color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+  }
+
+  .card-noun {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #3498db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    background-color: rgb(54, 124, 255);
+    transform-style: preserve-3d;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+  }
+    
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .card-front {
+    background-color: #3498db;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .card-back {
+    background-color: #e74c3c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    transform: rotateY(180deg);
+  }
+  
+  .card.flipped .card-front {
+    display: none;
+  }
+  
+  .card.flipped .card-back {
+    display: block;
+    transform: rotateY(180deg); 
+  }
+  
+  .card:hover {
+    box-shadow: 0px 4px 8px rgb(255, 0, 0);
+  }
+
+  /* ---------------------------- */
+
+  #dark-mode-toggle {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: default;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+
+  /* Round button dark style */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  } 
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+  
+.slider {
+  position: absolute;
+  cursor: default;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.hero-heading {
+  font-size: 48px; 
+  font-weight: bold; 
+  color: #e6e6e6; 
+  margin-top: 30px;
+  margin-bottom: 20px; 
+  position: relative;
+}
+
+.hero-paragraph {
+  font-size: 20px; 
+  line-height: 1.6; 
+  color: #e6e6e6; 
+  margin-bottom: 30px;
+  margin-top: 50px; 
+}
+
+.container {
+  max-width: 1000px; 
+  margin: 0 auto; 
+  margin-top: 30px;
+  padding: 0 0; 
+  background-color: #555; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+  padding: 40px; /* Increase padding for better spacing */
+}
+
+.container:hover {
+  box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
+  transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
+}
+
+.post-date {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #e6e6e6; 
+  position: absolute; /* Position the date element */
+  bottom: -25px; /* Adjust the vertical position as needed */
+  left: 0; /* Position it at the left side */
+
+  }
+
+  /* icons */
+  .fa-heart {
+    color: red;
+  }
+
+  /* Styles for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%; /* Full width for small screens */
+    border-radius: 0; /* No border radius */
+    box-shadow: none; /* No box shadow */
+    padding: 20px; /* Reduced padding for small screens */
+  }
+}

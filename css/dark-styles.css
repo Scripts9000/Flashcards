@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: lato Serif Hebrew, Arial, sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 10px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding-top: 10px;
+  }
+  
+  header {
+    background-color: #6d6d6d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+}
+
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  z-index: 2; /* Adjust the z-index as needed */
+}
+
+.dropdown .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #575757;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+}
+
+.content {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+/* ... (previous code) ... */
+
+/* Style for sub-submenu items */
+
+.submenu:hover .sub-submenu {
+  display: block;
+}
+
+
+ul li {
+  display: inline-block;
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+ul li a{
+  padding: 5px 20px;
+  border: 5px solid transparent;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+ul li a:hover{
+  background-color: #373737;
+  color: #ffffff;
+}
+
+.sub-item.active {
+  background-color: #ff0000; /* Change the background color as desired */
+}
+
+.sub-item:hover .sub-submenu {
+  display: none; /* Remove this line */
+}
+
+.sub-item.open .sub-submenu {
+  display: block;
+}
+
+.sub-item a{
+  white-space: nowrap;
+}
+
+
+.submenu a {
+  white-space: nowrap;
+  display: block;
+  padding: 5px 20px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  padding-right:0px;
+}
+
+.submenu a:hover {
+  background-color: #373737;
+  color: #ffffff;
+}
+
+/* Style for sub-submenu items */
+.sub-submenu a {
+  white-space: nowrap;
+  display: block;
+  padding: 5px 20px;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.sub-submenu a:hover {
+  background-color: #6d6d6d;
+  color: #ffffff;
+}
+
+  .title-container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin-top: 30px;
+    
+  }
+
+  .card-container {
+    margin-top: 20px;
+    justify-content: center;
+    perspective: 1000px;
+    cursor: default;
+    flex-wrap: wrap;
+    gap: 10px;
+    perspective: 1000px;
+    display: flex; 
+    background-color: #262626;
+    border: 1px solid #444;
+  }
+  
+  .card {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    transform-style: preserve-3d;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+  }
+
+  .large-font .card {
+    font-size: 65px; /* Adjust the font size as desired */
+  }
+
+  .right-to-left-container {
+    flex-direction: row-reverse;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .card-front {
+    background-color: #555;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .card-back {
+    background-color: #800000;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    transform: rotateY(180deg);
+  }
+
+  .card.flipped .card-front {
+    display: none;
+  }
+
+  .card.flipped .card-back {
+    display: block;
+    transform: rotateY(180deg); 
+  }
+  
+  .card:hover {
+    box-shadow: 0px 4px 8px rgba(255, 0, 0.0);
+  }
+  /* Style for the toggle button */
+
+  #dark-mode-toggle {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: default;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Style for the toggle button when hovered */
+  #dark-mode-toggle:hover {
+    background-color: #2980b9;
+  
+}
+/* Round button dark style */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+} 
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+
+.slider {
+position: absolute;
+cursor: default;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+
+
+/* --------------------------- */
+}
+
+.hero-heading {
+  font-size: 48px; 
+  font-weight: bold; 
+  color: #e6e6e6; 
+  margin-top: 30px;
+  margin-bottom: 20px; 
+  position: relative;
+}
+
+.hero-paragraph {
+  font-size: 20px; 
+  line-height: 1.6; 
+  color: #e6e6e6; 
+  margin-bottom: 30px;
+  margin-top: 50px; 
+  text-align: left;
+}
+
+.example {
+  font-size: 80px;
+  color: #e6e6e6;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px; 
+  margin: 0 auto; 
+  margin-top: 30px;
+  padding: 0 0; 
+  background-color: #555; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+  padding: 40px; /* Increase padding for better spacing */
+}
+
+.container:hover {
+  box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
+  transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
+}
+
+.post-date {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #e6e6e6; 
+  position: absolute; /* Position the date element */
+  bottom: -25px; /* Adjust the vertical position as needed */
+  left: 0; /* Position it at the left side */
+
+  }
+
+  /* icons */
+  .fa-heart {
+    color: red;
+  }
+
+  /* Styles for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%; /* Full width for small screens */
+    border-radius: 0; /* No border radius */
+    box-shadow: none; /* No box shadow */
+    padding: 20px; /* Reduced padding for small screens */
+  }
+}
+
+
+.popup {
+  display: none;
+  position: absolute;
+  color: #1a1a1a;
+  top: 0%;
+  left: 40%;
+  right: auto; /* Position it in the top-right corner */
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: auto; /* Adjust the width as needed */
+  max-width: 300px; /* Maximum width for the bubble */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc; /* Add a border for better separation */
+}
+
+.popup::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.9); /* Triangle pointer with same color as bubble background */
+  transform: translateX(-50%);
+}
+
+#hebrew-date {
+  font-size: 24px;
+  margin-left: 850px;
+  order: 2;
+}

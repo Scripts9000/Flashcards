@@ -63,6 +63,7 @@ class MyHeader extends HTMLElement {
                     </label>
                     </div>
                 </div>
+                <p>Hebrew Date: <span id="hebrew-date-value"></span></p>
             </nav>
         </header>
         `

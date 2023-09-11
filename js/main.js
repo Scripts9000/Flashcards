@@ -33,7 +33,7 @@ class MyHeader extends HTMLElement {
                     </li>
 
                     <li class="dropdown">
-                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
+                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                             <a href="introduction.html">General Introduction</a>
                             <a href="alphabet.html">Alphabet א,ב,ג,ד</a>

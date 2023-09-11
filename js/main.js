@@ -43,7 +43,7 @@ class MyHeader extends HTMLElement {
                         </ul>
                     </li>
                     
-                    <li><a href="contact.html"><i class="fa fa-heart fa-lg" aria-hidden="true"> Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li class="dropdown">
                         <a href="support.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">

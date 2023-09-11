@@ -106,7 +106,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-    
+  document.addEventListener("DOMContentLoaded", function () {
+    const latitude = 32.0853; // Latitude of Tel Aviv
+    const longitude = 34.7818; // Longitude of Tel Aviv
+  
+    // Construct the API request URL with the correct timezone identifier
+    const apiURL = `https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=now&month=x&ss=on&mf=on&c=on&geo=geoname&geonameid=3448439&M=on&s=on&c=on&b=18&c=on&m=50&geo=pos&latitude=${latitude}&longitude=${longitude}&tzid=Asia/Jerusalem`;
+  
+    // Make a fetch request to the API
+    fetch(apiURL)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Log the response data
+        const hebDate = data.hebrew;
+        const parashatHaShavuah = data.items.find(item => item.category === 'holiday' && item.subcat === 'parashat');
+        const candleLightingTimes = data.items.filter(item => item.category === 'candles');
+  
+        console.log('Hebrew Date:', hebDate);
+        console.log('Parashat ha-Shavuah:', parashatHaShavuah.title);
+        console.log('Candle Lighting Times:', candleLightingTimes);
+      })
+      .catch(error => {
+        console.error("Error fetching Hebrew date:", error);
+      });
+      
+  });
+
+  window.onload = updateHebrewDate;
+  
+  
+   
+  
 
 });
+
 

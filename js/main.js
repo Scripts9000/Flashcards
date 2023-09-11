@@ -33,24 +33,24 @@ class MyHeader extends HTMLElement {
                     </li>
 
                     <li class="dropdown">
-                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
+                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
                         <ul class="submenu">
                             <a href="introduction.html">General Introduction</a>
                             <a href="alphabet.html">Alphabet א,ב,ג,ד</a>
                             <a href="Sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
-                            <a href="voweles.html">Vowels א,ה,ו,י</a>
-                            <a href="alphabet_detail.html">Alphabet Details</a>
+                            <a href="voweles.html"> <i class="fa fa-gears fa-lg" aria-hidden="true"></i> Vowels א,ה,ו,י</a>
+                            <a href="alphabet_detail.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Alphabet Details</a>
                         </ul>
                     </li>
-                    
-                    <li><a href="contact.html">Contact</a></li>
+
+                    <li><a href="contact.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Contact</a></li>
                     <li class="dropdown">
                         <a href="support.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                             <a href="paypal.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Paypal - <i class="fa fa-paypal fa-lg" aria-hidden="true"></i></a>
-                            <a href="bank.html">Bank - <i class="fa fa-university fa-lg" aria-hidden="true"></i></a>
-                            <a href="wise.html">Wise - <i class="fa fa-exchange fa-lg" aria-hidden="true"></i></a>
-                            <a href="crypto.html">Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
+                            <a href="bank.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Bank - <i class="fa fa-university fa-lg" aria-hidden="true"></i></a>
+                            <a href="wise.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Wise - <i class="fa fa-exchange fa-lg" aria-hidden="true"></i></a>
+                            <a href="crypto.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
                         </ul>
                     </li>
                 </ul>
@@ -63,9 +63,12 @@ class MyHeader extends HTMLElement {
                     </label>
                     </div>
                 </div>
+                <p><span id="hebrew-date-value"></span></p>
             </nav>
         </header>
         `
+        
+
     }
 }
 

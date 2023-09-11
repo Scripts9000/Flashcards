@@ -390,6 +390,10 @@ transition: .4s;
     color: yellow
   }
 
+  .fa-arrow-right {
+    color: rgb(0, 255, 0);
+  }
+
   /* Styles for smaller screens (e.g., mobile phones) */
 @media (max-width: 600px) {
   .container {

@@ -106,21 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-    // Function to fetch and display the Hebrew date
-    function updateHebrewDate() {
-      fetch("https://www.hebcal.com/converter?cfg=json&cfg=json&gy=2023&gm=8&gd=31&g2h=1")
-        .then(response => response.json())
-        .then(data => {
-          const hebDate = data.hebrew;
-          document.getElementById("hebrew-date-value").textContent = hebDate;
-        })
-        .catch(error => {
-          console.error("Error fetching Hebrew date:", error);
-        });
-    }
-  
-    // Call the updateHebrewDate function when the page loads
-    window.onload = updateHebrewDate;
+    
 
 });
 

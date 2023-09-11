@@ -47,7 +47,7 @@ class MyHeader extends HTMLElement {
                     <li class="dropdown">
                         <a href="support.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
-                            <a href="paypal.html">Paypal - <i class="fa fa-paypal fa-lg" aria-hidden="true"></i></a>
+                            <a href="paypal.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Paypal - <i class="fa fa-paypal fa-lg" aria-hidden="true"></i></a>
                             <a href="bank.html">Bank - <i class="fa fa-university fa-lg" aria-hidden="true"></i></a>
                             <a href="wise.html">Wise - <i class="fa fa-exchange fa-lg" aria-hidden="true"></i></a>
                             <a href="crypto.html">Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>

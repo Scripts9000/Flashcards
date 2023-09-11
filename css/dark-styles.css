@@ -386,6 +386,10 @@ transition: .4s;
     color: red;
   }
 
+  .fa-gears {
+    color: yellow
+  }
+
   /* Styles for smaller screens (e.g., mobile phones) */
 @media (max-width: 600px) {
   .container {
@@ -433,4 +437,9 @@ transition: .4s;
   font-size: 24px;
   margin-left: 850px;
   order: 2;
+}
+
+.construction {
+  text-align: center;
+  margin-top: 200px;
 }

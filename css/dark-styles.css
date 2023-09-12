@@ -11,19 +11,22 @@ body {
     align-items: flex-start;
     height: 100vh;
     margin: 0;
-    padding-top: 10px;
-    background-color: #1a1a1a;
+    /* background-color: #ff0000; */
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/bg/green-apples7.jpg);
     color: #e0e0e0;
     padding-top: 10px;
   }
   
   header {
-    background-color: #6d6d6d;
+    /* background-color: #6d6d6d; */
+    background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
+    margin-top: 10px;
 }
 
 nav {
@@ -74,7 +77,8 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #575757;
+  /* background-color: #575757; */
+  background-color: rgba(48, 48, 48, 1.0); /* Semi-transparent background color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   list-style: none;
   padding: 10px;
@@ -115,15 +119,14 @@ ul li a{
 ul li a:hover{
   background-color: #373737;
   color: #ffffff;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
 .sub-item.active {
   background-color: #ff0000; /* Change the background color as desired */
 }
 
-.sub-item:hover .sub-submenu {
-  display: none; /* Remove this line */
-}
 
 .sub-item.open .sub-submenu {
   display: block;
@@ -143,8 +146,9 @@ ul li a:hover{
   padding-right:0px;
 }
 
-.submenu a:hover {
-  background-color: #373737;
+/* Selector */
+.submenu a:hover {  
+  background-color: #474747;
   color: #ffffff;
 }
 
@@ -157,10 +161,7 @@ ul li a:hover{
   text-decoration: none;
 }
 
-.sub-submenu a:hover {
-  background-color: #6d6d6d;
-  color: #ffffff;
-}
+
 
   .title-container {
     display: flex;
@@ -173,14 +174,14 @@ ul li a:hover{
   .card-container {
     margin-top: 20px;
     justify-content: center;
-    perspective: 1000px;
     cursor: default;
     flex-wrap: wrap;
     gap: 10px;
-    perspective: 1000px;
+    perspective: 1500px;
     display: flex; 
-    background-color: #262626;
-    border: 1px solid #444;
+    /* background-color: #262626; */
+    border: 1px solid #444444;
+
   }
   
   .card {
@@ -194,8 +195,11 @@ ul li a:hover{
     transform-style: preserve-3d;
     transition: transform 0.2s, box-shadow 0.2s;
     border-radius: 10px;
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */
     border: 1px solid #555;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow with some transparency */
+
   }
 
   .large-font .card {
@@ -246,7 +250,7 @@ ul li a:hover{
   }
   
   .card:hover {
-    box-shadow: 0px 4px 8px rgba(255, 0, 0.0);
+    box-shadow: 1px 6px 5px rgb(255, 255, 255);
   }
   /* Style for the toggle button */
 
@@ -336,7 +340,7 @@ transition: .4s;
   font-size: 48px; 
   font-weight: bold; 
   color: #e6e6e6; 
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 20px; 
   position: relative;
 }
@@ -350,6 +354,15 @@ transition: .4s;
   text-align: left;
 }
 
+.hero-paragraph-hebrew {
+  font-size: 20px; 
+  line-height: 1.6; 
+  color: #e6e6e6; 
+  margin-bottom: 30px;
+  margin-top: 50px; 
+  text-align: right;
+}
+
 .example {
   font-size: 80px;
   color: #e6e6e6;
@@ -361,11 +374,27 @@ transition: .4s;
   margin: 0 auto; 
   margin-top: 30px;
   padding: 0 0; 
-  background-color: #555; /* Light gray background */
+  /* background-color: #555;  */
+  background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */  
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+  padding: 40px; 
+}
+
+.container-hebrew {
+  max-width: 1100px; 
+  margin: 0 auto; 
+  margin-top: 30px;
+  padding: 0 0; 
+  /* background-color: #555;  */
+  background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */  
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
   padding: 40px; /* Increase padding for better spacing */
+  text-align: right;
 }
+
+
 
 .container:hover {
   box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
@@ -378,8 +407,16 @@ transition: .4s;
   position: absolute; /* Position the date element */
   bottom: -25px; /* Adjust the vertical position as needed */
   left: 0; /* Position it at the left side */
-
   }
+  
+  .post-date-hebrew {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #e6e6e6; 
+    position: absolute; /* Position the date element */
+    bottom: -25px; /* Adjust the vertical position as needed */
+    right: 0; /* Position it at the left side */
+    }
+
 
   /* icons */
   .fa-heart {
@@ -387,7 +424,7 @@ transition: .4s;
   }
 
   .fa-gears {
-    color: yellow
+    color: yellow;
   }
 
   .fa-arrow-right {
@@ -437,13 +474,15 @@ transition: .4s;
   transform: translateX(-50%);
 }
 
-#hebrew-date {
-  font-size: 24px;
-  margin-left: 850px;
-  order: 2;
-}
 
 .construction {
   text-align: center;
   margin-top: 200px;
+}
+
+.bracha {
+  text-align: center; /* Center the content horizontally */
+  position: relative; /* Allows positioning within the parent container */
+  top: 50%; /* Move the element down by 50% of its own height */
+  transform: translateY(-50%); /* Center the element vertically */
 }

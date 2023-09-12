@@ -59,14 +59,14 @@ class MyHeader extends HTMLElement {
                         </ul>
                     </li>
                 </ul>
-                <!-- Toggle button for dark mode2 -->
-                <div class="switches-container">
-                    <div class="switch">
-                    <label for="switch">
-                        <input type="checkbox" id="switch">
-                        <span class="slider round"></span>
-                    </label>
-                    </div>
+                // <!-- Toggle button for dark mode2 -->
+                // <div class="switches-container">
+                //     <div class="switch">
+                //     <label for="switch">
+                //         <input type="checkbox" id="switch">
+                //         <span class="slider round"></span>
+                //     </label>
+                //     </div>
                 </div>
                 <p><span id="hebrew-date-value"></span></p>
             </nav>

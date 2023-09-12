@@ -401,6 +401,11 @@ transition: .4s;
   transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
 }
 
+.container-hebrew:hover {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
+    transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
+  }
+
 .post-date {
   font-size: 18px; /* Adjust the font size as needed */
   color: #e6e6e6; 

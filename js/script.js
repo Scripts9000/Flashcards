@@ -23,10 +23,45 @@ document.addEventListener("DOMContentLoaded", function () {
       submenu.style.display = isSubMenuVisible ? "none" : "block";
     });
 
-    link.addEventListener("mouseover", function () {
-      const submenu = link.nextElementSibling;
-      submenu.style.display = "block";
+    document.addEventListener("DOMContentLoaded", function () {
+      const submenuLinks = document.querySelectorAll(".submenu-trigger");
+      const submenus = document.querySelectorAll(".submenu");
+    
+      // // Function to close all submenus
+      // function closeAllSubmenus() {
+      //   submenus.forEach((submenu) => {
+      //     submenu.style.display = "none";
+      //   });
+      // }
+    
+      submenuLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const submenu = link.nextElementSibling;
+          const isSubMenuVisible = submenu.style.display === "block";
+    
+          // Close all submenus
+          closeAllSubmenus();
+    
+          // Show or hide the clicked submenu
+          submenu.style.display = isSubMenuVisible ? "none" : "block";
+        });
+      });
+    
+      // Click event listener for the document to close the submenu when clicking outside
+      document.addEventListener("click", function (e) {
+        const isInsideSubmenu = Array.from(submenus).some((submenu) =>
+          submenu.contains(e.target)
+        );
+    
+        if (!isInsideSubmenu) {
+          closeAllSubmenus();
+        }
+      });
+    
+      // Rest of your code (card flipping, dark mode toggle, etc.) goes here
     });
+    
 
     // Close the submenu when the mouse leaves it
     link.nextElementSibling.addEventListener("mouseleave", function () {

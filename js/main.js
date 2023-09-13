@@ -55,10 +55,20 @@ class MyHeader extends HTMLElement {
                             <a href="paypal.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Paypal - <i class="fa fa-paypal fa-lg" aria-hidden="true"></i></a>
                             <a href="bank.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Bank - <i class="fa fa-university fa-lg" aria-hidden="true"></i></a>
                             <a href="wise.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Wise - <i class="fa fa-exchange fa-lg" aria-hidden="true"></i></a>
-                            <a href="crypto.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
+                            <a href="crypto.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
                         </ul>
                     </li>
                 </ul>
+                <!-- Toggle button for dark mode2 -->
+                <div class="switches-container">
+                    <div class="switch">
+                    <label for="switch">
+                        <input type="checkbox" id="switch">
+                        <span class="slider round"></span>
+                    </label>
+                    </div>
+                </div>
+                <p><span id="hebrew-date-value"></span></p>
             </nav>
         </header>
         `

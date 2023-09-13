@@ -364,14 +364,7 @@ ul li a:hover{
   margin-top: 50px; 
 }
 
-.hero-paragraph-hebrew {
-  font-size: 20px; 
-  line-height: 1.6; 
-  color: #e6e6e6; 
-  margin-bottom: 30px;
-  margin-top: 50px; 
-  text-align: right;
-}
+
 
 
 .container {
@@ -402,6 +395,11 @@ ul li a:hover{
   /* icons */
   .fa-heart {
     color: red;
+  }
+
+
+  .crypto-info {
+    text-align: center;
   }
 
   /* Styles for smaller screens (e.g., mobile phones) */

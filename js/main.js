@@ -52,10 +52,10 @@ class MyHeader extends HTMLElement {
                     <li class="dropdown">
                         <a href="donate.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
+                            <a href="donate_crypto.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
                             <a href="paypal.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Paypal - <i class="fa fa-paypal fa-lg" aria-hidden="true"></i></a>
                             <a href="bank.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Bank - <i class="fa fa-university fa-lg" aria-hidden="true"></i></a>
                             <a href="wise.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Wise - <i class="fa fa-exchange fa-lg" aria-hidden="true"></i></a>
-                            <a href="donate_crypto.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Crypto - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
                         </ul>
                     </li>
                 </ul>

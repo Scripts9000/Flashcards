@@ -9,7 +9,7 @@ class MyHeader extends HTMLElement {
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="#" class="submenu-trigger">Flashcards <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
+                        <a href="#" class="submenu-trigger">Vocabulary <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                                 <a href="b1u1.html">Book 1 unit 1 words</a>
                                 <a href="b1u2.html"disabled>Book 1 unit 2 words</a>

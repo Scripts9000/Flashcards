@@ -378,10 +378,9 @@ transition: .4s;
   line-height: 1.6; 
   color: #e6e6e6; 
   margin-bottom: 30px;
-  margin-left:115px;
+  /* margin-left:115px; */
   margin-top: 50px; 
   text-align: left;
-  width: 800px;
 }
 
 

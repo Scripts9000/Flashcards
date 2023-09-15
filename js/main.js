@@ -30,10 +30,10 @@ class MyHeader extends HTMLElement {
                                 <a href="b2u4.html">Book 2 Unit 4 Vocabulary</a>
                                 <a href="b2u5.html">Book 2 Unit 5 Vocabulary</a>
                                 <a href="b2u6.html"> <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Book 2 Unit 6 Vocabulary</a>
-                                <a href="b2u7.html"> <i class="fa fa-gears fa-lg" aria-hidden="true"></i> Book 2 Unit 7 Vocabulary</a>
-                                <a href="b2u8.html"> <i class="fa fa-gears fa-lg" aria-hidden="true"></i> Book 2 Unit 8 Vocabulary</a>
-                                <a href="b2u9.html"> <i class="fa fa-gears fa-lg" aria-hidden="true"></i> Book 2 Unit 9 Vocabulary</a>
-                                <a href="b2u10.html"> <i class="fa fa-gears fa-lg" aria-hidden="true"></i> Book 2 Unit 10 Vocabulary</a>
+                                <a href="b2u7.html"> <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Book 2 Unit 7 Vocabulary</a>
+                                <a href="b2u8.html"> <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Book 2 Unit 8 Vocabulary</a>
+                                <a href="b2u9.html"> <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Book 2 Unit 9 Vocabulary</a>
+                                <a href="b2u10.html"> <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Book 2 Unit 10 Vocabulary</a>
                         </ul>
                     </li>
 

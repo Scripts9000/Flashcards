@@ -349,14 +349,15 @@ transition: .4s;
 }
 
 
-.hero-heading-center {
+
+.hero-heading-donation {
+  text-align: center;
   font-size: 48px; 
   font-weight: bold; 
   color: #e6e6e6; 
   /* margin-top: 30px; */
   margin-bottom: 20px; 
   position: relative;
-  text-align: center;
 }
 
 
@@ -409,6 +410,7 @@ transition: .4s;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
   padding: 40px; 
+  padding-bottom: 60px ;
 }
 
 .container-hebrew {
@@ -472,8 +474,24 @@ transition: .4s;
   }
 
   .crypto-info {
-    text-align: center;
+    max-width: 800px ;
+    text-align: center ;
+    padding-left: 70px ;
+    padding-right: 70px ;
   }
+
+
+  .crypto-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-container{
+    padding: auto;
+  }
+
 
   .space-after-container {
     height: 20px;
@@ -484,7 +502,40 @@ transition: .4s;
     font-size: 14px;
     text-align: center;
     color: rgb(0, 255, 0);
+    word-wrap: break-word;
   }
+
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+
+  .video-wrapper {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .video-wrapper h1 {
+    font-size: 36px;
+    margin-bottom: 1px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .video-wrapper video {
+    width: 720px;
+    height: 480px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
 
 
   /* Styles for smaller screens (e.g., mobile phones) */

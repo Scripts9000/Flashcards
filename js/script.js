@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");
   const submenus = document.querySelectorAll(".submenu");
   
+  
 
   // Function to close all submenus
   function closeAllSubmenus() {
@@ -27,13 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const submenuLinks = document.querySelectorAll(".submenu-trigger");
       const submenus = document.querySelectorAll(".submenu");
     
-      // // Function to close all submenus
-      // function closeAllSubmenus() {
-      //   submenus.forEach((submenu) => {
-      //     submenu.style.display = "none";
-      //   });
-      // }
-    
+
       submenuLinks.forEach((link) => {
         link.addEventListener("click", function (e) {
           e.preventDefault();
@@ -59,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     
-      // Rest of your code (card flipping, dark mode toggle, etc.) goes here
     });
     
 
@@ -68,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.style.display = "none";
     });
   });
+
 
   // Card flipping code
   const cardContainers = document.querySelectorAll('.card-container');
@@ -105,16 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById('switch');
   const stylesheetLink = document.getElementById('stylesheet-link');
   let isDarkMode = true;
-  toggleButton.checked = true;
 
-  toggleButton.addEventListener('click', () => {
-    isDarkMode = !isDarkMode;
-    if (isDarkMode) {
-      stylesheetLink.href = 'dark-styles.css';
-    } else {
-      stylesheetLink.href = 'styles.css';
-    }
-  });
 
   // Info functionality
   const cards = document.querySelectorAll('.card');
@@ -141,38 +127,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const latitude = 32.0853; // Latitude of Tel Aviv
-    const longitude = 34.7818; // Longitude of Tel Aviv
   
-    // Construct the API request URL with the correct timezone identifier
-    const apiURL = `https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=now&month=x&ss=on&mf=on&c=on&geo=geoname&geonameid=3448439&M=on&s=on&c=on&b=18&c=on&m=50&geo=pos&latitude=${latitude}&longitude=${longitude}&tzid=Asia/Jerusalem`;
   
-    // Make a fetch request to the API
-    fetch(apiURL)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Log the response data
-        const hebDate = data.hebrew;
-        const parashatHaShavuah = data.items.find(item => item.category === 'holiday' && item.subcat === 'parashat');
-        const candleLightingTimes = data.items.filter(item => item.category === 'candles');
   
-        console.log('Hebrew Date:', hebDate);
-        console.log('Parashat ha-Shavuah:', parashatHaShavuah.title);
-        console.log('Candle Lighting Times:', candleLightingTimes);
-      })
-      .catch(error => {
-        console.error("Error fetching Hebrew date:", error);
-      });
-      
-  });
 
-  window.onload = updateHebrewDate;
-  
-  
-   
-  
 
 });
-
 

@@ -202,8 +202,9 @@ ul li a:hover{
     background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */
     border: 1px solid #555;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow with some transparency */
-
   }
+
+
 
   .large-font .card {
     font-size: 65px; /* Adjust the font size as desired */
@@ -593,3 +594,95 @@ transition: .4s;
   top: 50%; /* Move the element down by 50% of its own height */
   transform: translateY(-50%); /* Center the element vertically */
 }
+
+#msg {
+  height: 100px;
+}
+
+/* Style the container for the form elements */
+.form-container {
+  font-size: 16px;
+  display: flex; /* Display the elements in a row */
+  align-items: center; /* Vertically center the elements */
+}
+
+/* Style the submit button */
+#submit-button {
+  margin-right: 30px; /* Add some spacing to the right of the button */
+}
+
+
+
+/* Add this CSS to create a two-column layout */
+.container {
+  display:block;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.form-info {
+  flex-basis: 30%; /* Set the width of the info column */
+  margin-left: 20px; /* Add some spacing between the form and info column */
+}
+
+/* Adjust the styles as needed for spacing, colors, and fonts */
+
+
+
+.bigger {
+  font-size:larger;
+}
+
+.tablegrid {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Style the table header row */
+.tablegrid tr.row1 {
+  background-color: #3a3a3a; /* Add a background color */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Style table cells */
+.tablegrid td {
+  border: 1px solid #9d00ff; /* Add a border to cells */
+  padding: 8px; /* Add padding for spacing */
+}
+
+/* Optional: Center-align text in cells */
+.tablegrid td {
+  text-align: center;
+}
+
+.tablegrid td {
+  font-size: 30px; /* Adjust the font size as needed */
+}
+
+
+
+/* Style the table header row */
+.tablegrid_y tr.row1 {
+  background-color: #3a3a3a; /* Add a background color */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Style table cells */
+.tablegrid_y td {
+  border: 1px solid #eeff00; /* Add a border to cells */
+  padding: 8px; /* Add padding for spacing */
+}
+
+
+/* Optional: Center-align text in cells */
+.tablegrid_y td {
+  text-align: center;
+}
+
+.tablegrid_y td {
+  font-size: 30px; /* Adjust the font size as needed */
+}
+
+

@@ -210,35 +210,35 @@
     function checkAnswer(isCorrect, selectedCard) {
       const messageElement = document.getElementById('message');
       const flashcardContainer = document.getElementById('flashcard-container');
-
+    
       // Get the Hebrew card element
       const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
-
+    
       // Remove the correct-answer and wrong-answer classes from all cards
       document.querySelectorAll('.english-card').forEach(card => {
         card.classList.remove('correct-answer', 'wrong-answer');
       });
-
+    
       if (isCorrect) {
         // Correct answer
         score += 1;
         messageElement.textContent = 'You are correct!';
-
+    
         // Add the class for the green effect to the selected card
         selectedCard.classList.add('correct-answer');
       } else {
         // Wrong answer
         score = Math.max(0, score - 2);
         messageElement.textContent = 'You are wrong!';
-
+    
         // Add the class for the red effect to the selected card
         selectedCard.classList.add('wrong-answer');
       }
-
+    
       // Update the score
       const scoreElement = document.getElementById('score');
       scoreElement.textContent = `Score: ${score}`;
-
+    
       // Remove the class after 0.5 seconds and generate new flashcards
       setTimeout(() => {
         selectedCard.classList.remove('correct-answer', 'wrong-answer');

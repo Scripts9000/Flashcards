@@ -165,7 +165,6 @@
 
       flashcardContainer.appendChild(hebrewCard);
 
-
       // Display the English options
       const options = generateOptions(currentCard);
       options.forEach((option, index) => {
@@ -173,17 +172,19 @@
         englishCard.classList.add('card', 'english-card');
         englishCard.textContent = option.english;
 
-
         // Attach click event listener only if the card is not already flipped
-        if (!englishCard.classList.contains('flipped')) {
-        englishCard.addEventListener('click', () => checkAnswer(englishCard, currentCard));
-        }
+        let clickCount = 0;
+        englishCard.addEventListener('click', () => {
+          if (clickCount > 0 || englishCard.classList.contains('flipped')) {
+            return;
+          }
+
+          clickCount++;
+          checkAnswer(englishCard, currentCard);
+        });
 
         flashcardContainer.appendChild(englishCard);
-
       });
-
-
     }
 
     function generateOptions(currentCard) {

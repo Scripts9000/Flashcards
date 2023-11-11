@@ -166,58 +166,59 @@
       flashcardContainer.appendChild(hebrewCard);
 
       // Display the English options
-      const options = generateOptions(currentCard);
-      options.forEach((option, index) => {
-        const englishCard = document.createElement('div');
-        englishCard.classList.add('card', 'english-card');
-        const isCorrect = index === 0;
-        englishCard.textContent = option.english;
+const options = generateOptions(currentCard);
+options.forEach((option, index) => {
+    const englishCard = document.createElement('div');
+    englishCard.classList.add('card', 'english-card');
+    englishCard.textContent = option.english;
 
-        // Attach click event listener with the selectedCard parameter
-        englishCard.addEventListener('click', () => checkAnswer(isCorrect, englishCard));
+    // Attach click event listener with the selectedCard parameter
+    englishCard.addEventListener('click', () => checkAnswer(englishCard));
 
-        flashcardContainer.appendChild(englishCard);
-      });
-    }
+    flashcardContainer.appendChild(englishCard);
+});
 
-    function generateOptions(correctCard) {
-      const options = [correctCard];
+function checkAnswer(selectedCard) {
+    const messageElement = document.getElementById('message');
+    const flashcardContainer = document.getElementById('flashcard-container');
 
-      // Generate three more unique options
-      for (let i = 0; i < 3; i++) {
-        let option;
-        do {
-          option = getRandomCard();
-        } while (options.some(existingOption => existingOption.english === option.english));
+    // Get the Hebrew card element
+    const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
 
-        options.push(option);
-      }
-
-      // Shuffle the options so that the correct answer is not always in the same position
-      for (let i = options.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [options[i], options[j]] = [options[j], options[i]];
-      }
-
-      return options;
-    }
-
-    function getRandomCard() {
-      const randomIndex = Math.floor(Math.random() * flashcards.length);
-      return flashcards[randomIndex];
-    }
-
-    function checkAnswer(isCorrect, selectedCard) {
-      const messageElement = document.getElementById('message');
-      const flashcardContainer = document.getElementById('flashcard-container');
-    
-      // Get the Hebrew card element
-      const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
-    
-      // Remove the correct-answer and wrong-answer classes from all cards
-      document.querySelectorAll('.english-card').forEach(card => {
+    // Remove the correct-answer and wrong-answer classes from all cards
+    document.querySelectorAll('.english-card').forEach(card => {
         card.classList.remove('correct-answer', 'wrong-answer');
-      });
+    });
+
+    // Check if the selected card corresponds to the correct English translation
+    const isCorrect = selectedCard.textContent === currentCard.english;
+
+    if (isCorrect) {
+        // Correct answer
+        score += 1;
+        messageElement.textContent = 'You are correct!';
+
+        // Add the class for the green effect to the selected card
+        selectedCard.classList.add('correct-answer');
+    } else {
+        // Wrong answer
+        score = Math.max(0, score - 2);
+        messageElement.textContent = 'You are wrong!';
+
+        // Add the class for the red effect to the selected card
+        selectedCard.classList.add('wrong-answer');
+    }
+
+    // Update the score
+    const scoreElement = document.getElementById('score');
+    scoreElement.textContent = `Score: ${score}`;
+
+    // Remove the class after 0.5 seconds and generate new flashcards
+    setTimeout(() => {
+        selectedCard.classList.remove('correct-answer', 'wrong-answer');
+        generateFlashcards();
+    }, 500);
+}
     
       if (isCorrect) {
         // Correct answer

@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
         <header>
             <nav>
                 <div class="logo">
-                    <h1>Hebrewy</h1>
+                    <h1>HEBREWY</h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>

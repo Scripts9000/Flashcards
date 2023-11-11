@@ -166,19 +166,19 @@
       flashcardContainer.appendChild(hebrewCard);
 
       // Display the English options
-const options = generateOptions(currentCard);
-options.forEach((option, index) => {
-    const englishCard = document.createElement('div');
-    englishCard.classList.add('card', 'english-card');
-    englishCard.textContent = option.english;
+      const options = generateOptions(currentCard);
+      options.forEach((option, index) => {
+      const englishCard = document.createElement('div');
+      englishCard.classList.add('card', 'english-card');
+      englishCard.textContent = option.english;
 
-    // Attach click event listener with the selectedCard parameter
-    englishCard.addEventListener('click', () => checkAnswer(englishCard));
+      // Attach click event listener with the selectedCard parameter
+       englishCard.addEventListener('click', () => checkAnswer(englishCard));
 
-    flashcardContainer.appendChild(englishCard);
-});
+      flashcardContainer.appendChild(englishCard);
+     });
 
-function checkAnswer(selectedCard) {
+    function checkAnswer(selectedCard) {
     const messageElement = document.getElementById('message');
     const flashcardContainer = document.getElementById('flashcard-container');
 

@@ -166,24 +166,29 @@
       return flashcards[randomIndex];
     }
 
-    function checkAnswer(isCorrect) {
+    function checkAnswer(isCorrect, selectedCard) {
       const messageElement = document.getElementById('message');
       const flashcardContainer = document.getElementById('flashcard-container');
     
       // Get the Hebrew card element
       const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
     
+      // Remove the correct-answer class from all cards
+      document.querySelectorAll('.card').forEach(card => {
+        card.classList.remove('correct-answer');
+      });
+    
       if (isCorrect) {
         // Correct answer
         score += 1;
         messageElement.textContent = 'You are correct!';
     
-        // Add the class for the green effect
-        hebrewCard.classList.add('correct-answer');
+        // Add the class for the green effect to the selected card
+        selectedCard.classList.add('correct-answer');
     
         // Remove the class after 0.5 seconds
         setTimeout(() => {
-          hebrewCard.classList.remove('correct-answer');
+          selectedCard.classList.remove('correct-answer');
           // Generate new flashcards after removing the class
           generateFlashcards();
         }, 500);
@@ -199,7 +204,7 @@
       // Update the score
       const scoreElement = document.getElementById('score');
       scoreElement.textContent = `Score: ${score}`;
-    }
+}
     
       // Generate new flashcards
       generateFlashcards();

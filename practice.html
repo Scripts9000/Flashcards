@@ -168,78 +168,68 @@
       // Display the English options
       const options = generateOptions(currentCard);
       options.forEach((option, index) => {
-      const englishCard = document.createElement('div');
-      englishCard.classList.add('card', 'english-card');
-      englishCard.textContent = option.english;
+        const englishCard = document.createElement('div');
+        englishCard.classList.add('card', 'english-card');
+        englishCard.textContent = option.english;
 
-      // Attach click event listener with the selectedCard parameter
-       englishCard.addEventListener('click', () => checkAnswer(englishCard));
+        // Attach click event listener with the selectedCard parameter
+        englishCard.addEventListener('click', () => checkAnswer(englishCard, currentCard));
 
-      flashcardContainer.appendChild(englishCard);
-     });
-
-    function checkAnswer(selectedCard) {
-    const messageElement = document.getElementById('message');
-    const flashcardContainer = document.getElementById('flashcard-container');
-
-    // Get the Hebrew card element
-    const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
-
-    // Remove the correct-answer and wrong-answer classes from all cards
-    document.querySelectorAll('.english-card').forEach(card => {
-        card.classList.remove('correct-answer', 'wrong-answer');
-    });
-
-    // Check if the selected card corresponds to the correct English translation
-    const isCorrect = selectedCard.textContent === currentCard.english;
-
-    if (isCorrect) {
-        // Correct answer
-        score += 1;
-        messageElement.textContent = 'You are correct!';
-
-        // Add the class for the green effect to the selected card
-        selectedCard.classList.add('correct-answer');
-    } else {
-        // Wrong answer
-        score = Math.max(0, score - 2);
-        messageElement.textContent = 'You are wrong!';
-
-        // Add the class for the red effect to the selected card
-        selectedCard.classList.add('wrong-answer');
+        flashcardContainer.appendChild(englishCard);
+      });
     }
 
-    // Update the score
-    const scoreElement = document.getElementById('score');
-    scoreElement.textContent = `Score: ${score}`;
+    function generateOptions(currentCard) {
+      // Exclude the correct answer from the options
+      const options = flashcards.filter(card => card.english !== currentCard.english);
 
-    // Remove the class after 0.5 seconds and generate new flashcards
-    setTimeout(() => {
-        selectedCard.classList.remove('correct-answer', 'wrong-answer');
-        generateFlashcards();
-    }, 500);
-}
-    
+      // Shuffle the options and select the first three
+      return shuffleArray(options).slice(0, 3);
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function checkAnswer(selectedCard, currentCard) {
+      const messageElement = document.getElementById('message');
+      const flashcardContainer = document.getElementById('flashcard-container');
+
+      // Get the Hebrew card element
+      const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
+
+      // Remove the correct-answer and wrong-answer classes from all cards
+      document.querySelectorAll('.english-card').forEach(card => {
+        card.classList.remove('correct-answer', 'wrong-answer');
+      });
+
+      // Check if the selected card corresponds to the correct English translation
+      const isCorrect = selectedCard.textContent === currentCard.english;
+
       if (isCorrect) {
         // Correct answer
         score += 1;
         messageElement.textContent = 'You are correct!';
-    
+
         // Add the class for the green effect to the selected card
         selectedCard.classList.add('correct-answer');
       } else {
         // Wrong answer
         score = Math.max(0, score - 2);
         messageElement.textContent = 'You are wrong!';
-    
+
         // Add the class for the red effect to the selected card
         selectedCard.classList.add('wrong-answer');
       }
-    
+
       // Update the score
       const scoreElement = document.getElementById('score');
       scoreElement.textContent = `Score: ${score}`;
-    
+
       // Remove the class after 0.5 seconds and generate new flashcards
       setTimeout(() => {
         selectedCard.classList.remove('correct-answer', 'wrong-answer');
@@ -255,4 +245,3 @@
 </body>
 
 </html>
-

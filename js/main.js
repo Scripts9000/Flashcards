@@ -4,11 +4,7 @@ class MyHeader extends HTMLElement {
         <header>
             <nav>
                 <div class="logo">
-                    
-                    <a href="index.html">
-                        <img src="img/Hebrewy_Color_400_3_1.png" alt="Hebrewy" style="width:200px; height:100; />
-                    </a>
-
+                    <h1>Hebrewy</h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>

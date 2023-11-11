@@ -147,7 +147,6 @@
     ];
 
     let score = 0;
-    let hebrewCardClicked = false;
 
     function generateFlashcards() {
       const flashcardContainer = document.getElementById('flashcard-container');
@@ -173,22 +172,18 @@
         englishCard.classList.add('card', 'english-card');
         englishCard.textContent = option.english;
 
-        // Attach click event listener only if the Hebrew card has been clicked
-        if (hebrewCardClicked) {
-          englishCard.addEventListener('click', () => checkAnswer(englishCard, currentCard));
-        }
+        // Attach click event listener only if the card is not already flipped
+        let clickCount = 0;
+        englishCard.addEventListener('click', () => {
+          if (clickCount > 0 || englishCard.classList.contains('flipped')) {
+            return;
+          }
+
+          clickCount++;
+          checkAnswer(englishCard, currentCard);
+        });
 
         flashcardContainer.appendChild(englishCard);
-      });
-
-      // Add click event listener to the Hebrew card
-      hebrewCard.addEventListener('click', () => {
-        hebrewCardClicked = true;
-
-        // Add the class to English cards for the flipping effect
-        document.querySelectorAll('.english-card').forEach(card => {
-          card.classList.add('hebrew-card-clicked');
-        });
       });
     }
 

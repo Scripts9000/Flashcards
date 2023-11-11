@@ -107,6 +107,10 @@
     .correct-answer {
       background-color: #4caf50 !important;
     }
+
+    .wrong-answer {
+      background-color: #f44336 !important;
+    }
   </style>
 
   <script>
@@ -165,9 +169,9 @@
       // Get the Hebrew card element
       const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
 
-      // Remove the correct-answer class from all cards
+      // Remove the correct-answer and wrong-answer classes from all cards
       document.querySelectorAll('.card').forEach(card => {
-        card.classList.remove('correct-answer');
+        card.classList.remove('correct-answer', 'wrong-answer');
       });
 
       if (isCorrect) {
@@ -188,6 +192,9 @@
         // Wrong answer
         score = Math.max(0, score - 2);
         messageElement.textContent = 'You are wrong!';
+
+        // Add the class for the red effect to the selected card
+        selectedCard.classList.add('wrong-answer');
 
         // Generate new flashcards immediately in case of a wrong answer
         generateFlashcards();

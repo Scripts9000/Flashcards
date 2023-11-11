@@ -168,15 +168,20 @@
       const messageElement = document.getElementById('message');
       const flashcardContainer = document.getElementById('flashcard-container');
     
+      // Get the Hebrew card element
+      const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
+    
       if (isCorrect) {
         // Correct answer
         score += 1;
         messageElement.textContent = 'You are correct!';
-        flashcardContainer.firstChild.classList.add('correct-answer'); // Add the class to the Hebrew card
+    
+        // Add the class for the green effect
+        hebrewCard.classList.add('correct-answer');
     
         // Remove the class after 0.5 seconds
         setTimeout(() => {
-          flashcardContainer.firstChild.classList.remove('correct-answer');
+          hebrewCard.classList.remove('correct-answer');
         }, 500);
       } else {
         // Wrong answer

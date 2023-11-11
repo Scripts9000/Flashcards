@@ -184,16 +184,22 @@
         // Remove the class after 0.5 seconds
         setTimeout(() => {
           hebrewCard.classList.remove('correct-answer');
+          // Generate new flashcards after removing the class
+          generateFlashcards();
         }, 500);
       } else {
         // Wrong answer
         score = Math.max(0, score - 2);
         messageElement.textContent = 'You are wrong!';
+    
+        // Generate new flashcards immediately in case of a wrong answer
+        generateFlashcards();
       }
     
       // Update the score
       const scoreElement = document.getElementById('score');
       scoreElement.textContent = `Score: ${score}`;
+    }
     
       // Generate new flashcards
       generateFlashcards();

@@ -10,9 +10,17 @@
   <script type="module" src="js/main.js"></script>
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="https://use.typekit.net/ihm6auk.css">
+</head>
+
+<my-header></my-header>
+
+<body>
+  <div class="title-container"></div>
+  <div class="card-container" id="flashcard-container"></div>
+  <div id="message"></div>
+  <div id="score">Score: 0</div>
 
   <style>
-    /* Add your styles here */
     #message {
       text-align: center;
       font-size: 24px;
@@ -104,46 +112,35 @@
       background-color: #f44336 !important;
     }
   </style>
-</head>
-
-<my-header></my-header>
-
-<body>
-
-  <div class="title-container"></div>
-  <div class="card-container" id="flashcard-container"></div>
-  <div id="message"></div>
-  <div id="score">Score: 0</div>
 
   <script>
     const flashcards = [
       { hebrew: 'שָׁלוֹם', english: 'Hello / Hi / Peace' },
-                { hebrew: 'אֲנִי ', english: "Me / I'm" },
-                { hebrew: 'אַתָּה', english: 'You (m)' },
-                { hebrew: 'אַתְּ', english: 'You (f)' },
-                { hebrew: 'נִירָה', english: 'Nira (name)' },
-                { hebrew: 'רובו', english: 'Robo' },
-                { hebrew: 'רָם', english: 'Ram' },
-                { hebrew: 'לֹא', english: 'No' },
-                { hebrew: 'אֲנִי רָם', english: "I'm Ram" },
-                { hebrew: 'אֲנִי נִירָה', english: "I'm Nira" },
-                { hebrew: 'אֲנִי רובו', english: "I'm Robo" },
-                { hebrew: 'אַתָּה רָם?', english: 'Are you Ram?' },
-                { hebrew: 'אֲנִי לֹא נִירָה.', english: "I'm not Nira" },
-                { hebrew: 'שָׁלוֹם אֲנִי נִירָה', english: 'Hello I\'m Nira' },
-                { hebrew: 'שָׁלוֹם אֲנִי רָם', english: 'Hello I\'m Ram' },
-                { hebrew: 'שָׁלוֹם אֲנִי רובו', english: 'Hello I\'m Robo' },
-                { hebrew: 'לֹא אֲנִי לֹא רָם', english: "No I'm not Ram" },
-                { hebrew: 'לֹא אֲנִי לֹא רובו', english: "No I'm not Robo" },
-                { hebrew: 'לֹא אֲנִי לֹא נִירֶה', english: "No I'm not Nira" },
-                { hebrew: 'אֲנִי ______', english: "I'm ______" },
-                { hebrew: 'מוֹרָה', english: 'Teacher' },
-                { hebrew: 'תַּלְמִיד', english: 'Student (m)' },
-                { hebrew: 'תַּלְמִידָה', english: 'Student (f)' },
-                { hebrew: 'עִבְרִית', english: 'Hebrew' },
-                { hebrew: 'אֲנִי מוֹרָה אֲנִי לֹא תַּלְמִידה', english: "I'm a teacher I'm not a Student (f)" },
-                { hebrew: 'אֲנִי תַּלְמִידָה אֲנִי לֹא מוֹרָה', english: "I'm a student (f) I'm not a teacher" },
-                // Add more flashcards as needed
+      { hebrew: 'אֲנִי ', english: "Me / I'm" },
+      { hebrew: 'אַתָּה', english: 'You (m)' },
+      { hebrew: 'אַתְּ', english: 'You (f)' },
+      { hebrew: 'נִירָה', english: 'Nira (name)' },
+      { hebrew: 'רובו ', english: 'Robo' },
+      { hebrew: 'רָם', english: 'Ram' },
+      { hebrew: 'לֹא', english: 'No' },
+      { hebrew: 'אֲנִי רָם ', english: "I'm Ram" },
+      { hebrew: 'אֲנִי נִירָה ', english: "I'm Nira" },
+      { hebrew: 'אֲנִי רובו ', english: "I'm Robo" },
+      { hebrew: 'אַתָּה רָם?', english: 'Are you Ram?' },
+      { hebrew: 'אֲנִי לֹא נִירָה.', english: "I'm not Nira" },
+      { hebrew: 'שָׁלוֹם אֲנִי נִירָה', english: 'Hello I\'m Nira' },
+      { hebrew: 'שָׁלוֹם אֲנִי רָם ', english: 'Hello i\'m Ram' },
+      { hebrew: 'שָׁלוֹם אֲנִי רובו', english: 'Hello i\'m Robo' },
+      { hebrew: 'לֹא אֲנִי לֹא רָם ', english: 'No i\'m not Ram' },
+      { hebrew: 'לֹא אֲנִי לֹא רובו ', english: "No I'm not Robo" },
+      { hebrew: 'לֹא אֲנִי לֹא נִירֶה', english: 'No i\'m not Nira' },
+      { hebrew: 'אֲנִי ______ ', english: "I'm ______" },
+      { hebrew: 'מוֹרָה ', english: 'Teacher' },
+      { hebrew: 'תַּלְמִיד ', english: 'Student (m)' },
+      { hebrew: 'תַּלְמִידָה', english: 'Student (f)' },
+      { hebrew: 'עִבְרִית', english: 'Hebrew' },
+      { hebrew: 'אֲנִי מוֹרָה אֲנִי לֹא תַּלְמִידה', english: "I'm teacher i'm not a Student (f)" },
+      { hebrew: 'אֲנִי תַּלְמִידָה אֲנִי לֹא מוֹרָה', english: 'I\'m a student (f) im not a teacher' },
     ];
 
     let score = 0;
@@ -152,37 +149,40 @@
       const flashcardContainer = document.getElementById('flashcard-container');
       flashcardContainer.innerHTML = '';
 
-      // Randomly select a card index
-      const currentCardIndex = Math.floor(Math.random() * flashcards.length);
+      // Create a copy of the flashcards array
+      const remainingFlashcards = [...flashcards];
 
-      // Get the current card
-      const currentCard = flashcards[currentCardIndex];
+      // Randomly select 5 unique cards
+      for (let i = 0; i < 5; i++) {
+        const randomIndex = Math.floor(Math.random() * remainingFlashcards.length);
+        const selectedCard = remainingFlashcards.splice(randomIndex, 1)[0];
 
-      // Display the Hebrew card
-      const hebrewCard = document.createElement('div');
-      hebrewCard.classList.add('card', 'hebrew-card');
-      hebrewCard.textContent = currentCard.hebrew;
+        // Display the Hebrew card
+        const hebrewCard = document.createElement('div');
+        hebrewCard.classList.add('card', 'hebrew-card');
+        hebrewCard.textContent = selectedCard.hebrew;
 
-      flashcardContainer.appendChild(hebrewCard);
+        flashcardContainer.appendChild(hebrewCard);
 
-      // Display the English options
-      for (let i = 0; i < 4; i++) {
-        const englishCard = document.createElement('div');
-        englishCard.classList.add('card', 'english-card');
-        const isCorrect = i === 0;
-        const option = isCorrect ? currentCard : getRandomCard();
-        englishCard.textContent = option.english;
+        // Display the English options
+        for (let j = 0; j < 4; j++) {
+          const englishCard = document.createElement('div');
+          englishCard.classList.add('card', 'english-card');
+          const isCorrect = j === 0;
+          const option = isCorrect ? selectedCard : getRandomCard(remainingFlashcards);
+          englishCard.textContent = option.english;
 
-        // Attach click event listener with the selectedCard parameter
-        englishCard.addEventListener('click', () => checkAnswer(isCorrect, englishCard));
+          // Attach click event listener with the selectedCard parameter
+          englishCard.addEventListener('click', () => checkAnswer(isCorrect, englishCard));
 
-        flashcardContainer.appendChild(englishCard);
+          flashcardContainer.appendChild(englishCard);
+        }
       }
     }
 
-    function getRandomCard() {
-      const randomIndex = Math.floor(Math.random() * flashcards.length);
-      return flashcards[randomIndex];
+    function getRandomCard(cards) {
+      const randomIndex = Math.floor(Math.random() * cards.length);
+      return cards.splice(randomIndex, 1)[0];
     }
 
     function checkAnswer(isCorrect, selectedCard) {
@@ -219,12 +219,8 @@
         // Add the class for the red effect to the selected card
         selectedCard.classList.add('wrong-answer');
 
-        // Remove the class after 0.5 seconds
-        setTimeout(() => {
-          selectedCard.classList.remove('wrong-answer');
-          // Generate new flashcards after removing the class
-          generateFlashcards();
-        }, 500);
+        // Generate new flashcards immediately in case of a wrong answer
+        generateFlashcards();
       }
 
       // Update the score

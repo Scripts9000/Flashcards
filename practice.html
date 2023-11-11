@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,11 @@
   <link rel="stylesheet" href="https://use.typekit.net/ihm6auk.css">
 </head>
 
-
-<my-header></my-header>
-  
-  
 <body>
   <div class="title-container"></div>
   <div class="card-container" id="flashcard-container"></div>
   <div id="message"></div>
   <div id="score">Score: 0</div>
-
 
   <style>
     #message {
@@ -28,13 +24,13 @@
       font-size: 24px;
       margin-top: 20px;
     }
-    
+
     #score {
       text-align: center;
       font-size: 18px;
       margin-top: 10px;
     }
-    
+
     #flashcard-container {
       display: flex;
       justify-content: center;
@@ -43,7 +39,7 @@
       gap: 10px;
       margin-top: 20px;
     }
-    
+
     .hebrew-card,
     .english-card {
       width: 200px;
@@ -61,16 +57,16 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
       cursor: pointer;
     }
-    
+
     .hebrew-card {
       background-color: #555;
       color: #e0e0e0;
     }
-    
+
     .card.flipped {
       transform: rotateY(180deg);
     }
-    
+
     .card-inner {
       width: 100%;
       height: 100%;
@@ -80,7 +76,7 @@
       align-items: center;
       position: absolute;
     }
-    
+
     .card-front,
     .card-back {
       background-color: #555;
@@ -88,34 +84,28 @@
       padding: 20px;
       border-radius: 10px;
     }
-    
+
     .card-back {
       transform: rotateY(180deg);
     }
-    
+
     .card.flipped .card-front {
       display: none;
     }
-    
+
     .card.flipped .card-back {
       display: block;
       transform: rotateY(180deg);
     }
-    
+
     .card:hover {
       box-shadow: 1px 6px 5px rgb(255, 255, 255);
     }
-    
-  
 
     .correct-answer {
       background-color: #4caf50 !important;
     }
-    
-    
   </style>
-
-
 
   <script>
     const flashcards = [
@@ -154,8 +144,8 @@
         const option = isCorrect ? currentCard : getRandomCard();
         englishCard.textContent = option.english;
 
-        // Attach click event listener
-        englishCard.addEventListener('click', () => checkAnswer(isCorrect));
+        // Attach click event listener with the selectedCard parameter
+        englishCard.addEventListener('click', () => checkAnswer(isCorrect, englishCard));
 
         flashcardContainer.appendChild(englishCard);
       }
@@ -169,23 +159,23 @@
     function checkAnswer(isCorrect, selectedCard) {
       const messageElement = document.getElementById('message');
       const flashcardContainer = document.getElementById('flashcard-container');
-    
+
       // Get the Hebrew card element
       const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
-    
+
       // Remove the correct-answer class from all cards
       document.querySelectorAll('.card').forEach(card => {
         card.classList.remove('correct-answer');
       });
-    
+
       if (isCorrect) {
         // Correct answer
         score += 1;
         messageElement.textContent = 'You are correct!';
-    
+
         // Add the class for the green effect to the selected card
         selectedCard.classList.add('correct-answer');
-    
+
         // Remove the class after 0.5 seconds
         setTimeout(() => {
           selectedCard.classList.remove('correct-answer');
@@ -196,27 +186,21 @@
         // Wrong answer
         score = Math.max(0, score - 2);
         messageElement.textContent = 'You are wrong!';
-    
+
         // Generate new flashcards immediately in case of a wrong answer
         generateFlashcards();
       }
-    
+
       // Update the score
       const scoreElement = document.getElementById('score');
       scoreElement.textContent = `Score: ${score}`;
-}
-    
-      // Generate new flashcards
-      generateFlashcards();
-    
+    }
 
-    // Initial generation of flashcards
+    // Generate new flashcards
     generateFlashcards();
   </script>
 
+  <script src="js/script.js"></script>
 </body>
-
-<script src="js/script.js"></script>
-
 
 </html>

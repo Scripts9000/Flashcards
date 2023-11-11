@@ -7,7 +7,7 @@ class MyHeader extends HTMLElement {
                     <h1 style="font-family: 'LiebeDoris'">Hebrewy</h1>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li style="font-family: 'LiebeDoris'"><a href="index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="submenu-trigger">Vocabulary <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">

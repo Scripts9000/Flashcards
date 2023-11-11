@@ -6,7 +6,7 @@ class MyHeader extends HTMLElement {
                 <div class="logo">
                     
                     <a href="index.html">
-                        <img src="img/Hebrewy_Color_400_3_1.png" alt="Hebrewy" style="width:200px;height:100; />
+                        <img src="img/Hebrewy_Color_400_3_1.png" alt="Hebrewy" style="width:200px; height:100; />
                     </a>
 
                 </div>

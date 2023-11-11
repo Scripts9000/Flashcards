@@ -7,20 +7,11 @@
   <title>Practice</title>
   <link id="stylesheet-link" rel="stylesheet" href="css/dark-styles.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <script type="module" src="js/main.js"></script>
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="https://use.typekit.net/ihm6auk.css">
-</head>
-
-<my-header></my-header>	
-
-<body>
-  <div class="title-container"></div>
-  <div class="card-container" id="flashcard-container"></div>
-  <div id="message"></div>
-  <div id="score">Score: 0</div>
 
   <style>
+    /* Add your styles here */
     #message {
       text-align: center;
       font-size: 24px;
@@ -112,6 +103,15 @@
       background-color: #f44336 !important;
     }
   </style>
+</head>
+
+<my-header></my-header>	
+
+<body>
+  <div class="title-container"></div>
+  <div class="card-container" id="flashcard-container"></div>
+  <div id="message"></div>
+  <div id="score">Score: 0</div>
 
   <script>
     const flashcards = [
@@ -196,8 +196,12 @@
         // Add the class for the red effect to the selected card
         selectedCard.classList.add('wrong-answer');
 
-        // Generate new flashcards immediately in case of a wrong answer
-        generateFlashcards();
+        // Remove the class after 0.5 seconds
+        setTimeout(() => {
+          selectedCard.classList.remove('wrong-answer');
+          // Generate new flashcards after removing the class
+          generateFlashcards();
+        }, 500);
       }
 
       // Update the score

@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
         <header>
             <nav>
                 <div class="logo">
-                    <h1 style="font-family: 'LiebeDoris'">>Hebrewy</h1>
+                    <h1 style="font-family: 'LiebeDoris'">Hebrewy</h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>

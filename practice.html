@@ -215,7 +215,7 @@
       const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
 
       // Remove the correct-answer and wrong-answer classes from all cards
-      document.querySelectorAll('.card').forEach(card => {
+      document.querySelectorAll('.english-card').forEach(card => {
         card.classList.remove('correct-answer', 'wrong-answer');
       });
 
@@ -226,13 +226,6 @@
 
         // Add the class for the green effect to the selected card
         selectedCard.classList.add('correct-answer');
-
-        // Remove the class after 0.5 seconds
-        setTimeout(() => {
-          selectedCard.classList.remove('correct-answer');
-          // Generate new flashcards after removing the class
-          generateFlashcards();
-        }, 500);
       } else {
         // Wrong answer
         score = Math.max(0, score - 2);
@@ -240,18 +233,17 @@
 
         // Add the class for the red effect to the selected card
         selectedCard.classList.add('wrong-answer');
-
-        // Remove the class after 0.5 seconds
-        setTimeout(() => {
-          selectedCard.classList.remove('wrong-answer');
-          // Generate new flashcards after removing the class
-          generateFlashcards();
-        }, 500);
       }
 
       // Update the score
       const scoreElement = document.getElementById('score');
       scoreElement.textContent = `Score: ${score}`;
+
+      // Remove the class after 0.5 seconds and generate new flashcards
+      setTimeout(() => {
+        selectedCard.classList.remove('correct-answer', 'wrong-answer');
+        generateFlashcards();
+      }, 500);
     }
 
     // Generate new flashcards

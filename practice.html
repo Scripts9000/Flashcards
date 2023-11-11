@@ -151,32 +151,34 @@
     function generateFlashcards() {
       const flashcardContainer = document.getElementById('flashcard-container');
       flashcardContainer.innerHTML = '';
-
+    
       // Randomly select a card index
       const currentCardIndex = Math.floor(Math.random() * flashcards.length);
-
+    
       // Get the current card
       const currentCard = flashcards[currentCardIndex];
-
+    
       // Display the Hebrew card
       const hebrewCard = document.createElement('div');
       hebrewCard.classList.add('card', 'hebrew-card');
       hebrewCard.textContent = currentCard.hebrew;
-
+    
       flashcardContainer.appendChild(hebrewCard);
-
+    
       // Display the English options
       const options = generateOptions(currentCard);
-      options.forEach((option, index) => {
+    
+      // Make sure there are always four English cards
+      for (let i = 0; i < 4; i++) {
         const englishCard = document.createElement('div');
         englishCard.classList.add('card', 'english-card');
-        englishCard.textContent = option.english;
-
+        englishCard.textContent = options[i] ? options[i].english : '';
+    
         // Attach click event listener with the selectedCard parameter
-        englishCard.addEventListener('click', () => checkAnswer(englishCard, currentCard));
-
+        englishCard.addEventListener('click', () => checkAnswer(englishCard));
+    
         flashcardContainer.appendChild(englishCard);
-      });
+      };
 
       // Add an empty option to ensure there are always four options
       const emptyOption = document.createElement('div');

@@ -166,25 +166,40 @@
       flashcardContainer.appendChild(hebrewCard);
 
       // Display the English options
-      const uniqueOptions = [currentCard]; // Keep track of selected options to ensure uniqueness
-      for (let i = 0; i < 3; i++) {
-        let option;
-        do {
-          option = getRandomCard();
-        } while (uniqueOptions.some(uniqueOption => uniqueOption.english === option.english));
-
-        uniqueOptions.push(option);
-
+      const options = generateOptions(currentCard);
+      options.forEach((option, index) => {
         const englishCard = document.createElement('div');
         englishCard.classList.add('card', 'english-card');
-        const isCorrect = i === 0;
+        const isCorrect = index === 0;
         englishCard.textContent = option.english;
 
         // Attach click event listener with the selectedCard parameter
         englishCard.addEventListener('click', () => checkAnswer(isCorrect, englishCard));
 
         flashcardContainer.appendChild(englishCard);
+      });
+    }
+
+    function generateOptions(correctCard) {
+      const options = [correctCard];
+
+      // Generate three more unique options
+      for (let i = 0; i < 3; i++) {
+        let option;
+        do {
+          option = getRandomCard();
+        } while (options.some(existingOption => existingOption.english === option.english));
+
+        options.push(option);
       }
+
+      // Shuffle the options so that the correct answer is not always in the same position
+      for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+      }
+
+      return options;
     }
 
     function getRandomCard() {

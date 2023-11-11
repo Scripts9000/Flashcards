@@ -45,6 +45,7 @@ class MyHeader extends HTMLElement {
                             <a href="Sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
                             <a href="voweles.html"> <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Vowels א,ה,ו,י</a>
                             <a href="alphabet_detail.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Alphabet Details</a>
+                            <a href="practice.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice</a>
                         </ul>
                     </li>
 

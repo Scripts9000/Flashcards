@@ -151,34 +151,32 @@
     function generateFlashcards() {
       const flashcardContainer = document.getElementById('flashcard-container');
       flashcardContainer.innerHTML = '';
-    
+
       // Randomly select a card index
       const currentCardIndex = Math.floor(Math.random() * flashcards.length);
-    
+
       // Get the current card
       const currentCard = flashcards[currentCardIndex];
-    
+
       // Display the Hebrew card
       const hebrewCard = document.createElement('div');
       hebrewCard.classList.add('card', 'hebrew-card');
       hebrewCard.textContent = currentCard.hebrew;
-    
+
       flashcardContainer.appendChild(hebrewCard);
-    
+
       // Display the English options
       const options = generateOptions(currentCard);
-    
-      // Make sure there are always four English cards
-      for (let i = 0; i < 4; i++) {
+      options.forEach((option, index) => {
         const englishCard = document.createElement('div');
         englishCard.classList.add('card', 'english-card');
-        englishCard.textContent = options[i] ? options[i].english : '';
-    
+        englishCard.textContent = option.english;
+
         // Attach click event listener with the selectedCard parameter
-        englishCard.addEventListener('click', () => checkAnswer(englishCard));
-    
+        englishCard.addEventListener('click', () => checkAnswer(englishCard, currentCard));
+
         flashcardContainer.appendChild(englishCard);
-      };
+      });
 
       // Add an empty option to ensure there are always four options
       const emptyOption = document.createElement('div');
@@ -191,7 +189,7 @@
       const options = flashcards.filter(card => card.english !== currentCard.english);
 
       // Shuffle the options and select the first two
-      const shuffledOptions = shuffleArray(options).slice(0, 3);
+      const shuffledOptions = shuffleArray(options).slice(0, 2);
 
       // Add the correct answer to the options
       shuffledOptions.push(currentCard);

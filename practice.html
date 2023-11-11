@@ -178,17 +178,14 @@
         flashcardContainer.appendChild(englishCard);
       });
 
-      // Add an empty option to ensure there are always four options
-      const emptyOption = document.createElement('div');
-      emptyOption.classList.add('card', 'english-card', 'empty-option');
-      flashcardContainer.appendChild(emptyOption);
+
     }
 
     function generateOptions(currentCard) {
       // Exclude the correct answer from the options
       const options = flashcards.filter(card => card.english !== currentCard.english);
 
-      // Shuffle the options and select the first two
+      // Shuffle the options and select the first three
       const shuffledOptions = shuffleArray(options).slice(0, 3);
 
       // Add the correct answer to the options

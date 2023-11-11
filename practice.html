@@ -177,14 +177,25 @@
 
         flashcardContainer.appendChild(englishCard);
       });
+
+      // Add an empty option to ensure there are always four options
+      const emptyOption = document.createElement('div');
+      emptyOption.classList.add('card', 'english-card', 'empty-option');
+      flashcardContainer.appendChild(emptyOption);
     }
 
     function generateOptions(currentCard) {
       // Exclude the correct answer from the options
       const options = flashcards.filter(card => card.english !== currentCard.english);
 
-      // Shuffle the options and select the first three
-      return shuffleArray(options).slice(0, 3);
+      // Shuffle the options and select the first two
+      const shuffledOptions = shuffleArray(options).slice(0, 2);
+
+      // Add the correct answer to the options
+      shuffledOptions.push(currentCard);
+
+      // Shuffle the options again to ensure the correct answer is not always in the same position
+      return shuffleArray(shuffledOptions);
     }
 
     function shuffleArray(array) {

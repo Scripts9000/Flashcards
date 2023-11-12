@@ -9,6 +9,19 @@ class MyHeader extends HTMLElement {
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
+                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
+                        <ul class="submenu">
+                            <a href="introduction.html">General Introduction</a>
+                            <a href="alphabet.html">Alphabet א,ב,ג,ד</a>
+                            <a href="Sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
+                            <a href="voweles.html"> Vowels א,ה,ו,י</a>
+                            <a href="alphabet_detail.html"> Alphabet Details</a>
+                            <a href="practiceBook1.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice Book 1</a>
+                            <a href="practiceBook2.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice BOok 2</a>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
                         <a href="#" class="submenu-trigger">Vocabulary <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                                 <a href="b1u1.html"><i class="fa fa-clone fa-lg" aria-hidden="true"></i> Book 1 unit 1 words</a>
@@ -37,18 +50,15 @@ class MyHeader extends HTMLElement {
                         </ul>
                     </li>
 
+
                     <li class="dropdown">
                         <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
                         <ul class="submenu">
-                            <a href="introduction.html">General Introduction</a>
-                            <a href="alphabet.html">Alphabet א,ב,ג,ד</a>
-                            <a href="Sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
-                            <a href="voweles.html"> Vowels א,ה,ו,י</a>
-                            <a href="alphabet_detail.html"> Alphabet Details</a>
-                            <a href="practiceBook1.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice</a>
-                            <a href="practiceBook2.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice</a>
+                            <a href="practiceBook1.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice Book 1</a>
+                            <a href="practiceBook2.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice BOok 2</a>
                         </ul>
                     </li>
+                    
 
                     <li><a href="register.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Register</a></li>
                     <li class="dropdown">

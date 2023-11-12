@@ -13,31 +13,28 @@
 
   <style>
     /* Add your styles here */
-    
-    
-    .title-container {  /* this one is for the title */
+    .container {
+      text-align: center;
+    }
+
+    .title-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh; /* Adjust as needed */
     }
-    
-    #message {
+
+    #message,
+    .score {
       text-align: center;
       font-size: 24px;
       margin-top: 20px;
     }
 
-    #score {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    #flashcard-container {
+    .flashcard-container {
       display: flex;
-      justify-content:space-evenly;
+      justify-content: space-evenly;
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
@@ -46,8 +43,8 @@
 
     .hebrew-card,
     .english-card {
-      width: 180px;
-      height: 130px;
+      width: 190px;
+      height: 140px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -120,17 +117,114 @@
 
 <body>
 
+  <div class="container">
+      <h1>Book 1 Unit 1</h1>
+      <p>Practice vocabulary from book 1 unit 1</p>
+    <div class="flashcard-container" id="flashcard-container1"></div>
+    <div id="message1"></div>
+    <div class="score" id="score1">Score: 0</div>
+  </div>
 
-  <div class="container"><h1>Book 1 Unit 1</h1>
-    <p>Vocabulary from book 1 unit 1</p>
-    <div class="card-container" id="flashcard-container"></div>
-    <div id="message"></div>
-    <div id="score">Score: 0</div>
+  <div class="container">
+      <h1>Book 1 Unit 2</h1>
+      <p>Practice vocabulary from book 1 unit 2</p>
+    <div class="flashcard-container" id="flashcard-container2"></div>
+    <div id="message2"></div>
+    <div class="score" id="score2">Score: 0</div>
+  </div>
+
+  <div class="container">
+      <h1>Book 1 Unit 3</h1>
+      <p>Practice vocabulary from book 1 unit 3</p>
+    <div class="flashcard-container" id="flashcard-container3"></div>
+    <div id="message3"></div>
+    <div class="score" id="score3">Score: 0</div>
   </div>
   
+  <div class="container">
+      <h1>Book 1 Unit 4</h1>
+      <p>Practice vocabulary from book 1 unit 4</p>
+    <div class="flashcard-container" id="flashcard-container4"></div>
+    <div id="message4"></div>
+    <div class="score" id="score4">Score: 0</div>
+  </div>
   
+  <div class="container">
+      <h1>Book 1 Unit 5</h1>
+      <p>Practice vocabulary from book 1 unit 5</p>
+    <div class="flashcard-container" id="flashcard-container5"></div>
+    <div id="message5"></div>
+    <div class="score" id="score5">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 6</h1>
+      <p>Practice vocabulary from book 1 unit 6</p>
+    <div class="flashcard-container" id="flashcard-container6"></div>
+    <div id="message6"></div>
+    <div class="score" id="score6">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 7</h1>
+      <p>Practice vocabulary from book 1 unit 7</p>
+    <div class="flashcard-container" id="flashcard-container7"></div>
+    <div id="message7"></div>
+    <div class="score" id="score7">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 8</h1>
+      <p>Practice vocabulary from book 1 unit 8</p>
+    <div class="flashcard-container" id="flashcard-container8"></div>
+    <div id="message8"></div>
+    <div class="score" id="score8">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 9</h1>
+      <p>Practice vocabulary from book 1 unit 9</p>
+    <div class="flashcard-container" id="flashcard-container9"></div>
+    <div id="message9"></div>
+    <div class="score" id="score9">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 10</h1>
+      <p>Practice vocabulary from book 1 unit 10</p>
+    <div class="flashcard-container" id="flashcard-container10"></div>
+    <div id="message10"></div>
+    <div class="score" id="score10">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 11</h1>
+      <p>Practice vocabulary from book 1 unit 11</p>
+    <div class="flashcard-container" id="flashcard-container11"></div>
+    <div id="message11"></div>
+    <div class="score" id="score11">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 12</h1>
+      <p>Practice vocabulary from book 1 unit 12</p>
+    <div class="flashcard-container" id="flashcard-container12"></div>
+    <div id="message12"></div>
+    <div class="score" id="score12">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 1 Unit 13</h1>
+      <p>Practice vocabulary from book 1 unit 13</p>
+    <div class="flashcard-container" id="flashcard-container13"></div>
+    <div id="message13"></div>
+    <div class="score" id="score13">Score: 0</div>
+  </div>
+
   <script>
-    const flashcards = [
+    // Define flashcards for each unit
+    const flashcards1 = [
+      // Flashcards for Book 1 Unit 1
       { hebrew: 'שָׁלוֹם', english: 'Hello / Hi / Peace' },
       { hebrew: 'אֲנִי ', english: "Me / I'm" },
       { hebrew: 'אַתָּה', english: 'You (m)' },
@@ -160,10 +254,359 @@
       // Add more flashcards as needed
     ];
 
-    let score = 0;
+    const flashcards2 = [
+      // Flashcards for Book 1 Unit 2
+	  { hebrew: "בַּיִת", english: "Home" },
+	  { hebrew: "כִּיתָּה", english: "Class" },
+	  { hebrew: "מְכוֹנִית", english: "Car" },
+	  { hebrew: "בֶ..", english: "in.." },
+	  { hebrew: "כֵּן", english: "Yes" },
+	  { hebrew: "לֹא", english: "No" },
+	  { hebrew: "מִי", english: "Who" },
+	  { hebrew: "גַּם", english: "Also" },
+	  { hebrew: "את", english: "You (f)" },
+	  { hebrew: "אַתָּה", english: "You (m)" },
+	  { hebrew: "מִי בַּבַּיִת?", english: "Who is at home?" },
+	  { hebrew: "רָם בַּבַּיִת", english: "Ram is at home" },
+	  { hebrew: "גַּם רובו בַּבַּיִת", english: "Also Robo is at home" },
+	  { hebrew: "גַּם נִירָה בַּבַּיִת", english: "Also Nira is at home" },
+	  { hebrew: "אַתְּ בַּכִּתָּה?", english: "Are you in the class? (f)" },
+	  { hebrew: "אַתה בַּבַּיִת?", english: "Are you at home? (m)" },
+	  { hebrew: "לֹא אֲנִי לֹא בַּבַּיִת", english: "No i'm not at home" },
+	  { hebrew: "רובו לֹא בַּבַּיִת", english: "Robo is not at home" },
+	  { hebrew: "נִירָה בַּמְּכוֹנִית", english: "Nira is in the car" },
+	  { hebrew: "מִי בַּבַּיִת?", english: "Who is at home?" },
+	  { hebrew: "גַּם אֲנִי בַּבַּיִת", english: "I'm also at home" },
+	  { hebrew: "נִירָה לֹא בַּמְּכוֹנִית", english: "Nira is not in the car" },
+	  { hebrew: "רָם בַּכִּיתָּה", english: "Ram is in the class" },
+	  { hebrew: "כֵּן אֲנִי בַּכִּיתָּה", english: "Yes, i'm in the class" },
+	  { hebrew: "גַּם אֲנִי בַּכִּיתָּה", english: "I'm also in the class" },
+	  { hebrew: "סוּפֶּרְמַרְקֶט", english: "Supermarket" },
+	  { hebrew: "גַּן", english: "Garden" },
+	  { hebrew: "חָצֵר", english: "Yard" },
+	  { hebrew: "חֲנוּת", english: "Shop" },
+	  { hebrew: "בֵּית סֵפֶר", english: "School" },
+	  { hebrew: "אֲנִי בַּכִּתָּה", english: "I'm in the class" },
+	  { hebrew: "וְגַם אַתָּה בַּכִּיתָּה", english: "Also you are in the class (m)" }
+		// Add more entries as needed
+	];
 
-    function generateFlashcards() {
-      const flashcardContainer = document.getElementById('flashcard-container');
+
+    const flashcards3 = [
+      // Flashcards for Book 1 Unit 3
+	  { hebrew: "אִמָּא", english: "Mother" },
+	  { hebrew: "אַבָּא", english: "Father" },
+	  { hebrew: "סבתה", english: "Grandmother" },
+	  { hebrew: "סַבָּא", english: "Grandfather" },
+	  { hebrew: "שֶׁל..", english: "Of.." },
+	  { hebrew: "שֶׁלִּי", english: "Mine" },
+	  { hebrew: "זֶה", english: "This (m)" },
+	  { hebrew: "זֹאת", english: "This (f)" },
+	  { hebrew: "אֲנִי אִמָּא שֶׁל נִירֶה", english: "I'm the mother of Nira" },
+	  { hebrew: "זֶה סַבָּא", english: "This is grandfather" },
+	  { hebrew: "אֲנִי אַבָּא שֶׁל _______", english: "I'm the father of _____" },
+	  { hebrew: "זֹאת סבתה שֶׁל רָם", english: "This is grandmother of Ram" },
+	  { hebrew: "זֶה סַבָּא שֶׁל _______", english: "This is grandfather of ______" },
+	  { hebrew: "מִי זֶה?", english: "Who is that? (m)" },
+	  { hebrew: "מִי זֹאת?", english: "Who is that? (f)" },
+	  { hebrew: "זֶה סַבָּא שֶׁלִּי", english: "This is my grandfather" },
+	  { hebrew: "זֹאת סבטה שֶׁלִּי", english: "This is my grandmother" },
+	  { hebrew: "זֶה סַבָּא", english: "This is grandfather" },
+	  { hebrew: "זֶה לֹא רָם.", english: "This is not Ram" },
+	  { hebrew: "אָח", english: "Brother" },
+	  { hebrew: "אָחוֹת", english: "Sister" },
+	  { hebrew: "דּוֹד", english: "Uncle" },
+	  { hebrew: "דּוֹדָה", english: "Aunt" },
+	  { hebrew: "שֶׁלְּךָ", english: "Your (m)" },
+	  { hebrew: "שֶׁלָּךְ", english: "Your (f)" }
+      // Add more flashcards as needed
+    ];
+
+	const flashcards4 = [
+      // Flashcards for Book 1 Unit 4
+	  { hebrew: "יִשְׂרָאֵל", english: "Israel" },
+	  { hebrew: "יְרוּשָׁלַיִם", english: "Jerusalem" },
+	  { hebrew: "אֶשְׁדּוֹד", english: "Ashdod" },
+	  { hebrew: "תֵּל אָבִיב", english: "Tel-Aviv" },
+	  { hebrew: "אֵילַת", english: "Eilat" },
+	  { hebrew: "חֵיפָה", english: "Haifa" },
+	  { hebrew: "יָם הַמֶּלַח", english: "Dead Sea" },
+	  { hebrew: "רְחוֹב צָבַר", english: "Tzabar Street" },
+	  { hebrew: "רְחוֹב ויצמן", english: "Wizmann Street" },
+	  { hebrew: "רְחוֹב רוטשילד", english: "Rotschild Street" },
+	  { hebrew: "אֵיפֹה?", english: "Where?" },
+	  { hebrew: "שֵׁם", english: "There" },
+	  { hebrew: "יֹופִי", english: "Great" },
+	  { hebrew: "גָּר", english: "Living (m)" },
+	  { hebrew: "גָּרה", english: "Living (f)" }
+	  // Add more flashcards as needed
+    ];
+	
+	
+	const flashcards5 = [
+      // Flashcards for Book 1 Unit 5
+	  { hebrew: "שֻׁולְחָן", english: "Table" },
+	  { hebrew: "כִּיסֵּא", english: "Chair" },
+	  { hebrew: "יַלְקוּט", english: "Backpack" },
+	  { hebrew: "סֵפֶר", english: "Book" },
+	  { hebrew: "ה-הַיְּדִיעָה", english: "Article*" },
+	  { hebrew: "עַל", english: "On*" },
+	  { hebrew: "ו-", english: "And" },
+	  { hebrew: "תּוֹדָה", english: "Thank you" },
+	  { hebrew: "כָּאן", english: "Here" },
+	  { hebrew: "הַשֻּׁולְחָן בַּכִּיתָּה", english: "The table is in the class" },
+	  { hebrew: "הַסֵּפֶר עַל הַשֻּׁולְחָן", english: "The book is on the table" },
+	  { hebrew: "אֵיפֹה הַיַּלְקוּט?", english: "Where is the Backpack?" },
+	  { hebrew: "הַסֵּפֶר שָׂם.", english: "The book is there" },
+	  { hebrew: "לֹא, הַסֵּפֶר כָּאן.", english: "No the book is here" },
+	  { hebrew: "הַכִּיסֵּא לֹא עַל הַשֻּׁולְחָן", english: "The chair is not on the table" },
+	  { hebrew: "אַתָּה גָּר שָׁם?", english: "Are you living there?" },
+	  { hebrew: "לֹא אֲנִי גָּר כָּאן", english: "No, I'm living here" },
+	  { hebrew: "גִּיר", english: "Chalk" },
+	  { hebrew: "לוּחַ", english: "Whiteboard" },
+	  { hebrew: "קַלְמָר", english: "Pencil case" },
+	  { hebrew: "סַרְגֵּל", english: "Ruler" },
+	  { hebrew: "מָחַק", english: "Eraser" },
+	  { hebrew: "צְבָעִים", english: "Colors" },
+	  { hebrew: "עָט", english: "Pencil" },
+	  { hebrew: "עִפָּרוֹן", english: "Pencil" }
+	  // Add more flashcards as needed
+	];
+	
+	const flashcards6 = [
+      // Flashcards for Book 1 Unit 6
+	  { hebrew: "מַחְבֶּרֶת", english: "Notebook" },
+	  { hebrew: "עִפָּרוֹן", english: "Pencil" },
+	  { hebrew: "כֶּסֶף", english: "Money" },
+	  { hebrew: "טֶלֶוִיזְיָה", english: "TV" },
+	  { hebrew: "יֵשׁ", english: "There is" },
+	  { hebrew: "אֵין", english: "There isn't" },
+	  { hebrew: "מָה", english: "What" },
+	  { hebrew: "רַק", english: "Only" },
+	  { hebrew: "אוּלַי", english: "Maybe" },
+	  { hebrew: "יְלָדִים", english: "Kids" },
+	  { hebrew: "תַּלְמִידִים", english: "Students" },
+	  { hebrew: "חַלּוֹן", english: "Window" },
+	  { hebrew: "דֶּלֶת", english: "Door" },
+	  { hebrew: "שָׁעוֹן", english: "Clock" },
+	  { hebrew: "הֶגֶה", english: "Steering wheel" },
+	  { hebrew: "רַדְיוֹ", english: "Radio" },
+	  { hebrew: "מְנוֹרָה", english: "Lamp" },
+	  { hebrew: "שָׁטִיחַ", english: "Carpet" },
+	  { hebrew: "עַכְשָׁיו", english: "Now" }
+	  // Add more flashcards as needed
+	];
+
+	  
+	
+	const flashcards7 = [
+      // Flashcards for Book 1 Unit 7
+	  { hebrew: "חֶשְׁבּוֹן", english: "Math" },
+	  { hebrew: "עִבְרִית", english: "Hebrew" },
+	  { hebrew: "מוּסִיקָה", english: "Music" },
+	  { hebrew: "הִתְעַמְּלוּת", english: "Sports" },
+	  { hebrew: "שִׁיעוּר", english: "Lesson" },
+	  { hebrew: "לוֹמֵד", english: "Study (m)" },
+	  { hebrew: "לוֹמֶדֶת", english: "Study (f)" },
+	  { hebrew: "הוּא", english: "He" },
+	  { hebrew: "הִיא", english: "She" },
+	  { hebrew: "הַיּוֹם", english: "Today" },
+	  { hebrew: "תּוֹרָה", english: "Torah" },
+	  { hebrew: "מְחַשְּׁבִים", english: "Computers" },
+	  { hebrew: "אַנְגְּלִית", english: "English" },
+	  { hebrew: "טֶבַע", english: "Chemistry" },
+	  { hebrew: "צִיּוּר", english: "Arts" },
+	  { hebrew: "גִּיטָרָה", english: "Guitar" },
+	  { hebrew: "אָקוֹרְדְּיוֹן", english: "Accordion" },
+	  { hebrew: "אוֹרְגָּן", english: "Piano" }
+	    // Add more flashcards as needed
+	];
+
+	
+	
+	const flashcards8 = [
+      // Flashcards for Book 1 Unit 8
+	  { hebrew: "בֵּית סֵפֶר", english: "School" },
+	  { hebrew: "חֲנוּת", english: "Shop" },
+	  { hebrew: "מִסִּיבָּה", english: "Party" },
+	  { hebrew: "עֲבוֹדָה", english: "Work" },
+	  { hebrew: "הוֹלֵךְ", english: "Walking (m)" },
+	  { hebrew: "הוֹלֶכֶת", english: "Walking (f)" },
+	  { hebrew: "רָץ", english: "Running (m)" },
+	  { hebrew: "רָצָה", english: "Running (f)" },
+	  { hebrew: "לְאָן?", english: "Where to" },
+	  { hebrew: "ל-", english: "To" },
+	  { hebrew: "הַבַּיְתָה", english: "To Home*" },
+	  { hebrew: "בֹּוקֶר", english: "Morning" },
+	  { hebrew: "צָהֳרַיִם", english: "Noon" },
+	  { hebrew: "אַחֲרֵי הַצָּהֳרַיִם", english: "After Noon" },
+	  { hebrew: "עֶרֶב", english: "Evening" },
+	  { hebrew: "תַּחֲנָה", english: "Station" },
+	  { hebrew: "מִשְׂרָד", english: "Office" },
+	  { hebrew: "גַּן יְלָדִים", english: "Kindergarten" },
+	  { hebrew: "מַכּוֹלֶת", english: "Grocery Store" },
+	  { hebrew: "סוּפֶּרְמַרְקֶט", english: "Supermarket" },
+	  { hebrew: "בָּא", english: "Coming (m)" },
+	  { hebrew: "בָּאָה", english: "Coming (f)" }
+	  // Add more flashcards as needed
+	];
+
+	  
+
+	
+	const flashcards9 = [
+      // Flashcards for Book 1 Unit 9
+	  { hebrew: "אוֹפַנַּיִם", english: "Bicycle" },
+	  { hebrew: "גִּיטָרָה", english: "Guitar" },
+	  { hebrew: "כַּדּוּר", english: "Ball" },
+	  { hebrew: "שָׁעוֹן", english: "Watch/Clock" },
+	  { hebrew: "חָבֵר", english: "Friend (m)" },
+	  { hebrew: "חֲבֵרָה", english: "Friend (f)" },
+	  { hebrew: "חֲבֵרִים", english: "Friends (pl)" },
+	  { hebrew: "אֲבָל", english: "But" },
+	  { hebrew: "שׁוּם דָּבָר", english: "Nothing" },
+	  { hebrew: "יֵשׁ לִי..", english: "I have" },
+	  { hebrew: "אֵין לִי. .", english: "I don't have" },
+	  { hebrew: "חֻולְצָה", english: "T-Shirt" },
+	  { hebrew: "מִכְנָסַיִם", english: "Pants" },
+	  { hebrew: "חֲצָאִית", english: "Skirt" },
+	  { hebrew: "שִׂמְלָה", english: "Dress" },
+	  { hebrew: "מִשְׁקָפַיִם", english: "Glasses" },
+	  { hebrew: "כּוֹבַע", english: "Hat" },
+	  { hebrew: "סְוֶדֶר", english: "Jumper" },
+	  { hebrew: "אָדֹום", english: "Red" },
+	  { hebrew: "שָׁחֹור", english: "Black" },
+	  { hebrew: "לָבָן", english: "White" },
+	  { hebrew: "כָּחֹול", english: "Blue" }
+	  	  // Add more flashcards as needed
+	];
+
+	const flashcards10 = [
+      // Flashcards for Book 1 Unit 10
+	  { hebrew: "יֶלֶד", english: "Boy" },
+	  { hebrew: "יַלְדָּה", english: "Girl" },
+	  { hebrew: "בַּקְבּוּק", english: "Bottle" },
+	  { hebrew: "מִיץ", english: "Juice" },
+	  { hebrew: "סוכריה", english: "Candy" },
+	  { hebrew: "הִנֵּה", english: "Here*" },
+	  { hebrew: "בְּבַקָּשָׁה", english: "Please" },
+	  { hebrew: "גָּדוֹל", english: "Big (m)" },
+	  { hebrew: "קָטָן", english: "Small (m)" },
+	  { hebrew: "גְּדוֹלָה", english: "Big (f)" },
+	  { hebrew: "קְטַנָּה", english: "Small (f)" },
+	  { hebrew: "רוֹצֶה", english: "Want (m)" },
+	  { hebrew: "רוֹצָה", english: "Want (f)" },
+	  { hebrew: "תֵּן לִי", english: "Give me (m)" },
+	  { hebrew: "תְּנִי לִי", english: "Give me (f)" },
+	  { hebrew: "גְּלִידָה", english: "Icecream" },
+	  { hebrew: "עוּגָה", english: "Cake" },
+	  { hebrew: "מַיִם", english: "Water" },
+	  { hebrew: "חָלָב", english: "Milk" },
+	  { hebrew: "לֶחָם", english: "Bread" }
+	  // Add more flashcards as needed
+	];
+
+	const flashcards11 = [
+      // Flashcards for Book 1 Unit 11
+	  { hebrew: "יְלָדִים", english: "Kids (m)" },
+	  { hebrew: "יְלָדוֹת", english: "Kids (f)" },
+	  { hebrew: "פֶּתֶק", english: "Note" },
+	  { hebrew: "כַּדּוּרֶגֶל", english: "Football" },
+	  { hebrew: "סֶרֶט", english: "Movie" },
+	  { hebrew: "כּוֹתֵב", english: "Writing" },
+	  { hebrew: "כּוֹתְבִים", english: "Writing (pl m)" },
+	  { hebrew: "כּוֹתְבוֹת", english: "Writing (pl f)" },
+	  { hebrew: "קוֹרֵא", english: "Reading (m)" },
+	  { hebrew: "קוֹרֵאת", english: "Reading (f)" },
+	  { hebrew: "קוֹרְאִים", english: "Reading (pl m)" },
+	  { hebrew: "קוֹרְאוֹת", english: "Reading (pl f)" },
+	  { hebrew: "נוֹסֵעַ", english: "Riding" },
+	  { hebrew: "נוֹסַעַת", english: "Riding (f)" },
+	  { hebrew: "נוֹסְעִים", english: "Riding (pl m)" },
+	  { hebrew: "נוֹסְעוֹת", english: "Riding (pl f)" },
+	  { hebrew: "לוֹבֵשׁ", english: "Wearing" },
+	  { hebrew: "יוֹשֵׁב", english: "Sitting" },
+	  { hebrew: "עוֹבֵד", english: "Working" },
+	  { hebrew: "עִיתּוֹן", english: "Newspaper" },
+	  { hebrew: "הַרְבֵּה", english: "A lot" }
+	  // Add more flashcards as needed
+	];
+
+	
+	const flashcards12 = [
+      // Flashcards for Book 1 Unit 12
+	  { hebrew: "יְלָדִים", english: "Kids (m)" },
+	  { hebrew: "יְלָדוֹת", english: "Kids (f)" },
+	  { hebrew: "פֶּתֶק", english: "Note" },
+	  { hebrew: "כַּדּוּרֶגֶל", english: "Football" },
+	  { hebrew: "סֶרֶט", english: "Movie" },
+	  { hebrew: "כּוֹתֵב", english: "Writing" },
+	  { hebrew: "כּוֹתְבִים", english: "Writing (pl m)" },
+	  { hebrew: "כּוֹתְבוֹת", english: "Writing (pl f)" },
+	  { hebrew: "קוֹרֵא", english: "Reading (m)" },
+	  { hebrew: "קוֹרֵאת", english: "Reading (f)" },
+	  { hebrew: "קוֹרְאִים", english: "Reading (pl m)" },
+	  { hebrew: "קוֹרְאוֹת", english: "Reading (pl f)" },
+	  { hebrew: "נוֹסֵעַ", english: "Riding" },
+	  { hebrew: "נוֹסַעַת", english: "Riding (f)" },
+	  { hebrew: "נוֹסְעִים", english: "Riding (pl m)" },
+	  { hebrew: "נוֹסְעוֹת", english: "Riding (pl f)" },
+	  { hebrew: "לוֹבֵשׁ", english: "Wearing" },
+	  { hebrew: "יוֹשֵׁב", english: "Sitting" },
+	  { hebrew: "עוֹבֵד", english: "Working" },
+	  { hebrew: "עִיתּוֹן", english: "Newspaper" },
+	  { hebrew: "הַרְבֵּה", english: "A lot" }
+	];
+
+	
+	const flashcards13 = [
+      // Flashcards for Book 1 Unit 13
+	  { hebrew: "אַחַת", english: "One" },
+	  { hebrew: "שְׁתַּיִם", english: "Two" },
+	  { hebrew: "שָׁלוֹשׁ", english: "Three" },
+	  { hebrew: "אַרְבַּע", english: "Four" },
+	  { hebrew: "חָמֵשׁ", english: "Five" },
+	  { hebrew: "שֵׁשׁ", english: "Six" },
+	  { hebrew: "שֶׁבַע", english: "Seven" },
+	  { hebrew: "שְׁמוֹנֶה", english: "Eight" },
+	  { hebrew: "תֵּשַׁע", english: "Nine" },
+	  { hebrew: "עֶשֶׂר", english: "Ten" },
+	  { hebrew: "אַחַת עֶשְׂרֵה", english: "Eleven" },
+	  { hebrew: "שְׁתֵּים עֶשְׂרֵה", english: "Twelve" },
+	  { hebrew: "יוֹם הֻולֶּדֶת", english: "Birthday" },
+	  { hebrew: "מַזָּל טוֹב", english: "Mazal Tov" },
+	  { hebrew: "בֵּן כַּמָּה?", english: "How old (m)" },
+	  { hebrew: "בַּת כַּמָּה?", english: "How old (f)" },
+	  { hebrew: "שׁוֹמֵעַ", english: "Hear (m)" },
+	  { hebrew: "שׁוֹמַעַת", english: "Hear (f)" },
+	  { hebrew: "רוֹאֶה", english: "See (m)" },
+	  { hebrew: "רוֹאָה", english: "See (f)" },
+	  { hebrew: "עוֹשֶׂה", english: "Doing (m)" },
+	  { hebrew: "עוֹשָׂה", english: "Doing (f)" }
+	  // Add more flashcards as needed
+	];
+
+
+    // Set initial score for each unit
+    let score1 = 0;
+    let score2 = 0;
+    let score3 = 0;
+    let score4 = 0;
+    let score5 = 0;
+    let score6 = 0;
+    let score7 = 0;
+    let score8 = 0;
+    let score9 = 0;
+    let score10 = 0;
+    let score11 = 0;
+    let score12 = 0;
+    let score13 = 0;
+	
+	
+
+    // Generate flashcards for a specific unit
+    function generateFlashcards(containerId, flashcards, scoreId, messageId) {
+      const flashcardContainer = document.getElementById(containerId);
       flashcardContainer.innerHTML = '';
 
       // Randomly select a card index
@@ -180,7 +623,7 @@
       flashcardContainer.appendChild(hebrewCard);
 
       // Display the English options
-      const options = generateOptions(currentCard);
+      const options = generateOptions(currentCard, flashcards);
       options.forEach((option, index) => {
         const englishCard = document.createElement('div');
         englishCard.classList.add('card', 'english-card');
@@ -194,14 +637,14 @@
           }
 
           clickCount++;
-          checkAnswer(englishCard, currentCard);
+          checkAnswer(englishCard, currentCard, flashcards, scoreId, messageId, containerId);
         });
 
         flashcardContainer.appendChild(englishCard);
       });
     }
 
-    function generateOptions(currentCard) {
+    function generateOptions(currentCard, flashcards) {
       // Exclude the correct answer from the options
       const options = flashcards.filter(card => card.english !== currentCard.english);
 
@@ -223,15 +666,15 @@
       return array;
     }
 
-    function checkAnswer(selectedCard, currentCard) {
-      const messageElement = document.getElementById('message');
-      const flashcardContainer = document.getElementById('flashcard-container');
+    function checkAnswer(selectedCard, currentCard, flashcards, scoreId, messageId, containerId) {
+      const messageElement = document.getElementById(messageId);
+      const flashcardContainer = document.getElementById(containerId);
 
       // Get the Hebrew card element
       const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
 
       // Remove the correct-answer and wrong-answer classes from all cards
-      document.querySelectorAll('.english-card').forEach(card => {
+      flashcardContainer.querySelectorAll('.english-card').forEach(card => {
         card.classList.remove('correct-answer', 'wrong-answer');
       });
 
@@ -240,34 +683,54 @@
 
       if (isCorrect) {
         // Correct answer
-        score += 1;
+        updateScore(scoreId, flashcards);
         messageElement.textContent = 'You are correct!';
 
         // Add the class for the green effect to the selected card
         selectedCard.classList.add('correct-answer');
       } else {
         // Wrong answer
-        score = Math.max(0, score - 2);
+        updateScore(scoreId, flashcards, -2);
         messageElement.textContent = 'You are wrong!';
 
         // Add the class for the red effect to the selected card
         selectedCard.classList.add('wrong-answer');
       }
 
-      // Update the score
-      const scoreElement = document.getElementById('score');
-      scoreElement.textContent = `Score: ${score}`;
-
       // Remove the class after 0.5 seconds and generate new flashcards
       setTimeout(() => {
         selectedCard.classList.remove('correct-answer', 'wrong-answer');
-        generateFlashcards();
+        generateFlashcards(containerId, flashcards, scoreId, messageId);
       }, 500);
     }
 
-    // Generate new flashcards
-    generateFlashcards();
-  </script>
+    function updateScore(scoreId, flashcards, value = 1) {
+      const scoreElement = document.getElementById(scoreId);
+      const currentCardIndex = flashcards.findIndex(card => card.english === flashcards[flashcards.length - 1].english);
+      const unitScore = flashcards[currentCardIndex].score || 0;
+
+      flashcards[currentCardIndex].score = unitScore + value;
+
+      const totalScore = flashcards.reduce((acc, card) => acc + (card.score || 0), 0);
+
+      scoreElement.textContent = `Score: ${totalScore}`;
+    }
+
+    // Generate new flashcards for each unit
+    generateFlashcards('flashcard-container1', flashcards1, 'score1', 'message1');
+    generateFlashcards('flashcard-container2', flashcards2, 'score2', 'message2');
+    generateFlashcards('flashcard-container3', flashcards3, 'score3', 'message3');
+    generateFlashcards('flashcard-container4', flashcards4, 'score4', 'message4');
+    generateFlashcards('flashcard-container5', flashcards5, 'score5', 'message5');
+    generateFlashcards('flashcard-container6', flashcards6, 'score6', 'message6');
+    generateFlashcards('flashcard-container7', flashcards7, 'score7', 'message7');
+    generateFlashcards('flashcard-container8', flashcards8, 'score8', 'message8');
+    generateFlashcards('flashcard-container9', flashcards9, 'score9', 'message9');
+    generateFlashcards('flashcard-container10', flashcards10, 'score10', 'message10');
+    generateFlashcards('flashcard-container11', flashcards11, 'score11', 'message11');
+    generateFlashcards('flashcard-container12', flashcards12, 'score12', 'message12');
+    generateFlashcards('flashcard-container13', flashcards13, 'score13', 'message13');
+    </script>
 
   <script src="js/script.js"></script>
 </body>

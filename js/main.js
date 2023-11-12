@@ -68,7 +68,7 @@ class MyHeader extends HTMLElement {
                             <a href="donate_crypto.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Bitcoin - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
                         </ul>
                     </li>
-                    <li><a href="register.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Register</a></li>
+                    <li><a href='https://ko-fi.com/L3L8R1QN8' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
                 </ul>
                 </div>
             </nav>

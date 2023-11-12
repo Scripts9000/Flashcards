@@ -7,7 +7,7 @@ class MyHeader extends HTMLElement {
                     <h1>Hebrewy</h1>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Updates</a></li>
                     <li class="dropdown">
                         <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
                         <ul class="submenu">

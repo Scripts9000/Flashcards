@@ -63,10 +63,12 @@ class MyHeader extends HTMLElement {
                         <a href="donate.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                         <li><a href='https://ko-fi.com/L3L8R1QN8' target='_blank'><img height='30' style='border:0px;height:30px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
-                        <a href="donate_crypto.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Bitcoin - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
+                        <a href="donate_crypto.html"><i class="fa fa-btc fa-lg" aria-hidden="true"></i> Bitcoin - </a>
                         </ul>
                     </li>
-                    <li><a href='https://ko-fi.com/L3L8R1QN8' target='_blank'><img height='30' style='border:0px;height:30px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
+                    <li>
+                    <a href='https://ko-fi.com/L3L8R1QN8' target='_blank'><img height='30' style='border:0px;height:30px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+                    </li>
                 </ul>
             </nav>
         </header>

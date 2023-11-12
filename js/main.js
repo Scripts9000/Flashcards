@@ -9,7 +9,7 @@ class MyHeader extends HTMLElement {
                 <ul class="nav-links">
                     <li><a href="index.html">Updates</a></li>
                     <li class="dropdown">
-                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
+                        <a href="basics.html" class="submenu-trigger">Basics <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                             <a href="introduction.html">General Introduction</a>
                             <a href="alphabet.html">Alphabet א,ב,ג,ד</a>
@@ -62,7 +62,6 @@ class MyHeader extends HTMLElement {
                     <li class="dropdown">
                         <a href="donate.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
-                        <li><a href='https://ko-fi.com/L3L8R1QN8' target='_blank'><img height='25' style='border:0px;height:25px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></li>
                         <a href="donate_crypto.html"><i class="fa fa-btc fa-lg" aria-hidden="true"></i> Bitcoin - </a>
                         </ul>
                     </li>

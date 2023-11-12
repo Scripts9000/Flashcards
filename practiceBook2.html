@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Book 2</title>
+  <link id="stylesheet-link" rel="stylesheet" href="css/dark-styles.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <script type="module" src="js/main.js"></script>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://use.typekit.net/ihm6auk.css">
+
+  <style>
+    /* Add your styles here */
+    .container {
+      text-align: center;
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Adjust as needed */
+    }
+
+    #message,
+    .score {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .flashcard-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .hebrew-card,
+    .english-card {
+      width: 190px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      transform-style: preserve-3d;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 10px;
+      background-color: rgba(48, 48, 48, 0.9);
+      border: 1px solid #555;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    .hebrew-card {
+      background-color: #555;
+      color: #e0e0e0;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+    }
+
+    .card-front,
+    .card-back {
+      background-color: #555;
+      color: #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    .card.flipped .card-front {
+      display: none;
+    }
+
+    .card.flipped .card-back {
+      display: block;
+      transform: rotateY(180deg);
+    }
+
+    .card:hover {
+      box-shadow: 1px 6px 5px rgb(255, 255, 255);
+    }
+
+    .correct-answer {
+      background-color: #4caf50 !important;
+    }
+
+    .wrong-answer {
+      background-color: #f44336 !important;
+    }
+  </style>
+</head>
+
+<my-header></my-header>
+
+<body>
+
+  <div class="container">
+      <h1>Book 2 Unit 1</h1>
+      <p>Practice vocabulary from Book 2 unit 1</p>
+    <div class="flashcard-container" id="flashcard-container1"></div>
+    <div id="message1"></div>
+    <div class="score" id="score1">Score: 0</div>
+  </div>
+
+  <div class="container">
+      <h1>Book 2 Unit 2</h1>
+      <p>Practice vocabulary from Book 2 unit 2</p>
+    <div class="flashcard-container" id="flashcard-container2"></div>
+    <div id="message2"></div>
+    <div class="score" id="score2">Score: 0</div>
+  </div>
+
+  <div class="container">
+      <h1>Book 2 Unit 3</h1>
+      <p>Practice vocabulary from Book 2 unit 3</p>
+    <div class="flashcard-container" id="flashcard-container3"></div>
+    <div id="message3"></div>
+    <div class="score" id="score3">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 4</h1>
+      <p>Practice vocabulary from Book 2 unit 4</p>
+    <div class="flashcard-container" id="flashcard-container4"></div>
+    <div id="message4"></div>
+    <div class="score" id="score4">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 5</h1>
+      <p>Practice vocabulary from Book 2 unit 5</p>
+    <div class="flashcard-container" id="flashcard-container5"></div>
+    <div id="message5"></div>
+    <div class="score" id="score5">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 6</h1>
+      <p>Practice vocabulary from Book 2 unit 6</p>
+    <div class="flashcard-container" id="flashcard-container6"></div>
+    <div id="message6"></div>
+    <div class="score" id="score6">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 7</h1>
+      <p>Practice vocabulary from Book 2 unit 7</p>
+    <div class="flashcard-container" id="flashcard-container7"></div>
+    <div id="message7"></div>
+    <div class="score" id="score7">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 8</h1>
+      <p>Practice vocabulary from Book 2 unit 8</p>
+    <div class="flashcard-container" id="flashcard-container8"></div>
+    <div id="message8"></div>
+    <div class="score" id="score8">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 9</h1>
+      <p>Practice vocabulary from Book 2 unit 9</p>
+    <div class="flashcard-container" id="flashcard-container9"></div>
+    <div id="message9"></div>
+    <div class="score" id="score9">Score: 0</div>
+  </div>
+  
+  <div class="container">
+      <h1>Book 2 Unit 10</h1>
+      <p>Practice vocabulary from Book 2 unit 10</p>
+    <div class="flashcard-container" id="flashcard-container10"></div>
+    <div id="message10"></div>
+    <div class="score" id="score10">Score: 0</div>
+  </div>
+  
+
+  <script>
+    // Flashcards for Book 2 Unit 1
+    const flashcards1 = [
+    { hebrew: "גִּינָּה", english: "Garden" },
+    { hebrew: "חֲבוּרָה", english: "Group of friends" },
+    { hebrew: "כְּלֵב", english: "Dog" },
+    { hebrew: "נַדְנֵדָה", english: "Swing" },
+    { hebrew: "סוֹד", english: "Secret" },
+    { hebrew: "סַפְסָל", english: "Bench" },
+    { hebrew: "עֵץ", english: "Tree" },
+    { hebrew: "קְבוּצָה", english: "Group" },
+    { hebrew: "שַׂחְקָן כַּדּוּרֶגֶל", english: "Football Player" },
+    { hebrew: "שֵׁם", english: "Name" },
+    { hebrew: "שׁירוּתִים", english: "Toilet" },
+    { hebrew: "אוֹמֵר", english: "Saying" },
+    { hebrew: "בֹּוא (לָבוֹא)", english: "Come (to Come)" },
+    { hebrew: "יוֹדֵעַ (לְדַעַת)", english: "Know (To know)" },
+    { hebrew: "לִהְיוֹת", english: "Be (To be)" },
+    { hebrew: "יָשֵׁן (לִישֹׁן)", english: "Sleep (To Sleep)" },
+    { hebrew: "עוֹשֶׂה (לַעֲשׂוֹת)", english: "Do (To do)" },
+    { hebrew: "רָץ (לָרוּץ)", english: "Run (to Run)" },
+    { hebrew: "עָצוּב", english: "Sad" },
+    { hebrew: "רָחָב", english: "Wide" },
+    { hebrew: "שָׂמֵחַ", english: "Happy" },
+    { hebrew: "עַל יַד", english: "Next to" },
+    { hebrew: "שֶׁל (בנתטייה)", english: "Belongs to..." },
+    { hebrew: "אוֹ", english: "Or" },
+    { hebrew: "בָּעֵד", english: "For" },
+    { hebrew: "בֶּטַח", english: "Of course" },
+    { hebrew: "הַכֹּל", english: "Everything" },
+    { hebrew: "כְּמוֹ", english: "Like this" },
+    { hebrew: "מַשֶּׁהוּ", english: "Something" },
+    { hebrew: "נֶגֶד", english: "Against" },
+    { hebrew: "שְׁלוֹשָׁה", english: "Three" },
+    { hebrew: "אֶחָד", english: "One" },
+    { hebrew: "מֶ...", english: "From..." }
+      // Add more flashcards as needed
+    ];
+
+    const flashcards2 = [
+      // Flashcards for Book 2 Unit 2
+      { hebrew: "אוֹגֵר", english: "Hamster" },
+      { hebrew: "אֹוכֶל", english: "Food/eating*" },
+      { hebrew: "בַּעֲלֵי חַיִּים", english: "Animals" },
+      { hebrew: "גָּזַר", english: "Carrot" },
+      { hebrew: "הוֹרִים", english: "Parents" },
+      { hebrew: "חָצֵר", english: "Backyard" },
+      { hebrew: "חָתוּל", english: "Cat (m)" },
+      { hebrew: "חֲתוּלָה", english: "Cat (f)" },
+      { hebrew: "כְּלוּב", english: "Cage" },
+      { hebrew: "מַיִם", english: "Water" },
+      { hebrew: "עוּגָה", english: "Cake" },
+      { hebrew: "פִּינַּת חַי", english: "Live corner (animals)" },
+      { hebrew: "צָב", english: "Turtle" },
+      { hebrew: "קוּפסָה", english: "Box" },
+      { hebrew: "רַעְיוֹן", english: "Idea" },
+      { hebrew: "תוּכִּי", english: "Parrot" },
+      { hebrew: "אוֹהֵב (לֶאֱהֹוב)", english: "Like (to like)" },
+      { hebrew: "בּוֹנֶה (לַבָּנוֹת)", english: "To build" },
+      { hebrew: "חוֹזֵר (לֶחָזוֹר)", english: "To come back" },
+      { hebrew: "יוֹשֵׁב (לַשַּׁבָּת)", english: "To sit" },
+      { hebrew: "אוֹמֵר (לְהַגִּיד)", english: "To say" },
+      { hebrew: "עוֹזֵר ל.. (לַעֲזֹר)", english: "Help to (to help)" },
+      { hebrew: "מְטַפֵּל ב.. (לַטָּפֵל)", english: "To take care of.." },
+      { hebrew: "מְנַקָּה (לְנַקּוֹת)", english: "To cleanup" },
+      { hebrew: "נוֹתֵן (לְתַת)", english: "To give" },
+      { hebrew: "קָם (לָקוּם)", english: "To stand up" },
+      { hebrew: "שׁוֹמֵר (לַשָּׁמוּר)", english: "To keep/To protect" },
+      { hebrew: "שָׂם (לָשִׁים)", english: "To put" },
+      { hebrew: "אֵלֶּה", english: "Those" },
+      { hebrew: "אֶת", english: "**Article" },
+      { hebrew: "אֵיזֶה יֹופִי", english: "Great (Slang)" },
+      { hebrew: "בְּיַחַד", english: "Together" },
+      { hebrew: "עוֹד", english: "More" },
+      { hebrew: "כֻּולָּם", english: "Everyone" },
+      { hebrew: "בּוֹקֶר", english: "Morning" },
+      { hebrew: "צָהֳרַיִם", english: "Noon" },
+      { hebrew: "אַחֲרֵי הַצָּהֳרַיִם", english: "Afternoon" },
+      { hebrew: "עֶרֶב", english: "Evening" },
+      { hebrew: "לַיְלָה", english: "Night" },
+      { hebrew: "בּוֹקֶר טוֹב", english: "Good morning" },
+      { hebrew: "צָהֳרַיִים טוֹבִים", english: "Good afternoon" },
+      { hebrew: "עֶרֶב טוֹב", english: "Good evening" },
+      { hebrew: "לַיְלָה טוֹב", english: "Good Night" },
+      { hebrew: "יוֹם שְׁלִישִׁי", english: "Tuesday" },
+      { hebrew: "חֲתוּלָה יָפָה", english: "Beautiful cat" }
+		// Add more entries as needed
+	];
+
+
+    const flashcards3 = [
+      // Flashcards for Book 2 Unit 3
+	  { hebrew: "חוּג", english: "After school class" },
+	  { hebrew: "חֲלָלִית", english: "Rocket ship" },
+	  { hebrew: "חַשְׁמַל", english: "Electricity" },
+	  { hebrew: "יוֹם", english: "Day" },
+	  { hebrew: "כַּדּוּר הָאָרֶץ", english: "Planet Earth" },
+	  { hebrew: "כּוֹכָב", english: "Star/Planet" },
+	  { hebrew: "כַּרְטִיס", english: "Card/Ticket" },
+	  { hebrew: "לַיְלָה", english: "Night" },
+	  { hebrew: "פְּגִישָׁה", english: "Meeting" },
+	  { hebrew: "קוֹלְנוֹעַ", english: "Cinema" },
+	  { hebrew: "קוּפָּה רוֹשֶׁמֶת", english: "Cash register" },
+	  { hebrew: "קוּפָּה", english: "Booking office" },
+	  { hebrew: "שָׁבוּעַ", english: "Week" },
+	  { hebrew: "שִׁעוּרִים", english: "Lessons (pl)" },
+	  { hebrew: "שִׁעוּרֵי בַּיִת", english: "Home Work" },
+	  { hebrew: "דּוֹמֶה ל..", english: "Similar to..." },
+	  { hebrew: "טָס (לָטוּס)", english: "Fly (to fly)" },
+	  { hebrew: "לָלֶכֶת בְּרֶגֶל", english: "To Walk" },
+	  { hebrew: "מַטִּיל (לְטַיֵּל)", english: "To Travel" },
+	  { hebrew: "יָפֶה", english: "Beautiful" },
+	  { hebrew: "(לָנוּחַ) נָח", english: "Resting (to rest)" },
+	  { hebrew: "עוֹזֵר ל.. (לַעֲזֹר)", english: "Help to (to help)" },
+	  { hebrew: "פּוֹגֵשׁ (לַפָּגוֹשׁ)", english: "Meeting (to meet)" },
+	  { hebrew: "פּוֹחֵד מ.. (לַפַּחַד)", english: "Afraid of (afraid)" },
+	  { hebrew: "קוֹנֶה (לִקְנוֹת)", english: "Buying (To buy)" },
+	  { hebrew: "רוֹקֵד (לִרְקֹד)", english: "Dance (To dance)" },
+	  { hebrew: "אַחֵר", english: "Different" },
+	  { hebrew: "מוּזָר", english: "Weird" },
+	  { hebrew: "מֵעִנְיָן", english: "Interesting" },
+	  { hebrew: "מַצְחִיק", english: "Funny" },
+	  { hebrew: "נֶחְמָד", english: "Cute" },
+	  { hebrew: "פָּתוּח", english: "Open" },
+	  { hebrew: "אֵיזֶה", english: "Which one?" },
+	  { hebrew: "מָתַי", english: "When?" },
+	  { hebrew: "אָז", english: "So/Then*" },
+	  { hebrew: "אחר-כך", english: "After that /Later" },
+	  { hebrew: "בַּהַתְחָלָה", english: "At the beginning" },
+	  { hebrew: "בַּסּוֹף", english: "At the end" },
+	  { hebrew: "כֹּל יוֹם", english: "Every day" },
+	  { hebrew: "מוֹצָאֵי שַׁבָּת", english: "After Shabbat" },
+	  { hebrew: "מָחָר", english: "Tomorrow" },
+	  { hebrew: "יוֹם רִאשׁוֹן", english: "Sunday" },
+	  { hebrew: "יוֹם שֵׁנִי", english: "Monday" },
+	  { hebrew: "יוֹם שְׁלִישִׁי", english: "Tuesday" },
+	  { hebrew: "יוֹם רְבִיעִי", english: "Wednesday" },
+	  { hebrew: "יוֹם חֲמִישִׁי", english: "Thursday" },
+	  { hebrew: "יוֹם שִׁישִׁי", english: "Friday" },
+	  { hebrew: "שַׁבָּת", english: "Saturday" },
+	  { hebrew: "צִיּוּר", english: "Drawing" },
+	  { hebrew: "לוּחַ", english: "Board/Whiteboard" },
+	  { hebrew: "אֲנִי מְצַיֶּרֶת צִיּוּרִים", english: "I draw pictures" },
+	  { hebrew: "אֲנִי נָח בְּיוֹם שַׁבָּת", english: "I rest on Shabbat" },
+	  { hebrew: "כֻּולָּם יְשֵׁנִים בַּלַּיְלָה", english: "Everybody sleeps at night" },
+      // Add more flashcards as needed
+    ];
+
+	const flashcards4 = [
+      // Flashcards for Book 2 Unit 4
+	  { hebrew: "אִישׁ", english: "A Man" },
+	  { hebrew: "אִשָּׁה", english: "A Woman" },
+	  { hebrew: "גָּדֵר", english: "Fence" },
+	  { hebrew: "דמֵי כִּיס", english: "Pocket Money" },
+	  { hebrew: "אַחַר כָּךְ", english: "Later" },
+	  { hebrew: "זְמַן", english: "Time" },
+	  { hebrew: "חֻלְצָה", english: "Tshirt" },
+	  { hebrew: "כִּיס", english: "Pocket" },
+	  { hebrew: "כֶּתֶם", english: "Stain" },
+	  { hebrew: "מוֹדָעָה", english: "Advertisement" },
+	  { hebrew: "צֶבַע", english: "Color" },
+	  { hebrew: "קֻופָּה", english: "Cash Register" },
+	  { hebrew: "שְׁכֵנִים", english: "Neighbours" },
+	  { hebrew: "מְקַבֵּל (לְקַבֵּל)", english: "To Receive" },
+	  { hebrew: "מְסַדֵּר (לְסֵדֶר)", english: "To Organize" },
+	  { hebrew: "עוֹבֵד (לַעֲבֹד)", english: "To Work" },
+	  { hebrew: "צוֹבֵעַ (לַצָּבוֹעַ)", english: "To Paint" },
+	  { hebrew: "רוֹחֵץ (לָרָחוּץ)", english: "To Wash" },
+	  { hebrew: "שׁוֹאֵל (לִשְׁאֹל)", english: "To Ask" },
+	  { hebrew: "יְפֵה", english: "Beautiful" },
+	  { hebrew: "אָדֹום", english: "Red" },
+	  { hebrew: "יָרֹוק", english: "Green" },
+	  { hebrew: "כְּחוֹל", english: "Blue" },
+	  { hebrew: "צָהֹוב", english: "Yellow" },
+	  { hebrew: "אֶת *בַּנְּטִיָּה", english: "You (f)" },
+	  { hebrew: "מָה פִּתְאוֹם", english: "No Way" },
+	  { hebrew: "אוֹתוֹ", english: "Him (not direct)" },
+	  { hebrew: "אוֹתה", english: "Her (not direct)" },
+	  { hebrew: "אוֹתָם", english: "Them (m) not direct" },
+	  { hebrew: "אוֹתָן", english: "Them (f) not direct" },
+	  { hebrew: "בְּעֵד", english: "For" },
+	  { hebrew: "נֶגֶד", english: "Against" },
+	  { hebrew: "אוֹתִי", english: "Me (direct)" },
+	  { hebrew: "אוֹתְךָ", english: "You (m) direct" },
+	  { hebrew: "אוֹתָךְ", english: "You (f) direct" },
+	  { hebrew: "אוֹתָנוּ", english: "Us (pl)" },
+	  { hebrew: "הַיְּלָדוֹת שְׂמֵחוֹת", english: "The girls are happy" },
+	  { hebrew: "הָעוּגָה מְצֻיֶּנֶת", english: "The cake is great" },
+	  { hebrew: "הָעֵץ רָחָב", english: "The tree is wide" },
+	  { hebrew: "הַסַּפְסָל קָטַן", english: "The bench is small" },
+	  { hebrew: "הָעוּגוֹת מְצֻיָּנוּת", english: "The cakes are great" },
+	  { hebrew: "הַסֵּפֶר מְעַנְיֵן", english: "The book is interesting" },
+	  { hebrew: "הַקְּבוּצָה גְּדוֹלָה", english: "The group is big" },
+	  { hebrew: "הַסְּפָרִים קְטַנִּים", english: "The books are small" },
+	  { hebrew: "הַסְּרָטִים מַצְחִיקִים", english: "The movies are funny" },
+	  { hebrew: "הַמּוֹרָה טוֹבָה", english: "The teacher is good (f)" },
+	  { hebrew: "הַמִּשְׂחָק נִפְלָא", english: "The game is great" },
+	  { hebrew: "הַקֻּפְסָאוֹת פְּתוּחוֹת", english: "The boxes are open" },
+	  { hebrew: "הַקֻּופָּה פְּתוּחָה", english: "Open booking office" },
+	  { hebrew: "יֵשׁ לִי פְּגִישָׁה", english: "I have a meeting" },
+	  { hebrew: "אֵין לִי פְּגִישָׁה", english: "I don't have a meeting" },
+	  { hebrew: "לִקְנוֹת כַּרְטִיסִים", english: "To buy tickets" },
+	  { hebrew: "הוּא יָפֶה", english: "He is beautiful" },
+	  { hebrew: "הִיא יָפֶה", english: "She is beautiful" },
+	  { hebrew: "הֵם מַצְחִיקִים", english: "They are funny (pm)" },
+	  { hebrew: "הֵן יודועת", english: "They know (pf)" },
+	  { hebrew: "יֵשׁ לִי זְמַן", english: "I have time" },
+	  { hebrew: "אֵין לִי כִּיסִים", english: "I don't have pockets" },
+	  // Add more flashcards as needed
+    ];
+	
+	
+	const flashcards5 = [
+      // Flashcards for Book 2 Unit 5
+	  { hebrew: "אֹורַח", english: "Guest" },
+	  { hebrew: "אוֹרְחִים", english: "Guests" },
+	  { hebrew: "בּוֹטנִים", english: "Peanuts" },
+	  { hebrew: "בֵּית כְּנֶסֶת", english: "Synagogue" },
+	  { hebrew: "גְּלִידָה", english: "Icecream" },
+	  { hebrew: "חֶדֶר", english: "Room" },
+	  { hebrew: "מַצְלֵמָה", english: "Camera" },
+	  { hebrew: "מַתָּנָה", english: "Gift" },
+	  { hebrew: "פָּנָס", english: "Flashlight" },
+	  { hebrew: "עוּגִיּוֹת", english: "Cookies" },
+	  { hebrew: "צִמּוּקִים", english: "Raisins" },
+	  { hebrew: "רַעַשׁ", english: "Noise" },
+	  { hebrew: "שֶׁקֶט", english: "Silence" },
+	  { hebrew: "שֶׁקַּל", english: "Shekel (singular)" },
+	  { hebrew: "שְׁקָלִים", english: "Shkalim (plural)" },
+	  { hebrew: "תַּרְמִיל", english: "Backpack" },
+	  { hebrew: "מְצַלֵּם (לַצַּלָּם)", english: "To take a photo" },
+	  { hebrew: "מִתְלַבֵּשׁ (לְהִתְלַבֵּשׁ)", english: "To dress up" },
+	  { hebrew: "מִתְרַגֵּשׁ (לְהִתְרַגֵּשׁ)", english: "Get excited" },
+	  { hebrew: "עוֹמֵד (לַעֲמֹד)", english: "To stand" },
+	  { hebrew: "שָׁר (לַשִּׁיר)", english: "To sing" },
+	  { hebrew: "עוֹלֶה (כֶּסֶף)", english: "Costs money" },
+	  { hebrew: "אֶחָד", english: "One (m)" },
+	  { hebrew: "שְׁנַיִם (שֵׁנִי)", english: "Two (m)" },
+	  { hebrew: "שְׁלוֹשָׁה", english: "Three (m)" },
+	  { hebrew: "אַרְבָּעָה", english: "Four (m)" },
+	  { hebrew: "חֲמִישָּׁה", english: "Five (m)" },
+	  { hebrew: "שִׁשָּׁה", english: "Six (m)" },
+	  { hebrew: "שִׁבְעָה", english: "Seven (m)" },
+	  { hebrew: "שְׁמוֹנֶה", english: "Eight (m)" },
+	  { hebrew: "תִּשְׁעָה", english: "Nine (m)" },
+	  { hebrew: "עֲשָׂרָה", english: "Ten (m)" },
+	  { hebrew: "עֶשְׂרִים", english: "Twenty (m)" },
+	  { hebrew: "שְׁלוֹשִׁים", english: "Thirty (m)" },
+	  { hebrew: "חֲמִשִּׁים", english: "Fifty (m)" },
+	  { hebrew: "מֵאָה", english: "A hundred (m)" },
+	  { hebrew: "בְּעוֹד", english: "Within" },
+	  { hebrew: "בַּר-מִצְוָה", english: "Bar Mitzvah" },
+	  { hebrew: "הַרְבֵּה", english: "A lot" },
+	  { hebrew: "כֹּל כָּךְ", english: "So" },
+	  { hebrew: "שְׁלוֹשׁ-עֶשְׂרֵה", english: "13" },
+	  { hebrew: "הַסֵּפֶר מְעַנְיֵן", english: "The book is interesting" },
+	  { hebrew: "בְּבֹוקֶר הוּא _____", english: "In the morning he______" },
+	  { hebrew: "אֲנִי רוֹצֶה לִקְנוֹת ______", english: "I want to buy_______" },
+	  { hebrew: "אֲנִי _____ מִסִּבּוֹת גדולות", english: "I_______ big parties" },
+	  // Add more flashcards as needed
+	];
+	
+	const flashcards6 = [
+      // Flashcards for Book 2 Unit 6
+	  { hebrew: "אֲרוֹן", english: "Closet" },
+	  { hebrew: "זָנָב", english: "Tail" },
+	  { hebrew: "יָד", english: "Hand" },
+	  { hebrew: "לְטָאָה", english: "Lizzard" },
+	  { hebrew: "מָקוֹם", english: "Place" },
+	  { hebrew: "קַלְמָר", english: "Pencil pouch" },
+	  { hebrew: "בּוֹרֵחַ (לִבְרֹוחַ)", english: "Run away (m)" },
+	  { hebrew: "כּוֹעֵס (לִכְעֹס)", english: "Angry (m)" },
+	  { hebrew: "מֵבִין (לְהָבִין)", english: "Understand (m)" },
+	  { hebrew: "מַרְגִּישׁ (לְהַרְגִּישׁ)", english: "Feel (m)" },
+	  { hebrew: "מִפְּסִיק (לְהַפְסִיק)", english: "Stopping (m)" },
+	  { hebrew: "מַשְׁלִים (לְהַשְׁלִים) [שָׁלוֹם]", english: "Completing" },
+	  { hebrew: "מַתְחִיל (לְהַתְחִיל)", english: "Starting" },
+	  { hebrew: "רָב (לָרִיב)", english: "To argue with" },
+	  { hebrew: "שׂוֹנֵא (לִשְׂנוֹא)", english: "Hate" },
+	  { hebrew: "תּוֹפֵס (לַתָּפוּס)", english: "Catching" },
+	  { hebrew: "שָׁמֵן", english: "Fat" },
+	  { hebrew: "אֵצֶל", english: "at / in the possession of.." },
+	  { hebrew: "אִתִּי", english: "By me / With me" },
+	  { hebrew: "אִתְּךָ", english: "With you / By you" },
+	  { hebrew: "בְּלִי", english: "Without" },
+	  { hebrew: "אֵיךְ", english: "How" },
+	  { hebrew: "אַף פַּעַם", english: "Never" },
+	  { hebrew: "אֶתְמוֹל", english: "Yesterday" },
+	  { hebrew: "בִּגְלַל", english: "because" },
+	  { hebrew: "בְּשָׁעָה", english: "At \"time\"" },
+	  { hebrew: "מָה קָרָה?", english: "What happened?" },
+	  { hebrew: "סְלִיחָה", english: "I'm sorry / Excuse me" },
+	  { hebrew: "קְצָת", english: "A little bit" },
+	  { hebrew: "שׁוּם מָקוֹם", english: "Nowhere" },
+	  { hebrew: "תָּמִיד", english: "Always" },
+	  { hebrew: "בְּרוֹגֶז", english: "(children's speech) to be angry with someone" },
+	  { hebrew: "שׁוֹלֶם", english: "(children's speech) overcome back in peace" }
+	  // Add more flashcards as needed
+	];
+
+	  
+	
+	const flashcards7 = [
+      // Flashcards for Book 2 Unit 7
+	  { Hebrew: 'אֹוזֶן', English: 'Blessing' },
+	  { Hebrew: 'אָזְנַיִם', English: 'Doctor (m)' },
+	  { Hebrew: 'יָד', English: 'Doctor (f)' },
+	  { Hebrew: 'יָדַיִם', English: 'Hands' },
+	  { Hebrew: 'אָחוֹת', English: 'Left' },
+	  { Hebrew: 'יָמִין', English: 'Throat' },
+	  { Hebrew: 'אַף', English: 'Tooth' },
+	  { Hebrew: 'עַיִן', English: 'Teeth' },
+	  { Hebrew: 'עֵינַיִם', English: 'Window' },
+	  { Hebrew: 'אֶצְבַּע', English: 'Checking (To check)' },
+	  { Hebrew: 'פֶּה', English: 'Painfull' },
+	  { Hebrew: 'בֶּטֶן', English: 'To Visit' },
+	  { Hebrew: 'רֹאשׁ', English: 'To Tell' },
+	  { Hebrew: 'בֵּית חוֹלִים', English: 'To Fall' },
+	  { Hebrew: 'רֶגֶל', English: 'To Break' },
+	  { Hebrew: 'רְגָלִים', English: 'Forbidden' },
+	  { Hebrew: 'בְּרָכָה', English: 'Already' },
+	  { Hebrew: 'רוֹפֵא', English: 'Great!' },
+	  { Hebrew: 'רוֹפְאָה', English: 'Later / Late' },
+	  { Hebrew: 'גֶּבֶס', English: 'How are you (m)' },
+	  { Hebrew: 'שְׂמֹאל', English: 'How are you (f)' },
+	  { Hebrew: 'גָּרוֹן', English: 'Lucky that...' },
+	  { Hebrew: 'שֵׁן', English: 'Once **' },
+	  { Hebrew: 'שִׁנַּיִים', English: 'Tooth' },
+	  { Hebrew: 'חַלּוֹן', English: 'Window' }
+	   // Add more flashcards as needed
+	];
+
+	
+	
+	const flashcards8 = [
+      // Flashcards for Book 2 Unit 8
+	  { Hebrew: 'אֶבֶן', English: 'Stone' },
+	  { Hebrew: 'בּוֹכֶה', English: 'Crying' },
+	  { Hebrew: 'גַּלְגַּל', English: 'Wheel' },
+	  { Hebrew: 'דַּבֵּר (דְּבָרִים)', English: 'Thing (things)' },
+	  { Hebrew: 'דֹּואַר', English: 'Post Office' },
+	  { Hebrew: 'דֶּלֶת', English: 'Door' },
+	  { Hebrew: 'זָהָב', English: 'Gold' },
+	  { Hebrew: 'טָבַעְתָּ', English: 'Ring' },
+	  { Hebrew: 'יַיִן', English: 'Wine' },
+	  { Hebrew: 'כּוֹבַע', English: 'Hat' },
+	  { Hebrew: 'כּוֹס', English: 'Glass' },
+	  { Hebrew: 'מִכְתָּב', English: 'Letter' },
+	  { Hebrew: 'מַפְתֵּחַ', English: 'Key' },
+	  { Hebrew: 'סִימָן (סִימָנִים)', English: 'Mark (Marks)**' },
+	  { Hebrew: 'סִפּוּר', English: 'A Story' },
+	  { Hebrew: 'שַׁרְשֶׁרֶת', English: 'Chain' },
+	  { Hebrew: 'תֵּאַטְרוֹן', English: 'Theater' },
+	  { Hebrew: 'מְאַבֵּד (לְאַבֵּד)', English: 'Losing (to Lose)' },
+	  { Hebrew: 'מַדְבִּיק (לְהַדְבִּיק)', English: 'To transfer illness**' },
+	  { Hebrew: 'מוֹצֵא (לִמְצֹוא)', English: 'Find (Look for)' },
+	  { Hebrew: 'מַזְמִין (לְהַזְמִין)', English: 'To Order / Invite' },
+	  { Hebrew: 'מַחְזִיר (לְהַחְזִיר)', English: 'Return (Returning)' },
+	  { Hebrew: 'מְחַפֵּשׂ (לְחַפֵּשׂ)', English: 'Search (Searching)' },
+	  { Hebrew: 'מְטַלְפֵּן (לְטַלְפֵּן)', English: 'Telephone' },
+	  { Hebrew: 'מְנַגֵּן (לַנַּגָּן)', English: 'Play Instrument' },
+	  { Hebrew: 'מְצַיֵּר (לַצַּיָּר)', English: 'Draws (to draw)' },
+	  { Hebrew: 'תּוֹלֶה (לַתְּלוּת)', English: 'Hang (To hang)' },
+	  { Hebrew: 'חוֹשֵׁב', English: 'Thinking' },
+	  { Hebrew: 'יָקָר', English: 'Important' },
+	  { Hebrew: 'מְיֻוחָד', English: 'Expensive' },
+	  { Hebrew: 'עַתִּיק', English: 'Special' },
+	  { Hebrew: 'אַחֲרֵי', English: 'After' },
+	  { Hebrew: 'בְּדִיּוּק', English: 'Exactly' },
+	  { Hebrew: 'בְּדֶרֶךְ כְּלָל', English: 'Usually' },
+	  { Hebrew: 'דְּרִישַׁת שָׁלוֹם', English: 'Greet / Send Hi**' },
+	  { Hebrew: 'לַכָּבוֹד', English: 'For: **' },
+	  { Hebrew: 'מָגֵן דָּוִד', English: "David's Shield**" },
+	  { Hebrew: 'עוֹבֵר מִדּוֹר לַדּוֹר', English: 'Passed from generation to generation' },
+	  { Hebrew: 'עֶרֶב שַׁבָּת', English: 'Shabbat Evening' },
+	  { Hebrew: 'קֹודֶם', English: 'At first (before)**' },
+	  { Hebrew: 'קִידּוּשׁ', English: 'Kiddush' }
+	  // Add more flashcards as needed
+	];
+
+
+	
+	const flashcards9 = [
+      // Flashcards for Book 2 Unit 9
+	  { hebrew: 'אוּלָם', english: 'Hall' },
+	  { hebrew: 'אַשְׁפָּה', english: 'Garbage' },
+	  { hebrew: 'הִתְעַמְּלוּת קַרְקַע', english: 'Gymnastics' },
+	  { hebrew: 'חֹוק', english: 'Law' },
+	  { hebrew: 'טֶנִיס', english: 'Tennis' },
+	  { hebrew: 'כַּדּוּרְסַל', english: 'Basketball' },
+	  { hebrew: 'כַּפְתּוֹר', english: 'Botton' },
+	  { hebrew: 'מְיגָרֵשׁ', english: 'Court/Site/Field' },
+	  { hebrew: 'מֶטֶר', english: 'Meter' },
+	  { hebrew: 'סְפּוֹרְטַאי', english: 'Sportsman' },
+	  { hebrew: 'קְפִיצָה לַגֹּובַהּ ', english: 'High Jump' },
+	  { hebrew: 'רִיצָּה', english: 'Running' },
+	  { hebrew: 'שׁוֹפֵט', english: 'Judge' },
+	  { hebrew: 'שַׂק', english: 'Bag' },
+	  { hebrew: 'תּוֹר', english: 'Queue' },
+	  { hebrew: 'תַּחֲרוּת', english: 'Competition' },
+	  { hebrew: 'תְּעוּדָה', english: 'Diploma' },
+	  { hebrew: 'גּוֹמֵר (לִגְמֹור)', english: 'Finish (To Finish)' },
+	  { hebrew: 'דּוֹחֵף (לִדְחֹוף)', english: 'Pushing (to Push)' },
+	  { hebrew: 'זוֹכֵר (לִזְכֹּור)', english: 'Remembering (To Remember)' },
+	  { hebrew: 'זוֹרֵק (לִזְרֹוק)', english: 'Throw (To Throw)' },
+	  { hebrew: 'מַגִּיעַ (לְהַגִּיעַ)', english: 'Comming up (To arrive)' },
+	  { hebrew: 'מוֹדֵד (לִמְדֹוד)', english: 'Masure (To Masure)' },
+	  { hebrew: 'מוֹצָאֵי (לְהוֹצִיא)', english: 'Taking out (To take out)' },
+	  { hebrew: 'מְנַצֵּחַ (לְנַצֵּחַ)', english: 'Winning (To win)' },
+	  { hebrew: 'מַפְסִיד (לְהַפְסִיד)', english: 'Losing (To Lose)' },
+	  { hebrew: 'מִשְׁתַּתֵּף (לְהִשְׁתַּתֵּף)', english: 'Participant (Participating)' },
+	  { hebrew: 'מִתְאַמֵּן (לְהִתְאַמֵּן)', english: 'Training (To Train)' },
+	  { hebrew: 'מִתְעַמֵּל (לְהִתְעַמֵּל)', english: 'Gymnast' },
+	  { hebrew: 'צוֹדֵק', english: 'Right (Correct)' },
+	  { hebrew: 'צוֹעֵק (לִצְעֹוק)', english: 'Shouting (To Yell)' },
+	  { hebrew: 'קוֹפֵץ (לִקְפֹּוץ)', english: 'Jumping (To jump)' },
+	  { hebrew: 'תּוֹפֵר (לִתְפֹּור)', english: 'Tailor (To Sew)' },
+	  { hebrew: 'אַחֲרוֹן', english: 'Last' },
+	  { hebrew: 'גָּבוֹהַּ', english: 'Tall' },
+	  { hebrew: 'רִאשׁוֹן ', english: 'First' },
+	  { hebrew: 'שֵׁנִי', english: 'Second' },
+	  { hebrew: 'אֵלַי ', english: 'To me' },
+	  { hebrew: 'יוֹם סְפּוֹרְט', english: 'Sports Day' },
+	  { hebrew: 'יִהְיֶה ', english: 'Will be' },
+	  { hebrew: 'לִכְבוֹד', english: 'TO/For' },
+	  { hebrew: 'לְכוּ ', english: 'Go (pl)' },
+	  { hebrew: 'לְתוֹךְ', english: 'In to / Inside' },
+	  { hebrew: 'מַחֲנַיִם', english: 'It\'s a game' },
+	  { hebrew: 'נַעֲשֶׂה', english: 'We will do' },
+	  { hebrew: 'עוֹד', english: 'Soon' },
+	  { hebrew: 'כּיפָק הֵי!', english: 'Slang in sports day' }
+	  	// Add more flashcards as needed
+	];
+
+	const flashcards10 = [
+      // Flashcards for Book 2 Unit 10
+	  { hebrew: "אֵשׁ", english: "Fire" },
+	  { hebrew: "אֶרֶץ", english: "Earth/Ground" },
+	  { hebrew: "בְּדִיחָה", english: "A joke" },
+	  { hebrew: "בּוּל", english: "Stamp" },
+	  { hebrew: "הַזְמָנָה", english: "Invitation" },
+	  { hebrew: "הַצָּגָה", english: "Presentation / Demonstration" },
+	  { hebrew: "חֹופֶשׁ", english: "Summer Holliday / Freedom" },
+	  { hebrew: "חַלּוֹן", english: "Window" },
+	  { hebrew: "יָם", english: "Sea" },
+	  { hebrew: "מְדוּרָה", english: "Camp fire" },
+	  { hebrew: "מַמְתַּקִּים", english: "Sweets" },
+	  { hebrew: "נֵר נֵרוֹת", english: "Candle/Candles" },
+	  { hebrew: "מְפַקֵּד מְפַקֶּדֶת", english: "Commander (m)/Comaander (f)" },
+	  { hebrew: "עָנָף", english: "Branch" },
+	  { hebrew: "צִפּוֹר", english: "A Bird" },
+	  { hebrew: "קוֹצִים", english: "Spikes" },
+	  { hebrew: "קְרָשִׁים", english: "Planks" },
+	  { hebrew: "שְׂמִיכָה", english: "Blanket" },
+	  { hebrew: "תָּוכְנִית", english: "Program" },
+	  { hebrew: "תַּפּוּחֵי אֲדָמָה", english: "Potatoes" },
+	  { hebrew: "אוֹסֵף (לֶאֱסֹף)", english: "Collect (To Collect)" },
+	  { hebrew: "בּוֹחֵר (לִבְחֹור)", english: "Select (To Select)" },
+	  { hebrew: "דּוֹאֵג (לִדְאֹוג)", english: "Worry (To be in Worry)" },
+	  { hebrew: "מֵבִיא (לְהָבִיא)", english: "Bring (To Bring)" },
+	  { hebrew: "מַדְלִיק (לְהַדְלִיק)", english: "Ignite / Light up" },
+	  { hebrew: "מֵכִין (לְהָכִין)", english: "Prepare (To Prepare)" },
+	  { hebrew: "מְלַמֵּד (לְלַמֵּד)", english: "Teaching (To Teach)" },
+	  { hebrew: "מַצִּיג (לְהַצִּיג)", english: "Present (To Present something)" },
+	  { hebrew: "מִקְוֶה (לְקַוּוֹת)", english: "Hope (To hope)" },
+	  { hebrew: "מִתְגַּעְגֵּעַ (לְהִתְגַּעְגֵּעַ)", english: "Miss (To Miss somebody)" },
+	  { hebrew: "עוֹבֵר (לַעֲבֹור) [דִּירָה]", english: "Moving [appartments]" },
+	  { hebrew: "יָבֵשׁ", english: "Dry" },
+	  { hebrew: "מְבֻוגָּר", english: "Adult" },
+	  { hebrew: "רָחוֹק", english: "Far away" },
+	  { hebrew: "בַּחוּץ", english: "Outside" },
+	  { hebrew: "בֶּן דּוֹד", english: "Cousin" },
+	  { hebrew: "בְּשָׁנָה הֲבָאָה", english: "Next year" },
+	  { hebrew: "הַשָּׁנָה", english: "This year" },
+	  { hebrew: "זְהִירוּת", english: "Warning (Careful)" },
+	  { hebrew: "לְבַד", english: "Alone" },
+	  { hebrew: "לִפְעָמִים", english: "Sometimes" },
+	  { hebrew: "מַצַּב-רוּחַ", english: "Mood" },
+	  { hebrew: "סוֹף", english: "End" },
+	  { hebrew: "סֵפֶר זִכְרוֹנוֹת", english: "A book of memories" },
+	  { hebrew: "פִּתְאוֹם", english: "Suddenly" },
+	  // Add more flashcards as needed
+	];
+
+	
+
+    // Set initial score for each unit
+    let score1 = 0;
+    let score2 = 0;
+    let score3 = 0;
+    let score4 = 0;
+    let score5 = 0;
+    let score6 = 0;
+    let score7 = 0;
+    let score8 = 0;
+    let score9 = 0;
+    let score10 = 0;
+
+	
+
+    // Generate flashcards for a specific unit
+    function generateFlashcards(containerId, flashcards, scoreId, messageId) {
+      const flashcardContainer = document.getElementById(containerId);
+      flashcardContainer.innerHTML = '';
+
+      // Randomly select a card index
+      const currentCardIndex = Math.floor(Math.random() * flashcards.length);
+
+      // Get the current card
+      const currentCard = flashcards[currentCardIndex];
+
+      // Display the Hebrew card
+      const hebrewCard = document.createElement('div');
+      hebrewCard.classList.add('card', 'hebrew-card');
+      hebrewCard.textContent = currentCard.hebrew;
+
+      flashcardContainer.appendChild(hebrewCard);
+
+      // Display the English options
+      const options = generateOptions(currentCard, flashcards);
+      options.forEach((option, index) => {
+        const englishCard = document.createElement('div');
+        englishCard.classList.add('card', 'english-card');
+        englishCard.textContent = option.english;
+
+        // Attach click event listener only if the card is not already flipped
+        let clickCount = 0;
+        englishCard.addEventListener('click', () => {
+          if (clickCount > 0 || englishCard.classList.contains('flipped')) {
+            return;
+          }
+
+          clickCount++;
+          checkAnswer(englishCard, currentCard, flashcards, scoreId, messageId, containerId);
+        });
+
+        flashcardContainer.appendChild(englishCard);
+      });
+    }
+
+    function generateOptions(currentCard, flashcards) {
+      // Exclude the correct answer from the options
+      const options = flashcards.filter(card => card.english !== currentCard.english);
+
+      // Shuffle the options and select the first three
+      const shuffledOptions = shuffleArray(options).slice(0, 3);
+
+      // Add the correct answer to the options
+      shuffledOptions.push(currentCard);
+
+      // Shuffle the options again to ensure the correct answer is not always in the same position
+      return shuffleArray(shuffledOptions);
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function checkAnswer(selectedCard, currentCard, flashcards, scoreId, messageId, containerId) {
+      const messageElement = document.getElementById(messageId);
+      const flashcardContainer = document.getElementById(containerId);
+
+      // Get the Hebrew card element
+      const hebrewCard = flashcardContainer.querySelector('.hebrew-card');
+
+      // Remove the correct-answer and wrong-answer classes from all cards
+      flashcardContainer.querySelectorAll('.english-card').forEach(card => {
+        card.classList.remove('correct-answer', 'wrong-answer');
+      });
+
+      // Check if the selected card corresponds to the correct English translation
+      const isCorrect = selectedCard.textContent === currentCard.english;
+
+      if (isCorrect) {
+        // Correct answer
+        updateScore(scoreId, flashcards);
+        messageElement.textContent = 'You are correct!';
+
+        // Add the class for the green effect to the selected card
+        selectedCard.classList.add('correct-answer');
+      } else {
+        // Wrong answer
+        updateScore(scoreId, flashcards, -2);
+        messageElement.textContent = 'You are wrong!';
+
+        // Add the class for the red effect to the selected card
+        selectedCard.classList.add('wrong-answer');
+      }
+
+      // Remove the class after 0.5 seconds and generate new flashcards
+      setTimeout(() => {
+        selectedCard.classList.remove('correct-answer', 'wrong-answer');
+        generateFlashcards(containerId, flashcards, scoreId, messageId);
+      }, 500);
+    }
+
+    function updateScore(scoreId, flashcards, value = 1) {
+      const scoreElement = document.getElementById(scoreId);
+      const currentCardIndex = flashcards.findIndex(card => card.english === flashcards[flashcards.length - 1].english);
+      const unitScore = flashcards[currentCardIndex].score || 0;
+
+      flashcards[currentCardIndex].score = unitScore + value;
+
+      const totalScore = flashcards.reduce((acc, card) => acc + (card.score || 0), 0);
+
+      scoreElement.textContent = `Score: ${totalScore}`;
+    }
+
+    // Generate new flashcards for each unit
+    generateFlashcards('flashcard-container1', flashcards1, 'score1', 'message1');
+    generateFlashcards('flashcard-container2', flashcards2, 'score2', 'message2');
+    generateFlashcards('flashcard-container3', flashcards3, 'score3', 'message3');
+    generateFlashcards('flashcard-container4', flashcards4, 'score4', 'message4');
+    generateFlashcards('flashcard-container5', flashcards5, 'score5', 'message5');
+    generateFlashcards('flashcard-container6', flashcards6, 'score6', 'message6');
+    generateFlashcards('flashcard-container7', flashcards7, 'score7', 'message7');
+    generateFlashcards('flashcard-container8', flashcards8, 'score8', 'message8');
+    generateFlashcards('flashcard-container9', flashcards9, 'score9', 'message9');
+    generateFlashcards('flashcard-container10', flashcards10, 'score10', 'message10');
+
+    </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

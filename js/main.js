@@ -50,10 +50,10 @@ class MyHeader extends HTMLElement {
 
 
                     <li class="dropdown">
-                        <a href="Practice.html" class="submenu-trigger">Practice <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
+                        <a href="Practice.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i></a> class="submenu-trigger">Practice <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a></a>
                         <ul class="submenu">
                             <a href="practiceBook1.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice Book 1</a>
-                            <a href="practiceBook2.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice BOok 2</a>
+                            <a href="practiceBook2.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Practice Book 2</a>
                         </ul>
                     </li>
                     

@@ -68,9 +68,9 @@ class MyHeader extends HTMLElement {
                             <a href="donate_crypto.html"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i> Bitcoin - <i class="fa fa-btc fa-lg" aria-hidden="true"></i></a>
                         </ul>
                     </li>
+                    <li><a href="register.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Register</a></li>
                 </ul>
                 </div>
-                <p><span id="hebrew-date-value"></span></p>
             </nav>
         </header>
         `

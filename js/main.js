@@ -58,7 +58,7 @@ class MyHeader extends HTMLElement {
                     </li>
                     
 
-                    <li><a href="register.html"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Register</a></li>
+                    <li><a href="#"><i class="fa fa-gears fa-lg" aria-hidden="true"></i> Register</a></li>
                     <li class="dropdown">
                         <a href="donate.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">

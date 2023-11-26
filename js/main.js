@@ -66,9 +66,6 @@ class MyHeader extends HTMLElement {
                         <a href="ko-fi.html"><span style='font-size:px;'>&#9749;</span> Ko-fi QR </a>
                         </ul>
                     </li>-->
-                    <li>
-                    <a href='https://ko-fi.com/L3L8R1QN8' target='_blank'><img height='36' style='border:0px;height:36px;' src='img/kofi_s_tag_dark.webp' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-                    </li>
                 </ul>
             </nav>
         </header>

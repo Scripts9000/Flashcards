@@ -78,4 +78,20 @@ class MyHeader extends HTMLElement {
     }
 }
 
+
+class MyFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <footer>
+            <address>
+                © Hebrewy.org<br/>
+                <a href="https://hebrewy.org/ko-fi.html">Donate</a>
+            </address>
+        </footer>
+        `
+    }
+}
+
 customElements.define ('my-header', MyHeader)
+customElements.define ('my-footer', MyFooter)
+

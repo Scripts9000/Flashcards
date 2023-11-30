@@ -577,6 +577,42 @@ transition: .4s;
   .big {
     text-align: center; /* Center-align text for better readability */
   }
+
+  .nav-links {
+    display: none; /* Hide the navigation links by default */
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center; /* Center-align the links */
+  }
+
+  .nav-links.show {
+    display: flex; /* Show the links when the 'show' class is applied */
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger icon by default */
+  }
+
+  .close-icon {
+    display: none; /* Hide the close icon by default */
+  }
+
+
+}
+
+@media (min-width: 601px) {
+  .hamburger {
+    display: none; /* Hide the hamburger icon on larger screens */
+  }
+
+  .close-icon {
+    display: none; /* Hide the close icon on larger screens */
+  }
+}
+
+/* Add this CSS for both screen sizes */
+.hamburger,
+.close-icon {
+  cursor: pointer;
 }
 
 

@@ -558,6 +558,26 @@ transition: .4s;
     text-align: center; /* Center-align text for better readability */
     padding: 20px; /* Reduced padding for small screens */
   }
+
+  .flex-container {
+    flex-direction: column; /* Stack flex items vertically for small screens */
+    align-items: center; /* Center-align items in the flex container */
+  }
+
+  .image {
+    margin: 0; /* Remove margin for the image */
+  }
+
+  .text-container {
+    direction: rtl; /* Keep right-to-left direction */
+    text-align: center; /* Center-align text within the text container */
+  }
+  .hero-heading,
+  .post-date-hebrew,
+  .hero-paragraph-hebrew,
+  .big {
+    text-align: center; /* Center-align text for better readability */
+  }
 }
 
 

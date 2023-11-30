@@ -28,6 +28,23 @@ document.addEventListener("DOMContentLoaded", function () {
     submenus.forEach((submenu) => {
       submenu.style.display = "none";
     });
+
+  // Add this JavaScript to toggle the navigation links
+  const hamburger = this.querySelector('.hamburger');
+  const closeIcon = this.querySelector('.close-icon');
+  const navLinks = this.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.style.display = 'none';
+      closeIcon.style.display = 'block';
+  });
+
+  closeIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.style.display = 'block';
+      closeIcon.style.display = 'none';
+  });
   }
 
   submenuLinks.forEach((link) => {

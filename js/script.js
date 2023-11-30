@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");
   const submenus = document.querySelectorAll(".submenu");
+  
+  
 
   // Function to close all submenus
   function closeAllSubmenus() {

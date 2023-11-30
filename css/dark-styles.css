@@ -584,7 +584,9 @@ transition: .4s;
     align-items: center; /* Center-align the links */
   }
 
-
+  .ul li a {
+    font-size: smaller;
+  }
 
 
 }

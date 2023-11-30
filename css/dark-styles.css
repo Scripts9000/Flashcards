@@ -574,9 +574,6 @@ transition: .4s;
     direction: rtl; /* Keep right-to-left direction */
     text-align: center; /* Center-align text within the text container */
   }
-  .hero-heading,
-  .post-date-hebrew,
-  .hero-paragraph-hebrew,
   .big {
     text-align: center; /* Center-align text for better readability */
   }

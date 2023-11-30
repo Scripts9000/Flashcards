@@ -705,3 +705,8 @@ a {
   display: flex;
   align-items: center; /* Align items vertically in the center */
 }
+
+
+.text-container {
+  flex: 1; /* Take up the remaining space */
+}

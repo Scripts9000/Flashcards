@@ -599,21 +599,6 @@ transition: .4s;
 
 }
 
-@media (min-width: 601px) {
-  .hamburger {
-    display: none; /* Hide the hamburger icon on larger screens */
-  }
-
-  .close-icon {
-    display: none; /* Hide the close icon on larger screens */
-  }
-}
-
-/* Add this CSS for both screen sizes */
-.hamburger,
-.close-icon {
-  cursor: pointer;
-}
 
 
 .popup {

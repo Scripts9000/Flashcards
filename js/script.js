@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");
   const submenus = document.querySelectorAll(".submenu");
   
-  // Hamburger icon functionality
+  /* Add this JavaScript to toggle the navigation links */
   const hamburger = document.querySelector('.hamburger');
   const closeIcon = document.querySelector('.close-icon');
   const navLinks = document.querySelector('.nav-links');
@@ -11,17 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburger.style.display = 'none';
   closeIcon.style.display = 'block';
 
-  hamburger.addEventListener('click', function () {
-    navLinks.classList.toggle('show');
-    hamburger.style.display = 'none';
-    closeIcon.style.display = 'block';
-  });
-
-  closeIcon.addEventListener('click', function () {
-    navLinks.classList.remove('show');
-    closeIcon.style.display = 'none';
-    hamburger.style.display = 'block';
-  });
+  
 
   // Function to close all submenus
   function closeAllSubmenus() {
@@ -43,11 +33,45 @@ document.addEventListener("DOMContentLoaded", function () {
       submenu.style.display = isSubMenuVisible ? "none" : "block";
     });
 
+    document.addEventListener("DOMContentLoaded", function () {
+      const submenuLinks = document.querySelectorAll(".submenu-trigger");
+      const submenus = document.querySelectorAll(".submenu");
+    
+
+      submenuLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const submenu = link.nextElementSibling;
+          const isSubMenuVisible = submenu.style.display === "block";
+    
+          // Close all submenus
+          closeAllSubmenus();
+    
+          // Show or hide the clicked submenu
+          submenu.style.display = isSubMenuVisible ? "none" : "block";
+        });
+      });
+    
+      // Click event listener for the document to close the submenu when clicking outside
+      document.addEventListener("click", function (e) {
+        const isInsideSubmenu = Array.from(submenus).some((submenu) =>
+          submenu.contains(e.target)
+        );
+    
+        if (!isInsideSubmenu) {
+          closeAllSubmenus();
+        }
+      });
+    
+    });
+    
+
     // Close the submenu when the mouse leaves it
     link.nextElementSibling.addEventListener("mouseleave", function () {
       this.style.display = "none";
     });
   });
+
 
   // Card flipping code
   const cardContainers = document.querySelectorAll('.card-container');
@@ -86,18 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const stylesheetLink = document.getElementById('stylesheet-link');
   let isDarkMode = true;
 
-  toggleButton.addEventListener('click', () => {
-    isDarkMode = !isDarkMode;
-    const darkModeClass = 'dark-mode';
-
-    if (isDarkMode) {
-      document.body.classList.add(darkModeClass);
-      stylesheetLink.href = 'dark-mode.css'; // Change the link to your dark mode stylesheet
-    } else {
-      document.body.classList.remove(darkModeClass);
-      stylesheetLink.href = 'light-mode.css'; // Change the link to your light mode stylesheet
-    }
-  });
 
   // Info functionality
   const cards = document.querySelectorAll('.card');
@@ -123,4 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  
+  
+  
+
+
 });
+

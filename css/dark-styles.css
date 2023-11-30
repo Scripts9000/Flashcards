@@ -463,6 +463,8 @@ transition: .4s;
     position: absolute; /* Position the date element */
     bottom: -25px; /* Adjust the vertical position as needed */
     right: 0; /* Position it at the left side */
+    display: block; /* Make the span a block element for proper centering */
+    text-align: center; /* Center-align the date */
     }
 
 
@@ -741,7 +743,3 @@ a {
   text-align: right;
 }
 
-.post-date-hebrew {
-  display: block; /* Make the span a block element for proper centering */
-  text-align: center; /* Center-align the date */
-}

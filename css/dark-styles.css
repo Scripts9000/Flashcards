@@ -700,6 +700,7 @@ a {
   width: 250px;
   height: 250px;
   margin-right: 20px;
+  align-items: left;
 }
 
 .flex-container {

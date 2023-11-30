@@ -579,22 +579,12 @@ transition: .4s;
   }
 
   .nav-links {
-    display: none; /* Hide the navigation links by default */
-    flex-direction: column; /* Stack the links vertically */
+    /*display: none; /* Hide the navigation links by default */
+    flex-direction: row; /* Stack the links vertically */
     align-items: center; /* Center-align the links */
   }
 
-  .nav-links.show {
-    display: flex; /* Show the links when the 'show' class is applied */
-  }
 
-  .hamburger {
-    display: block; /* Show the hamburger icon by default */
-  }
-
-  .close-icon {
-    display: none; /* Hide the close icon by default */
-  }
 
 
 }

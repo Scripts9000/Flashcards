@@ -6,6 +6,8 @@ class MyHeader extends HTMLElement {
                 <div class="logo">
                     <h1>Hebrewy</h1>
                 </div>
+                <div class="hamburger">&#9776;</div>
+                <div class="close-icon">&#10006;</div>
                 <ul class="nav-links">
                     <li><a href="index.html">Updates</a></li>
                     <li class="dropdown">

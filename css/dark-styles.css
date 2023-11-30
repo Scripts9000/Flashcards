@@ -700,3 +700,8 @@ a {
   width: 100px; /* Adjust the width as needed */
   margin-right: 20px; /* Adjust the margin as needed */
 }
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}

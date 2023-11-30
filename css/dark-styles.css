@@ -740,3 +740,8 @@ a {
   direction: ltr;
   text-align: right;
 }
+
+.post-date-hebrew {
+  display: block; /* Make the span a block element for proper centering */
+  text-align: center; /* Center-align the date */
+}

@@ -421,6 +421,7 @@ transition: .4s;
 
 .container-hebrew {
   display: flex;
+  direction: rtl;
   max-width: 1100px; 
   margin: 0 auto; 
   margin-top: 30px;
@@ -709,4 +710,5 @@ a {
 
 .text-container {
   flex: 1; /* Take up the remaining space */
+  direction: ltr;
 }

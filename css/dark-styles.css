@@ -552,6 +552,12 @@ transition: .4s;
     box-shadow: none; /* No box shadow */
     padding: 20px; /* Reduced padding for small screens */
   }
+
+  .container-hebrew {
+    flex-direction: column; /* Stack flex items vertically for small screens */
+    text-align: center; /* Center-align text for better readability */
+    padding: 20px; /* Reduced padding for small screens */
+  }
 }
 
 

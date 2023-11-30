@@ -712,4 +712,5 @@ a {
 .text-container {
   flex: 1; /* Take up the remaining space */
   direction: ltr;
+  text-align: right;
 }

@@ -44,11 +44,7 @@ nav {
   list-style: none;
   display: flex;
   align-items: center;
-  display: none; /* Hide the navigation links by default */
-  flex-direction: column; /* Stack the links vertically */
-  align-items: center; /* Center-align the links */
-  }
-
+}
 
 .nav-links li {
   margin-right: 0, 10px;
@@ -582,6 +578,11 @@ transition: .4s;
     text-align: center; /* Center-align text for better readability */
   }
 
+  .nav-links {
+    display: none; /* Hide the navigation links by default */
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center; /* Center-align the links */
+  }
 
   .nav-links.show {
     display: flex; /* Show the links when the 'show' class is applied */

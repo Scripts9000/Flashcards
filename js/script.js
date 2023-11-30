@@ -1,17 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");
   const submenus = document.querySelectorAll(".submenu");
-  
-  /* Add this JavaScript to toggle the navigation links */
-  const hamburger = document.querySelector('.hamburger');
-  const closeIcon = document.querySelector('.close-icon');
-  const navLinks = document.querySelector('.nav-links');
-
-  navLinks.classList.toggle('show');
-  hamburger.style.display = 'none';
-  closeIcon.style.display = 'block';
-
-  
 
   // Function to close all submenus
   function closeAllSubmenus() {

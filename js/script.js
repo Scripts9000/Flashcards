@@ -135,7 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");

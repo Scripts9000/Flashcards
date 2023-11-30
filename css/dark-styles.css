@@ -696,3 +696,7 @@ a {
   color: pink;
 }
 
+.image {
+  width: 100px; /* Adjust the width as needed */
+  margin-right: 20px; /* Adjust the margin as needed */
+}

@@ -3,8 +3,10 @@ class MyHeader extends HTMLElement {
         this.innerHTML = `
         <header>
             <nav>
-                <div class="logo">
-                    <h1>Hebrewy</h1>
+                <div id="logo">
+                    <a href="">
+                        <img src="img/logo.png" alt="Hebrewy" />
+                    </a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Updates</a></li>

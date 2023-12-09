@@ -368,7 +368,7 @@ transition: .4s;
 
 
 .hero-paragraph {
-  font-family: Lato;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px; 
   font-weight: 300;
   line-height: 1.6; 
@@ -379,7 +379,7 @@ transition: .4s;
 }
 
 .hero-paragraph-crypto {
-  font-family: Lato;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px; 
   font-weight: 300;
   line-height: 1.6; 

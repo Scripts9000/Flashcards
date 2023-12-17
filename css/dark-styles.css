@@ -135,7 +135,7 @@ ul li a:hover{
   background-color: #ff0000; /* Change the background color as desired */
 }
 
-
+ccnainner
 .sub-item.open .sub-submenu {
   display: block;
 }
@@ -235,7 +235,7 @@ ul li a:hover{
 
   .card-front {
     background-color: #555;
-    color: #e0e0e0;
+    color: #3b79ff;
     padding: 20px;
     border-radius: 10px;
   }
@@ -753,4 +753,5 @@ a {
   direction: ltr;
   text-align: right;
 }
+
 

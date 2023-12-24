@@ -18,7 +18,7 @@ class MyHeader extends HTMLElement {
                             <a href="Sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
                             <a href="voweles.html"> Vowels תְּנוּעוֹת</a>
                             <a href="alphabet_detail.html"> Alphabet Details</a>
-                            <a href="sounds.html">Sounds</a>
+                            <a href="sounds.html">Read Hebrew</a>
                         </ul>
                     </li>
 

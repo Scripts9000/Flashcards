@@ -561,12 +561,12 @@
   
   
     /* Styles for smaller screens (e.g., mobile phones) */
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     .container {
       max-width: 100%; /* Full width for small screens */
       border-radius: 0; /* No border radius */
       box-shadow: none; /* No box shadow */
-      padding: 20px; /* Reduced padding for small screens */
+      padding: 5px; /* Reduced padding for small screens */
     }
   
     .container-hebrew {
@@ -625,9 +625,9 @@
   
 
     /* Responsive font size adjustments */
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
     .tablegrid td {
-      font-size: 16px; /* Adjust the font size for smaller screens */
+      font-size: 14px; /* Adjust the font size for smaller screens */
     }
   }
   }
@@ -784,7 +784,7 @@
     text-align: right;
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     .tablegrid td {
       font-size: 12px; /* Adjust the font size for smaller screens */
       white-space: normal; /* Allow text to wrap within cells */

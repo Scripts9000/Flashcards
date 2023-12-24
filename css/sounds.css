@@ -1,0 +1,758 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: Arial;
+      /* display: flex; */
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+      /*background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/bg/green-apples7.jpg);*/
+      background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/bg/Channukah2.png);
+      color: #e0e0e0;
+      padding-top: 10px;
+    }
+
+    .h2-left{
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .p-left {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+
+    header {
+      /* background-color: #6d6d6d; */
+      background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      margin-top: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .logo {
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    margin-right: 0, 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    z-index: 2; /* Adjust the z-index as needed */
+  }
+  
+  .dropdown .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #575757; */
+    background-color: rgba(48, 48, 48, 1.0); /* Semi-transparent background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  footer {
+    max-width: 1100px; 
+    margin: 0 auto; 
+    margin-top: 30px;
+    padding: 0 0; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  /* ... (previous code) ... */
+  
+  /* Style for sub-submenu items */
+  
+  .submenu:hover .sub-submenu {
+    display: block;
+  }
+  
+  
+  ul li {
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
+  
+  ul li a{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 20px;
+    border: 5px solid transparent;
+    transition: 0.2s ease;
+    text-decoration: none;
+  }
+  
+  ul li a:hover{
+  
+    background-color: #373737;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  
+  .sub-item.active {
+    background-color: #ff0000; /* Change the background color as desired */
+  }
+  
+
+  .sub-item.open .sub-submenu {
+    display: block;
+  }
+  
+  .sub-item a{
+    white-space: nowrap;
+  }
+  
+  
+  .submenu a {
+    white-space: nowrap;
+    display: block;
+    padding: 5px 20px;
+    transition: 0.2s ease;
+    text-decoration: none;
+    padding-right:0px;
+  }
+  
+  /* Selector */
+  .submenu a:hover {  
+    background-color: #474747;
+    color: #ffffff;
+  }
+  
+  /* Style for sub-submenu items */
+  .sub-submenu a {
+    white-space: nowrap;
+    display: block;
+    padding: 5px 20px;
+    transition: 0.2s ease;
+    text-decoration: none;
+  }
+  
+  
+  
+    .title-container {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      margin-top: 30px;
+      
+    }
+  
+    .card-container {
+      margin-top: 20px;
+      justify-content: center;
+      cursor: default;
+      flex-wrap: wrap;
+      gap: 10px;    
+      perspective: 1500px;
+      display: flex; 
+      /* background-color: #262626; */
+      border: 1px solid #444444;
+  
+    }
+    
+    .card {
+      width: 200px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      transform-style: preserve-3d;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 10px;
+      /* background-color: #333; */
+      background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */
+      border: 1px solid #555;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow with some transparency */
+    }
+  
+  
+  
+    .large-font .card {
+      font-size: 65px; /* Adjust the font size as desired */
+    }
+  
+    .right-to-left-container {
+      flex-direction: row-reverse;
+    }
+    
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+  
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+    }
+  
+    .card-front {
+      background-color: #555;
+      color: #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .card-back {
+      background-color: #837676;
+      color: #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+      transform: rotateY(180deg);
+    }
+  
+    .card.flipped .card-front {
+      display: none;
+    }
+  
+    .card.flipped .card-back {
+      display: block;
+      transform: rotateY(180deg); 
+    }
+    
+    .card:hover {
+      box-shadow: 1px 2px 1px 5px rgb(166, 2, 2);
+    }
+    /* Style for the toggle button */
+  
+    #dark-mode-toggle {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: default;
+      font-size: 16px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    /* Style for the toggle button when hovered */
+    #dark-mode-toggle:hover {
+      background-color: #2980b9;
+    
+  }
+  /* Round button dark style */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  } 
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+  border-radius: 34px;
+  }
+  
+  .slider.round:before {
+  border-radius: 50%;
+  }
+  
+  
+  .slider {
+  position: absolute;
+  cursor: default;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+  
+  /* --------------------------- */
+  }
+  
+  .hero-heading {
+    font: Arial;
+    font-size: 48px; 
+    font-weight: bold; 
+    color: #e6e6e6; 
+    /* margin-top: 30px; */
+    margin-bottom: 20px; 
+    position: relative;
+  }
+  
+  
+  
+  .hero-heading-donation {
+    text-align: center;
+    font-size: 48px; 
+    font-weight: bold; 
+    color: #e6e6e6; 
+    /* margin-top: 30px; */
+    margin-bottom: 20px; 
+    position: relative;
+  }
+  
+  
+  .hero-paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    font-weight: 300;
+    line-height: 1.6; 
+    color: #e6e6e6; 
+    margin-bottom: 30px;
+    margin-top: 50px; 
+    text-align: left;
+  }
+  
+  .hero-paragraph-crypto {
+    font-family: Arial;
+    font-size: 20px; 
+    font-weight: 300;
+    line-height: 1.6; 
+    color: #e6e6e6; 
+    margin-bottom: 30px;
+    /* margin-left:115px; */
+    margin-top: 50px; 
+    text-align: left;
+  }
+  
+  
+  .hero-paragraph-hebrew {
+    font-size: 20px; 
+    line-height: 1.6; 
+    color: #e6e6e6; 
+    margin-bottom: 30px;
+    margin-top: 50px; 
+    text-align: right;
+  }
+  
+  .example {
+    font-size: 80px;
+    color: #e6e6e6;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1100px; 
+    margin: 0 auto; 
+    margin-top: 30px;
+    padding: 0 0; 
+    /* background-color: #555;  */
+    background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */  
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+    padding: 40px; 
+    padding-bottom: 60px ;
+    text-align: center; /*this will center the date in cells
+
+  }
+  
+  .container-hebrew {
+    display: flex;
+    max-width: 1100px; 
+    margin: 0 auto; 
+    margin-top: 30px;
+    padding: 0 0; 
+    /* background-color: #555;  */
+    background-color: rgba(48, 48, 48, 0.9); /* Semi-transparent background color */  
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+    padding: 40px; /* Increase padding for better spacing */
+  }
+  
+  
+  
+  .container:hover {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
+    transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
+  }
+  
+  .container-hebrew:hover {
+      box-shadow: 0px 0px 20px rgb(255, 255, 255); /* Slightly stronger shadow on hover */
+      transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
+    }
+  
+  
+  .post-date {
+    font-family: Space-mono, monospace;
+    font-size: 18px; /* Adjust the font size as needed */
+    /* font-style: italic; */
+    color: #e6e6e6; 
+    position: absolute; /* Position the date element */
+    bottom: -25px; /* Adjust the vertical position as needed */
+    left: 0; /* Position it at the left side */
+    }
+    
+    .post-date-hebrew {
+      font-family: Space-mono, monospace;
+      font-size: 18px; /* Adjust the font size as needed */
+      /* font-style: italic; */
+      color: #e6e6e6; 
+      position: absolute; /* Position the date element */
+      bottom: -25px; /* Adjust the vertical position as needed */
+      right: 0; /* Position it at the left side */
+      display: block; /* Make the span a block element for proper centering */
+      text-align: center; /* Center-align the date */
+      }
+  
+  
+    /* icons */
+    .fa-heart {
+      color: red;
+    }
+  
+    .fa-gears {
+      color: yellow;
+    }
+  
+    .fa-arrow-right {
+      color: rgb(0, 255, 0);
+    }
+  
+    .crypto-info {
+      max-width: 800px ;
+      text-align: center ;
+      padding-left: 70px ;
+      padding-right: 70px ;
+    }
+  
+  
+    .crypto-info-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .icon-container{
+      padding: auto;
+    }
+  
+  
+    .space-after-container {
+      height: 20px;
+    }
+  
+    .code {
+      font-family: monospace;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(0, 255, 0);
+      word-wrap: break-word;
+    }
+  
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 0px;
+  }
+  
+  
+    .video-wrapper {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .video-wrapper h1 {
+      font-size: 36px;
+      margin-bottom: 1px;
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+    }
+  
+    .video-wrapper video {
+      width: 720px;
+      height: 480px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+  
+  
+    /* Styles for smaller screens (e.g., mobile phones) */
+  @media (max-width: 600px) {
+    .container {
+      max-width: 100%; /* Full width for small screens */
+      border-radius: 0; /* No border radius */
+      box-shadow: none; /* No box shadow */
+      padding: 20px; /* Reduced padding for small screens */
+    }
+  
+    .container-hebrew {
+      flex-direction: column; /* Stack flex items vertically for small screens */
+      text-align: center; /* Center-align text for better readability */
+      padding: 20px; /* Reduced padding for small screens */
+    }
+  
+    .flex-container {
+      flex-direction: column; /* Stack flex items vertically for small screens */
+      align-items: center; /* Center-align items in the flex container */
+    }
+  
+    .image {
+      margin: 0; /* Remove margin for the image */
+    }
+  
+    .text-container {
+      direction: rtl; /* Keep right-to-left direction */
+      text-align: center; /* Center-align text within the text container */
+    }
+    .big {
+      text-align: center; /* Center-align text for better readability */
+    }
+  
+    .nav-links {
+      /*display: none; /* Hide the navigation links by default */
+      flex-direction: row; /* Stack the links vertically */
+      align-items: center; /* Center-align the links */
+    }
+  
+    .ul li a {
+      font-size: 10px;
+    }
+  
+  
+  }
+  
+  
+  
+  .popup {
+    display: none;
+    position: absolute;
+    color: #1a1a1a;
+    top: 0%;
+    left: 40%;
+    right: auto; /* Position it in the top-right corner */
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: auto; /* Adjust the width as needed */
+    max-width: 300px; /* Maximum width for the bubble */
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc; /* Add a border for better separation */
+  }
+  
+  .popup::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.9); /* Triangle pointer with same color as bubble background */
+    transform: translateX(-50%);
+  }
+  
+  
+  .construction {
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+  .bracha {
+    text-align: center; /* Center the content horizontally */
+    position: relative; /* Allows positioning within the parent container */
+    top: 50%; /* Move the element down by 50% of its own height */
+    transform: translateY(-50%); /* Center the element vertically */
+  }
+  
+  #msg {
+    height: 100px;
+  }
+  
+  /* Style the container for the form elements */
+  .form-container {
+    font-size: 16px;
+    display: flex; /* Display the elements in a row */
+    align-items: center; /* Vertically center the elements */
+  }
+  
+  /* Style the submit button */
+  #submit-button {
+    margin-right: 30px; /* Add some spacing to the right of the button */
+  }
+  
+  
+  
+  /* Add this CSS to create a two-column layout */
+  .container {
+    display:block;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  
+  
+  .form-info {
+    flex-basis: 30%; /* Set the width of the info column */
+    margin-left: 20px; /* Add some spacing between the form and info column */
+  }
+  
+  /* Adjust the styles as needed for spacing, colors, and fonts */
+  
+  
+  
+  .bigger {
+    font-size:larger;
+  }
+  
+  .tablegrid {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  
+
+
+  /* Style the table header row */
+  .tablegrid tr.row {
+    background-color: #3a3a3a; /* Add a background color */
+    text-align: center;
+  }
+  
+
+  /* Style table cells */
+  .tablegrid td {
+    border: 2px solid #c78dd9; /* Add a border to cells */
+    padding: 8px; /* Add padding for spacing */
+    text-align: center;
+    font-size: 30px; /* Adjust the font size as needed */
+    font-family: arial;
+  }
+  
+  
+  /* Style the table header row */
+  .tablegrid_y tr.row1 {
+    background-color: #3a3a3a; /* Add a background color */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* Style table cells */
+  .tablegrid_y td {
+    border: 1px solid #eeff00; /* Add a border to cells */
+    padding: 8px; /* Add padding for spacing */
+    text-align: center;
+    font-size: 30px; /* Adjust the font size as needed */
+  }
+  
+  
+  a {
+    color: pink;
+  }
+  
+  .image {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+    direction: ltr;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    width: 100%; /* Ensure the flex container takes up the full width */
+  }
+  
+  
+  .text-container {
+    flex: 1; /* Take up the remaining space */
+    direction: ltr;
+    text-align: right;
+  }
+  

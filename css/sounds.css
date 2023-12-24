@@ -625,7 +625,7 @@
   
 
     /* Responsive font size adjustments */
-    @media (max-width: 767px) {
+    @media (max-width: 600px) {
     .tablegrid td {
       font-size: 16px; /* Adjust the font size for smaller screens */
     }
@@ -784,9 +784,9 @@
     text-align: right;
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 600px) {
     .tablegrid td {
-      font-size: 9px; /* Adjust the font size for smaller screens */
+      font-size: 12px; /* Adjust the font size for smaller screens */
       white-space: normal; /* Allow text to wrap within cells */
     }
   }

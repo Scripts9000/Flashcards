@@ -790,3 +790,7 @@
       white-space: normal; /* Allow text to wrap within cells */
     }
   }
+
+  .ח { font-size: 25px; 
+        color: rgb(255, 255, 255);
+  }

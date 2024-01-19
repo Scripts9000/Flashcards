@@ -736,7 +736,7 @@
 
   /* Style table cells */
   .tablegrid td {
-    border: 2px solid #c78dd9; /* Add a border to cells */
+    border: 1px solid #c78dd9; /* Add a border to cells */
     padding: 8px; /* Add padding for spacing */
     text-align: center;
     font-size: 30px; /* Adjust the font size as needed */
@@ -745,13 +745,15 @@
   }
 
   .tablegrid_red td {
-    border: 2px solid rgb(255, 131, 131); /* Add a border to cells */
+    border: 1px solid rgb(255, 131, 131); /* Add a border to cells */
     padding: 8px; /* Add padding for spacing */
     text-align: center;
     font-size: 30px; /* Adjust the font size as needed */
     font-family: Arial;
     white-space: nowrap;
   }
+
+ 
   
   
   /* Style the table header row */
@@ -802,4 +804,30 @@
 
   .ח { font-size: 25px; 
         color: rgb(255, 255, 255);
+  }
+
+
+
+  @font-face {
+    font-family: "LevinAlefAlefAlef";
+    src: url("fonts/GveretLevinAlefAlefAlef/GveretLevinAlefAlefAlef/web/GveretLevinAlefAlefAlef-Regular.woff") format('woff');
+  }
+
+  @font-face {
+    font-family: "dana";
+    src: url("fonts/dana-yad-alefalefalef/dana-yad-alefalefalef/DanaYadAlefAlefAlef-Normal.woff") format('woff');
+  }
+
+  @font-face {
+    font-family: "motek";
+    src: url("/fonts/Motek/Motek.ttf") format('ttf');
+  }
+
+  .tablegrid_cursive td {
+    border: 1px solid #c78dd9; 
+    padding: 8px; 
+    text-align: center;
+    font-size: 30px; 
+    font-family: motek;
+    white-space: nowrap;
   }

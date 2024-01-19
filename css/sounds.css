@@ -743,6 +743,15 @@
     font-family: Arial;
     white-space: nowrap;
   }
+
+  .tablegrid_red td {
+    border: 2px solid rgb(255, 131, 131); /* Add a border to cells */
+    padding: 8px; /* Add padding for spacing */
+    text-align: center;
+    font-size: 30px; /* Adjust the font size as needed */
+    font-family: Arial;
+    white-space: nowrap;
+  }
   
   
   /* Style the table header row */

@@ -58,9 +58,9 @@ class MyHeader extends HTMLElement {
                         <ul class="submenu">
                             <a href="practiceBook1.html"> Book 1 all units</a>
                             <a href="practiceBook2.html"> Book 2 all units</a>
-                            <a href="100verbs.html">Practice 100 Verbs</a>
-                            <a href="100adverbs.html">Practice 100 Adverbs</a>
-                            <a href="100adjectives.html">Practice 100 Adjectives</a>
+                            <a href="100verbs.html">Practice Hebrew Verbs</a>
+                            <a href="100adverbs.html">Practice Hebrew Adverbs</a>
+                            <a href="100adjectives.html">Practice Hebrew Adjectives</a>
                         </ul>
                     </li>
                     

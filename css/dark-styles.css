@@ -210,6 +210,24 @@ ccnainner
   }
 
 
+  .card_green {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    transform-style: preserve-3d;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    /* background-color: #333; */
+    background-color: #005128; /* Semi-transparent background color */
+    border: 1px solid #555;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Box shadow with some transparency */
+  }
+
+
 
   .large-font .card {
     font-size: 65px; /* Adjust the font size as desired */
@@ -235,6 +253,13 @@ ccnainner
 
   .card-front {
     background-color: #555;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .card-front_green {
+    background-color: #609e7e;
     color: #e0e0e0;
     padding: 20px;
     border-radius: 10px;

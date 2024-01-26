@@ -56,10 +56,10 @@ class MyHeader extends HTMLElement {
                     <li class="dropdown">
                         <a href="#" class="submenu-trigger">Practice <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
-                            <a href="practiceBook1.html"> Practice Book 1</a>
-                            <a href="practiceBook2.html"> Practice Book 2</a>
-                            <a href="100verbs.html">100 Verbs</a>
-                            <a href="100adverbs.html">100 Adverbs</a>
+                            <a href="practiceBook1.html"> Book 1 all units</a>
+                            <a href="practiceBook2.html"> Book 2 all units</a>
+                            <a href="100verbs.html">Practice 100 Verbs</a>
+                            <a href="100adverbs.html">Practice 100 Adverbs</a>
                         </ul>
                     </li>
                     

@@ -90,6 +90,7 @@ class MyFooter extends HTMLElement {
             <address>
                 © Hebrewy.org <br/>
                 <a href="https://hebrewy.org/ko-fi.html">Buy Me a Coffee</a> <br/>
+                <img src="/img/coffee.svg" alt="Buy me a Coffee">
             </address>
         </footer>
         `

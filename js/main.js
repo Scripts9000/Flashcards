@@ -65,7 +65,7 @@ class MyHeader extends HTMLElement {
                     </li>
                     
 
-                    // <a href="https://ko-fi.com/hebrewy"><img src="/img/coffee-cup.png" alt="Buy me A Coffee" height="40"></a>
+                      <a href="https://ko-fi.com/hebrewy"><img src="/img/coffee-cup.png" alt="Buy me A Coffee" height="40"></a>
                 </ul>
             </nav>
         </header>

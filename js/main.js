@@ -66,13 +66,6 @@ class MyHeader extends HTMLElement {
                     
 
                     <li><a href="https://ko-fi.com/hebrewy"><img src="/img/coffee-cup.png" alt="Buy me A Coffee" height="30"></a></li>
-                    <!--<li class="dropdown">
-                        <a href="donate.html" class="submenu-trigger"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
-                        <ul class="submenu">
-                        <a href="donate_crypto.html"><i class="fa fa-btc fa-lg" aria-hidden="true"></i> Bitcoin </a>
-                        <a href="ko-fi.html"><span style='font-size:px;'>&#9749;</span> Ko-fi QR </a>
-                        </ul>
-                    </li>-->
                 </ul>
             </nav>
         </header>

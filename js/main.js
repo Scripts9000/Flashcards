@@ -63,6 +63,9 @@ class MyHeader extends HTMLElement {
                             <a href="100adjectives.html">Practice Hebrew Adjectives</a>
                         </ul>
                     </li>
+
+
+                    <li><a href="book_hebrew_class.html">Book a Hebrew Class</a></li>
                     
 
                 </ul>

@@ -65,7 +65,7 @@ class MyHeader extends HTMLElement {
                     </li>
 
 
-                    <li><a href="book_hebrew_class.html">Book a Hebrew Class</a></li>
+                    
                     
 
                 </ul>

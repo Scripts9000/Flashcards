@@ -65,11 +65,12 @@ class MyHeader extends HTMLElement {
                     </li>
 
                     <li class="dropdown">
-                    <a href="#" class="submenu-trigger">Online Hebrew</a>
-                    <ul class="submenu">
-                        <li><a href="book_hebrew_class.html">Hebrew for Coffee</a></li>
-                        <li><a href="book_hebrew_1on1.html">Hebrew 1:1</a></li>
-                    </ul>
+                        <a href="#" class="submenu-trigger">Hebrew Online</a>
+                        <ul class="submenu">
+                            <a href="book_hebrew_class.html">Hebrew for Coffee</a>
+                            <a href="book_hebrew_1on1.html">Hebrew 1:1</a>
+                        </ul>
+                    </li>
                     
                     
                     

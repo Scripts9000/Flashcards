@@ -15,7 +15,7 @@ class MyHeader extends HTMLElement {
                         <ul class="submenu">
                             <a href="introduction.html">General Introduction</a>
                             <a href="alphabet.html">Alphabet א,ב,ג,ד</a>
-                            <a href="sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
+                            <a href="Sofiyot.html">Ending suffix  ך,ץ,ף,ן,ם</a>
                             <a href="voweles.html"> Vowels תְּנוּעוֹת</a>
                             <a href="alphabet_detail.html"> Alphabet Details</a>
                             <a href="read_heb.html">Read Hebrew</a>

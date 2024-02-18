@@ -3,7 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const submenus = document.querySelectorAll(".submenu");
   
 
-  
+  function shuffleCards() {
+    var cardContainer = document.querySelector('.card-container');
+    var cards = document.querySelectorAll('.card');
+
+    var cardsArray = Array.from(cards);
+    cardsArray.sort(() => Math.random() - 0.5);
+
+    cardContainer.innerHTML = '';
+    cardsArray.forEach(card => cardContainer.appendChild(card));
+}
 
   // Function to close all submenus
   function closeAllSubmenus() {

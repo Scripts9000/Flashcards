@@ -106,3 +106,10 @@ function shuffleCards() {
   cardsArray.forEach(card => cardContainer.appendChild(card));
 }
 
+function flipToEnglish() {
+  const cards = document.querySelectorAll('.card-inner');
+
+  cards.forEach(card => {
+      card.classList.toggle('flipped');
+  });
+}

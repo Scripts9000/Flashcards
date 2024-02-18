@@ -107,6 +107,7 @@ function shuffleCards() {
 }
 
 function flipToEnglish() {
+  console.log('Flip to English button clicked!');
   const cards = document.querySelectorAll('.card-inner');
 
   cards.forEach(card => {

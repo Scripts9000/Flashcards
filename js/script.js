@@ -108,7 +108,21 @@ function shuffleCards() {
 
 function flipToEnglish() {
   const cards = document.querySelectorAll('.card');
+
   cards.forEach(card => {
       card.classList.toggle('flipped');
+
+      // Toggle visibility of card front and back based on 'flipped' class
+      const cardFront = card.querySelector('.card-front');
+      const cardBack = card.querySelector('.card-back');
+      
+      if (card.classList.contains('flipped')) {
+          cardFront.style.display = 'none';
+          cardBack.style.display = 'block';
+      } else {
+          cardFront.style.display = 'block';
+          cardBack.style.display = 'none';
+      }
   });
 }
+

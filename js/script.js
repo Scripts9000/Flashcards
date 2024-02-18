@@ -109,59 +109,28 @@ function shuffleCards() {
 
 
 /* Flip to English */
-const cards = document.querySelectorAll('.card');
-let flipToEnglishActive = false;
+function flipToEnglish() {
+  const cards = document.querySelectorAll('.card');
 
-// Function to toggle flip state for individual cards
-function toggleCardFlip(card) {
-  card.classList.toggle('flipped');
-  const cardFront = card.querySelector('.card-front');
-  const cardBack = card.querySelector('.card-back');
+  cards.forEach(card => {
+    // Toggle the 'flipped' class on each card
+    card.classList.toggle('flipped');
 
-  if (card.classList.contains('flipped')) {
-    cardFront.style.display = 'none';
-    cardBack.style.display = 'block';
-  } else {
-    cardFront.style.display = 'block';
-    cardBack.style.display = 'none';
-  }
-}
+    // Toggle visibility of card front and back based on 'flipped' class
+    const cardFront = card.querySelector('.card-front');
+    const cardBack = card.querySelector('.card-back');
 
-// Click event for individual cards
-cards.forEach(card => {
-  card.addEventListener('click', function (event) {
-    if (flipToEnglishActive) {
-      toggleCardFlip(this);
-
-      // Reset the state after a delay
-      setTimeout(() => {
-        if (this.classList.contains('flipped')) {
-          toggleCardFlip(this);
-        }
-      }, 5000); // 5000 milliseconds = 5 seconds
+    if (card.classList.contains('flipped')) {
+      // If 'flipped' class is present, show card back and hide card front
+      cardFront.style.display = 'none';
+      cardBack.style.display = 'block';
     } else {
-      // Normal behavior when "Flip to English" is not active
-      toggleCardFlip(this);
+      // If 'flipped' class is not present, show card front and hide card back
+      cardFront.style.display = 'block';
+      cardBack.style.display = 'none';
     }
-
-    event.preventDefault();
   });
-});
-
-// Click event for "Flip to English" button
-document.getElementById('flip-to-english-btn').addEventListener('click', function () {
-  flipToEnglishActive = !flipToEnglishActive;
-
-  // Reset the state of individual cards
-  if (!flipToEnglishActive) {
-    cards.forEach(card => {
-      if (card.classList.contains('flipped')) {
-        toggleCardFlip(card);
-      }
-    });
-  }
-});
-
+}
 
 
 

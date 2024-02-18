@@ -101,5 +101,3 @@ class MyFooter extends HTMLElement {
 
 customElements.define ('my-header', MyHeader)
 customElements.define ('my-footer', MyFooter)
-
-// Export the shuffleCards function

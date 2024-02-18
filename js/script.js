@@ -109,20 +109,29 @@ function shuffleCards() {
 
 
 /* Flip to English */
+/* Flip to English */
 function flipToEnglish() {
   const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
-      card.classList.toggle('flipped');
+    // Toggle the 'flipped' class on each card
+    card.classList.toggle('flipped');
 
-      // Toggle visibility of card front and back based on 'flipped' class
-      const cardFront = card.querySelector('.card-back');
-      const cardBack = card.querySelector('.card-front');
+    // Toggle visibility of card front and back based on 'flipped' class
+    const cardFront = card.querySelector('.card-front');
+    const cardBack = card.querySelector('.card-back');
 
-      // Toggle the display property directly
-      cardFront.style.display = card.classList.contains('flipped') ? 'none' : 'block';
-      cardBack.style.display = card.classList.contains('flipped') ? 'block' : 'none';
+    if (card.classList.contains('flipped')) {
+      // If 'flipped' class is present, show card back and hide card front
+      cardFront.style.display = 'none';
+      cardBack.style.display = 'block';
+    } else {
+      // If 'flipped' class is not present, show card front and hide card back
+      cardFront.style.display = 'block';
+      cardBack.style.display = 'none';
+    }
   });
 }
+
 
 

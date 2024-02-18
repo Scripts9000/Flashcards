@@ -103,6 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cardContainer.innerHTML = '';
     cardsArray.forEach(card => cardContainer.appendChild(card));
-  }
+}
 });
 

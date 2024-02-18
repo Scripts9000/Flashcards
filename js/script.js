@@ -116,8 +116,8 @@ function flipToEnglish() {
       card.classList.toggle('flipped');
 
       // Toggle visibility of card front and back based on 'flipped' class
-      const cardFront = card.querySelector('.card-front');
-      const cardBack = card.querySelector('.card-back');
+      const cardFront = card.querySelector('.card-back');
+      const cardBack = card.querySelector('.card-front');
 
       // Toggle the display property directly
       cardFront.style.display = card.classList.contains('flipped') ? 'none' : 'block';

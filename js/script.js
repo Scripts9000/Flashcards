@@ -65,33 +65,34 @@ document.addEventListener("DOMContentLoaded", function () {
   // Card flipping code
   const cardContainers = document.querySelectorAll('.card-container');
 
-  const cards = document.querySelectorAll('.card');
+  cardContainers.forEach(container => {
+    const cards = container.querySelectorAll('.card');
+    cards.forEach(card => {
+      const cardBack = card.querySelector('.card-back');
+      let isFlipped = false;
 
-  cards.forEach(card => {
-    card.addEventListener('click', function (event) {
-      // Check if "Flip to English" functionality is active
-      if (!document.getElementById('flipToEnglish').classList.contains('active')) {
-        // If not active, toggle the 'flipped' class on the clicked card
-        this.classList.toggle('flipped');
-  
-        // Toggle visibility of card front and back based on 'flipped' class
-        const cardFront = this.querySelector('.card-front');
-        const cardBack = this.querySelector('.card-back');
-  
-        if (this.classList.contains('flipped')) {
-          cardFront.style.display = 'none';
+      card.addEventListener('click', () => {
+        if (!isFlipped) {
+          card.classList.add('flipped');
           cardBack.style.display = 'block';
         } else {
-          cardFront.style.display = 'block';
+          card.classList.remove('flipped');
           cardBack.style.display = 'none';
         }
-      }
-  
-      // Prevent the default behavior (flipping the card) if "Flip to English" is active
-      event.preventDefault();
+
+        isFlipped = !isFlipped;
+
+        // Add automatic flip back after 5 seconds
+        if (isFlipped) {
+          setTimeout(() => {
+            card.classList.remove('flipped');
+            cardBack.style.display = 'none';
+            isFlipped = false;
+          }, 5000); // 5000 milliseconds = 5 seconds
+        }
+      });
     });
   });
-  
 });
 
 /* shuffleCards */

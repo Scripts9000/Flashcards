@@ -62,16 +62,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // Card flipping code
-  const cardContainers = document.querySelectorAll('.card-container');
+// Card flipping code
+const cardContainers = document.querySelectorAll('.card-container');
 
-  cardContainers.forEach(container => {
-    const cards = container.querySelectorAll('.card');
-    cards.forEach(card => {
-      const cardBack = card.querySelector('.card-back');
-      let isFlipped = false;
+cardContainers.forEach(container => {
+  const cards = container.querySelectorAll('.card');
+  let isFlipped = false;
 
-      card.addEventListener('click', () => {
+  cards.forEach(card => {
+    const cardBack = card.querySelector('.card-back');
+
+    card.addEventListener('click', () => {
+      const isFlipToEnglishActive = document.querySelector('.flipToEnglish').classList.contains('active');
+
+      if (isFlipToEnglishActive) {
+        card.classList.toggle('flipped');
+
+        const cardFront = card.querySelector('.card-front');
+        const cardBack = card.querySelector('.card-back');
+
+        if (card.classList.contains('flipped')) {
+          cardFront.style.display = 'none';
+          cardBack.style.display = 'block';
+        } else {
+          cardFront.style.display = 'block';
+          cardBack.style.display = 'none';
+        }
+      } else {
         if (!isFlipped) {
           card.classList.add('flipped');
           cardBack.style.display = 'block';
@@ -82,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         isFlipped = !isFlipped;
 
-        // Add automatic flip back after 5 seconds
         if (isFlipped) {
           setTimeout(() => {
             card.classList.remove('flipped');
@@ -90,10 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
             isFlipped = false;
           }, 5000); // 5000 milliseconds = 5 seconds
         }
-      });
+      }
     });
   });
 });
+
 
 /* shuffleCards */
 function shuffleCards() {

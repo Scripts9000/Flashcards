@@ -19,368 +19,371 @@
 </head>
 
 <my-header></my-header>	
+<!-- Randomize Button -->
+<button onclick="shuffleCards()">Randomize Cards</button>
+<!-- Flip to English Button -->
+<button onclick="flipToEnglish()">Flip to English</button>
 
 <body>
-    <div class="title-container">
-    </div>
+    <div class="title-container"></div>
         
-         <div class="card-container">
-                <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-inner">
-                <div class="card-front">אִמָּא</div>
-                <div class="card-back">Mother</div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אִמָּא</div>
+                    <div class="card-back">Mother</div>
                 </div>
-            </div>    
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אַבָּא</div>
-                <div class="card-back">Father</div>
             </div>
-        </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אַבָּא</div>
+                    <div class="card-back">Father</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">סַבתָא</div>
+                    <div class="card-back">Grandmother</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">סַבָּא</div>
+                    <div class="card-back">Grandfather</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁל..</div>
+                    <div class="card-back">Of..</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁלִּי</div>
+                    <div class="card-back">Mine</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה </div>
+                    <div class="card-back">This (m)</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֹאת</div>
+                    <div class="card-back">This (f)</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אֲנִי אִמָּא שֶׁל נִירֶה</div>
+                    <div class="card-back">I'm the mother of Nira</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא </div>
+                    <div class="card-back">This is grandfather</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אֲנִי אַבָּא שֶׁל _______</div>
+                    <div class="card-back">I'm the father of _____</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֹאת סבתה שֶׁל רָם</div>
+                    <div class="card-back">This is grandmother of Ram</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא שֶׁל _______</div>
+                    <div class="card-back">This is grandfather of ______</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">מִי זֶה? </div>
+                    <div class="card-back">Who is that? (m)</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">מִי זֹאת?</div>
+                    <div class="card-back">Who is that? (f)</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא שֶׁלִּי</div>
+                    <div class="card-back">This is my grandfather</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֹאת סבטה שֶׁלִּי</div>
+                    <div class="card-back">This is my grandmother </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא</div>
+                    <div class="card-back">This is grandfather </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה לֹא רָם.</div>
+                    <div class="card-back">This is not Ram</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אָח</div>
+                    <div class="card-back">Brother</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אָחוֹת</div>
+                    <div class="card-back">Sister</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">דּוֹד</div>
+                    <div class="card-back">Uncle</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">דּוֹדָה</div>
+                    <div class="card-back">Aunt</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁלְּךָ</div>
+                    <div class="card-back">Your (m)</div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁלָּךְ</div>
+                    <div class="card-back">Your (f)</div>
+                </div>
+            </div>
 
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">סַבתָא</div>
-                <div class="card-back">Grandmother</div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אִמָּא</div>
+                    <div class="card-back">Mother</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">סַבָּא</div>
-                <div class="card-back">Grandfather</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אַבָּא</div>
+                    <div class="card-back">Father</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁל..</div>
-                <div class="card-back">Of..</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">סבתה </div>
+                    <div class="card-back">Grandmother</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁלִּי</div>
-                <div class="card-back">Mine</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">סַבָּא</div>
+                    <div class="card-back">Grandfather</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה </div>
-                <div class="card-back">This (m)</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁל..</div>
+                    <div class="card-back">Of..</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֹאת</div>
-                <div class="card-back">This (f)</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁלִּי</div>
+                    <div class="card-back">Mine</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אֲנִי אִמָּא שֶׁל נִירֶה</div>
-                <div class="card-back">I'm the mother of Nira</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה </div>
+                    <div class="card-back">This (m)</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא </div>
-                <div class="card-back">This is grandfather</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֹאת</div>
+                    <div class="card-back">This (f)</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אֲנִי אַבָּא שֶׁל _______</div>
-                <div class="card-back">I'm the father of _____</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אֲנִי אִמָּא שֶׁל נִירֶה</div>
+                    <div class="card-back">I'm the mother of Nira</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֹאת סבתה שֶׁל רָם</div>
-                <div class="card-back">This is grandmother of Ram</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא </div>
+                    <div class="card-back">This is grandfather</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא שֶׁל _______</div>
-                <div class="card-back">This is grandfather of ______</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אֲנִי אַבָּא שֶׁל _______</div>
+                    <div class="card-back">I'm the father of _____</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">מִי זֶה? </div>
-                <div class="card-back">Who is that? (m)</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֹאת סבתה שֶׁל רָם</div>
+                    <div class="card-back">This is grandmother of Ram</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">מִי זֹאת?</div>
-                <div class="card-back">Who is that? (f)</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא שֶׁל _______</div>
+                    <div class="card-back">This is grandfather of ______</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא שֶׁלִּי</div>
-                <div class="card-back">This is my grandfather</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">מִי זֶה? </div>
+                    <div class="card-back">Who is that? (m)</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֹאת סבטה שֶׁלִּי</div>
-                <div class="card-back">This is my grandmother </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">מִי זֹאת?</div>
+                    <div class="card-back">Who is that? (f)</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא</div>
-                <div class="card-back">This is grandfather </div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא שֶׁלִּי</div>
+                    <div class="card-back">This is my grandfather</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה לֹא רָם.</div>
-                <div class="card-back">This is not Ram</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֹאת סבטה שֶׁלִּי</div>
+                    <div class="card-back">This is my grandmother </div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אָח</div>
-                <div class="card-back">Brother</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה סַבָּא</div>
+                    <div class="card-back">This is grandfather </div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אָחוֹת</div>
-                <div class="card-back">Sister</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">זֶה לֹא רָם.</div>
+                    <div class="card-back">This is not Ram</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">דּוֹד</div>
-                <div class="card-back">Uncle</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אָח</div>
+                    <div class="card-back">Brother</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">דּוֹדָה</div>
-                <div class="card-back">Aunt</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">אָחוֹת</div>
+                    <div class="card-back">Sister</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁלְּךָ</div>
-                <div class="card-back">Your (m)</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">דּוֹד</div>
+                    <div class="card-back">Uncle</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁלָּךְ</div>
-                <div class="card-back">Your (f)</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">דּוֹדָה</div>
+                    <div class="card-back">Aunt</div>
+                </div>
             </div>
-        </div>
-        </div>
-                    <div class="card-back">
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אִמָּא</div>
-                <div class="card-back">Mother</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁלְּךָ</div>
+                    <div class="card-back">Your (m)</div>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אַבָּא</div>
-                <div class="card-back">Father</div>
+        
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">שֶׁלָּךְ</div>
+                    <div class="card-back">Your (f)</div>
+                </div>
             </div>
+        
         </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">סבתה </div>
-                <div class="card-back">Grandmother</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">סַבָּא</div>
-                <div class="card-back">Grandfather</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁל..</div>
-                <div class="card-back">Of..</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁלִּי</div>
-                <div class="card-back">Mine</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה </div>
-                <div class="card-back">This (m)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֹאת</div>
-                <div class="card-back">This (f)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אֲנִי אִמָּא שֶׁל נִירֶה</div>
-                <div class="card-back">I'm the mother of Nira</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא </div>
-                <div class="card-back">This is grandfather</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אֲנִי אַבָּא שֶׁל _______</div>
-                <div class="card-back">I'm the father of _____</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֹאת סבתה שֶׁל רָם</div>
-                <div class="card-back">This is grandmother of Ram</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא שֶׁל _______</div>
-                <div class="card-back">This is grandfather of ______</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">מִי זֶה? </div>
-                <div class="card-back">Who is that? (m)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">מִי זֹאת?</div>
-                <div class="card-back">Who is that? (f)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא שֶׁלִּי</div>
-                <div class="card-back">This is my grandfather</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֹאת סבטה שֶׁלִּי</div>
-                <div class="card-back">This is my grandmother </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה סַבָּא</div>
-                <div class="card-back">This is grandfather </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">זֶה לֹא רָם.</div>
-                <div class="card-back">This is not Ram</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אָח</div>
-                <div class="card-back">Brother</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">אָחוֹת</div>
-                <div class="card-back">Sister</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">דּוֹד</div>
-                <div class="card-back">Uncle</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">דּוֹדָה</div>
-                <div class="card-back">Aunt</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁלְּךָ</div>
-                <div class="card-back">Your (m)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">שֶׁלָּךְ</div>
-                <div class="card-back">Your (f)</div>
-            </div>
-        </div>
-
-            </div>
      
          
 
 <my-footer></my-footer>
-    <script src="js/script.js"></script>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>

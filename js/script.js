@@ -109,5 +109,20 @@ function shuffleCards() {
 
 
 /* Flip to English */
+function flipToEnglish() {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.classList.add('flipped'); // Add the 'flipped' class to all cards
+
+    // Toggle visibility of card front and back based on 'flipped' class
+    const cardFront = card.querySelector('.card-front');
+    const cardBack = card.querySelector('.card-back');
+
+    // Initially hide card front and show card back
+    cardFront.style.display = 'none';
+    cardBack.style.display = 'block';
+  });
+}
 
 

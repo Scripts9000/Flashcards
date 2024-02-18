@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* shuffleCards */
 function shuffleCards() {
   var cardContainer = document.querySelector('.card-container');
   var cards = document.querySelectorAll('.card');
@@ -106,6 +107,8 @@ function shuffleCards() {
   cardsArray.forEach(card => cardContainer.appendChild(card));
 }
 
+
+/* Flip to English */
 function flipToEnglish() {
   const cards = document.querySelectorAll('.card');
 
@@ -115,14 +118,11 @@ function flipToEnglish() {
       // Toggle visibility of card front and back based on 'flipped' class
       const cardFront = card.querySelector('.card-front');
       const cardBack = card.querySelector('.card-back');
-      
-      if (card.classList.contains('flipped')) {
-          cardFront.style.display = 'none';
-          cardBack.style.display = 'block';
-      } else {
-          cardFront.style.display = 'block';
-          cardBack.style.display = 'none';
-      }
+
+      // Toggle the display property directly
+      cardFront.style.display = card.classList.contains('flipped') ? 'none' : 'block';
+      cardBack.style.display = card.classList.contains('flipped') ? 'block' : 'none';
   });
 }
+
 

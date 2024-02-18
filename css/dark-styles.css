@@ -787,3 +787,17 @@ a {
   width: 50%;
   width: 900px;
 }
+
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card-front {
+  display: none;
+}
+
+.card.flipped .card-back {
+  display: block;
+  transform: rotateY(180deg);
+}

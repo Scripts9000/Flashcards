@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   cards.forEach(card => {
     card.addEventListener('click', function (event) {
       // Check if "Flip to English" functionality is active
-      if (!document.getElementById('flip-to-english-btn').classList.contains('active')) {
+      if (!document.getElementById('flipToEnglish').classList.contains('active')) {
         // If not active, toggle the 'flipped' class on the clicked card
         this.classList.toggle('flipped');
   

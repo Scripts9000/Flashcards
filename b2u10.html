@@ -23,6 +23,19 @@
     
 <my-header></my-header>
 
+<script>function shuffleCards() {
+    var cardContainer = document.querySelector('.card-container');
+    var cards = document.querySelectorAll('.card');
+
+    var cardsArray = Array.from(cards);
+    cardsArray.sort(() => Math.random() - 0.5);
+
+    cardContainer.innerHTML = '';
+    cardsArray.forEach(card => cardContainer.appendChild(card));
+}
+</script>
+
+
     <div class="title-container"></div> 
          <div class="card-container">
                 <div class="card">

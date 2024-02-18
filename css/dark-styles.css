@@ -788,3 +788,17 @@ a {
   width: 900px;
 }
 
+
+/*Flif to english styles */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card .card-inner {
+  transition: transform 0.5s;
+}
+
+.card .card-front,
+.card .card-back {
+  backface-visibility: hidden;
+}

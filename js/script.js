@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-
+  console.log("Before defining shuffleCards");
   function shuffleCards() {
     var cardContainer = document.querySelector('.card-container');
     var cards = document.querySelectorAll('.card');
@@ -104,5 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
     cardContainer.innerHTML = '';
     cardsArray.forEach(card => cardContainer.appendChild(card));
 }
+console.log("After defining shuffleCards");
 });
 

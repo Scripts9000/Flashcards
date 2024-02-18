@@ -93,17 +93,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  console.log("Before defining shuffleCards");
-  function shuffleCards() {
-    var cardContainer = document.querySelector('.card-container');
-    var cards = document.querySelectorAll('.card');
-
-    var cardsArray = Array.from(cards);
-    cardsArray.sort(() => Math.random() - 0.5);
-
-    cardContainer.innerHTML = '';
-    cardsArray.forEach(card => cardContainer.appendChild(card));
-}
-console.log("After defining shuffleCards");
 });
+
+function shuffleCards() {
+  var cardContainer = document.querySelector('.card-container');
+  var cards = document.querySelectorAll('.card');
+
+  var cardsArray = Array.from(cards);
+  cardsArray.sort(() => Math.random() - 0.5);
+
+  cardContainer.innerHTML = '';
+  cardsArray.forEach(card => cardContainer.appendChild(card));
+}
 

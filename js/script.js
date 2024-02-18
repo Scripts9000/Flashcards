@@ -117,11 +117,11 @@ function flipToEnglish() {
       const cardBack = card.querySelector('.card-back');
       
       if (card.classList.contains('flipped')) {
-          cardFront.style.display = 'none';
+          cardFront.style.display = 'block';
           cardBack.style.display = 'block';
       } else {
           cardFront.style.display = 'block';
-          cardBack.style.display = 'none';
+          cardBack.style.display = 'block';
       }
   });
 }

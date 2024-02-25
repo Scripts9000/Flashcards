@@ -788,9 +788,10 @@ a {
   width: 900px;
 }
 
-
 .functions {
-  justify-content: space-between;
-  align-items:center;
-  padding-left: 100px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 15px;
 }
+

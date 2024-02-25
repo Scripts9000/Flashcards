@@ -789,4 +789,7 @@ a {
 }
 
 
-/*Flip to english styles */
+.functions {
+  justify-content: space-between;
+  align-items: center;
+}

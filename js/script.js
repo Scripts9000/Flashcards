@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
           cardBack.style.display = 'none';
         }
 
+        
+
         isFlipped = !isFlipped;
 
         // Add automatic flip back after 5 seconds

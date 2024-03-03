@@ -64,13 +64,13 @@ class MyHeader extends HTMLElement {
                         </ul>
                     </li>
 
-                    <li class="dropdown">
+                    <! -- <li class="dropdown">
                         <a href="#" class="submenu-trigger">Online Class <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></a>
                         <ul class="submenu">
                             <a href="book_hebrew_class.html">Hebrew for Coffee</a>
                             <a href="book_hebrew_1on1.html">Hebrew 1:1</a>
                         </ul>
-                    </li>
+                    </li> -->
                     
                     
                     

@@ -19,6 +19,15 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
+<script>
+    function playAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.play();
+
+        event.stopPropagation();
+    }
+</script>
+
 <body>
     
 <my-header></my-header>
@@ -34,6 +43,8 @@
                         <div class="card-front">אֵשׁ</div>
                         <div class="card-back">Fire</div>
                     </div>
+                    <button onclick="playAudio('eshAudio')" class="play-button">&#9654;</button>
+                    <audio id="eshAudio" src="mp3/1.mp3"></audio>
                 </div>
 
                 <div class="card">

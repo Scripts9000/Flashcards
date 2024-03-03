@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 /* shuffleCards */
 function shuffleCards() {
   var cardContainer = document.querySelector('.card-container');
@@ -132,4 +134,5 @@ function flipToEnglish() {
       cardBack.style.display = 'none';
     }
   });
+  
 }

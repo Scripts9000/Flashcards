@@ -22,6 +22,15 @@
 <!-- Randomize Button -->
 <div class="functions"><button onclick="shuffleCards()">Shuffle Cards</button></div>
 
+<script>
+	function playAudio(audioId) {
+		var audio = document.getElementById(audioId);
+		audio.play();
+
+		event.stopPropagation();
+	}
+</script>
+
 
 <body>
 
@@ -33,6 +42,8 @@
 			<div class="card-inner">
 				<div class="card-front">שָׁלוֹם</div>
 				<div class="card-back">Hello / Hi / Peace</div>
+			<button onclick="playAudio('shalomAudio')" class="play-button">&#9654;</button>
+			<audio id="shalomAudio" src="mp3/b1u1/New Recording 73.m4a"></audio>
 			</div>
 		
 			<div class="popup">
@@ -44,6 +55,8 @@
 			<div class="card-inner">
 				<div class="card-front">אֲנִי </div>
 				<div class="card-back">Me / I'm </div>
+			<button onclick="playAudio('aniAudio')" class="play-button">&#9654;</button>
+			<audio id="aniAudio" src="mp3/b1u1/New Recording 72.m4a"></audio>
 			</div>
 			<div class="popup">
 				<div class="info">'שֵם גוף ז'\נ Pronoun(m/f)</div>
@@ -54,6 +67,8 @@
 			<div class="card-inner">
 				<div class="card-front">אַתָּה</div>
 				<div class="card-back">You (m) </div>
+			<button onclick="playAudio('ataAudio')" class="play-button">&#9654;</button>
+			<audio id="ataAudio" src="mp3/b1u1/New Recording 71.m4a"></audio>
 			</div>
 			<div class="popup">
 				<div class="info">'שֵם גוף ז Pronoun(m)</div>
@@ -64,6 +79,8 @@
 			<div class="card-inner">
 				<div class="card-front">אַתְּ</div>
 				<div class="card-back">You (f)</div>
+			<button onclick="playAudio('atAudio')" class="play-button">&#9654;</button>
+			<audio id="atAudio" src="mp3/b1u1/New Recording 70.m4a"></audio>
 			</div>
 			<div class="popup">
 				<div class="info">'שֵם גוף נ Pronoun(f)</div>
@@ -74,6 +91,8 @@
 			<div class="card-inner">
 				<div class="card-front">נִירָה</div>
 				<div class="card-back">Nira (name)</div>
+			<button onclick="playAudio('niraAudio')" class="play-button">&#9654;</button>
+			<audio id="niraAudio" src="mp3/b1u1/New Recording 69.m4a"></audio>
 			</div>
 		</div>
 
@@ -81,6 +100,8 @@
 			<div class="card-inner">
 				<div class="card-front">רובו </div>
 				<div class="card-back">Robo</div>
+			<button onclick="playAudio('roboAudio')" class="play-button">&#9654;</button>
+			<audio id="roboAudio" src="mp3/b1u1/New Recording 68.m4a"></audio>
 			</div>
 		</div>
 
@@ -89,12 +110,16 @@
 				<div class="card-front">רָם</div>
 				<div class="card-back">Ram </div>
 			</div>
+		<button onclick="playAudio('ramAudio')" class="play-button">&#9654;</button>
+		<audio id="ramAudio" src="mp3/b1u1/New Recording 67.m4a"></audio>
 		</div>
 
 		<div class="card">
 			<div class="card-inner">
 				<div class="card-front">לֹא</div>
 				<div class="card-back">No </div>
+			<button onclick="playAudio('loAudio')" class="play-button">&#9654;</button>
+			<audio id="loAudio" src="mp3/b1u1/New Recording 66.m4a"></audio>
 			</div>
 		</div>
 
@@ -102,6 +127,8 @@
 			<div class="card-inner">
 				<div class="card-front">אֲנִי רָם </div>
 				<div class="card-back">I'm Ram </div>
+			<button onclick="playAudio('aniramAudio')" class="play-button">&#9654;</button>
+			<audio id="aniramAudio" src="mp3/b1u1/New Recording 65.m4a"></audio>
 			</div>
 		</div>
 
@@ -109,6 +136,8 @@
 			<div class="card-inner">
 				<div class="card-front">אֲנִי נִירָה </div>
 				<div class="card-back">i'm Nira</div>
+			<button onclick="playAudio('aniniraAudio')" class="play-button">&#9654;</button>
+			<audio id="aniniraAudio" src="mp3/b1u1/New Recording 64.m4a"></audio>
 			</div>
 		</div>
 
@@ -116,6 +145,8 @@
 			<div class="card-inner">
 				<div class="card-front">אֲנִי רובו </div>
 				<div class="card-back">I'm Robo</div>
+			<button onclick="playAudio('aniroboAudio')" class="play-button">&#9654;</button>
+			<audio id="aniroboAudio" src="mp3/b1u1/New Recording 63.m4a"></audio>
 			</div>
 		</div>
 
@@ -123,6 +154,8 @@
 			<div class="card-inner">
 				<div class="card-front">אַתָּה רָם?</div>
 				<div class="card-back">Are you Ram?</div>
+			<button onclick="playAudio('ataramAudio')" class="play-button">&#9654;</button>
+			<audio id="ataramAudio" src="mp3/b1u1/New Recording 62.m4a"></audio>
 			</div>
 		</div>
 
@@ -131,6 +164,8 @@
 				<div class="card-front">אֲנִי לֹא נִירָה.</div>
 				<div class="card-back">I'm not Nira</div>
 			</div>
+		<button onclick="playAudio('aniloniraAudio')" class="play-button">&#9654;</button>
+		<audio id="aniloniraAudio" src="mp3/b1u1/New Recording 85.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -138,6 +173,8 @@
 				<div class="card-front">שָׁלוֹם אֲנִי נִירָה</div>
 				<div class="card-back">Hello I'm Nira</div>
 			</div>
+		<button onclick="playAudio('shalomaniniraAudio')" class="play-button">&#9654;</button>
+		<audio id="shalomaniniraAudio" src="mp3/b1u1/New Recording 84.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -145,6 +182,8 @@
 				<div class="card-front">שָׁלוֹם אֲנִי רָם </div>
 				<div class="card-back">Hello i'm Ram</div>
 			</div>
+		<button onclick="playAudio('shalomaniramAudio')" class="play-button">&#9654;</button>
+		<audio id="shalomaniramAudio" src="mp3/b1u1/New Recording 83.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -152,6 +191,8 @@
 				<div class="card-front">שָׁלוֹם אֲנִי רובו</div>
 				<div class="card-back">Hello i'm Robo </div>
 			</div>
+		<button onclick="playAudio('shalomaniroboAudio')" class="play-button">&#9654;</button>
+		<audio id="shalomaniroboAudio" src="mp3/b1u1/New Recording 82.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -159,6 +200,8 @@
 				<div class="card-front">לֹא אֲנִי לֹא רָם </div>
 				<div class="card-back">No i'm not Ram </div>
 			</div>
+		<button onclick="playAudio('loaniloramAudio')" class="play-button">&#9654;</button>
+		<audio id="loaniloramAudio" src="mp3/b1u1/New Recording 81.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -166,6 +209,8 @@
 				<div class="card-front">לֹא אֲנִי לֹא רובו </div>
 				<div class="card-back">No I'm not Robo </div>
 			</div>
+		<button onclick="playAudio('loaniloroboAudio')" class="play-button">&#9654;</button>
+		<audio id="loaniloroboAudio" src="mp3/b1u1/New Recording 80.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -173,6 +218,8 @@
 				<div class="card-front">לֹא אֲנִי לֹא נִירָה</div>
 				<div class="card-back">No i'm not Nira</div>
 			</div>
+		<button onclick="playAudio('loaniloniraAudio')" class="play-button">&#9654;</button>
+		<audio id="loaniloniraAudio" src="mp3/b1u1/New Recording 79.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -180,6 +227,8 @@
 				<div class="card-front">אֲנִי ______ </div>
 				<div class="card-back">I'm ______</div>
 			</div>
+		<button onclick="playAudio('aniAudio')" class="play-button">&#9654;</button>
+		<audio id="aniAudio" src="mp3/b1u1/New Recording 78.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -187,6 +236,8 @@
 				<div class="card-front">מוֹרָה </div>
 				<div class="card-back">Teacher </div>
 			</div>
+		<button onclick="playAudio('moraAudio')" class="play-button">&#9654;</button>
+		<audio id="moraAudio" src="mp3/b1u1/New Recording 77.m4a"></audio>
 			<div class="popup">
 				<div class="info">'שֵם נ Noun(f)</div>
 			  </div>
@@ -197,6 +248,8 @@
 				<div class="card-front">תַּלְמִיד </div>
 				<div class="card-back">Student (m)</div>
 			</div>
+		<button onclick="playAudio('talmidAudio')" class="play-button">&#9654;</button>
+		<audio id="talmidAudio" src="mp3/b1u1/New Recording 76.m4a"></audio>
 			<div class="popup">
 				<div class="info">'שֵם ז Noun(m)</div>
 			  </div>
@@ -207,6 +260,8 @@
 				<div class="card-front">תַּלְמִידָה</div>
 				<div class="card-back">Student (f)</div>
 			</div>
+		<button onclick="playAudio('talmidaAudio')" class="play-button">&#9654;</button>
+		<audio id="talmidaAudio" src="mp3/b1u1/New Recording 75.m4a"></audio>
 			<div class="popup">
 				<div class="info">'שֵם נ Noun(f)</div>
 			  </div>
@@ -217,6 +272,8 @@
 				<div class="card-front">עִבְרִית</div>
 				<div class="card-back">Hebrew</div>
 			</div>
+		<button onclick="playAudio('ivritAudio')" class="play-button">&#9654;</button>
+		<audio id="ivritAudio" src="mp3/b1u1/New Recording 74.m4a"></audio>
 			<div class="popup">
 				<div class="info">'שֵם נ Noun(f)</div>
 			  </div>
@@ -227,6 +284,8 @@
 				<div class="card-front">אֲנִי מוֹרָה אֲנִי לֹא תַּלְמִידה</div>
 				<div class="card-back">I'm teacher i'm not a Student (f)</div>
 			</div>
+		<button onclick="playAudio('animoraanilotalmidaAudio')" class="play-button">&#9654;</button>
+		<audio id="animoraanilotalmidaAudio" src="mp3/b1u1/New Recording 87.m4a"></audio>
 		</div>
 
 		<div class="card">
@@ -234,6 +293,8 @@
 				<div class="card-front">אֲנִי תַּלְמִידָה אֲנִי לֹא מוֹרָה</div>
 				<div class="card-back">I'm a student (f) im not a teacher</div>
 			</div>
+		<button onclick="playAudio('anitalmidaanilomoraAudio')" class="play-button">&#9654;</button>
+		<audio id="anitalmidaanilomoraAudio" src="mp3/b1u1/New Recording 86.m4a"></audio>
 		</div>
 	</div>	
 

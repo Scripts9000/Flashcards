@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const submenuLinks = document.querySelectorAll(".submenu-trigger");
   const submenus = document.querySelectorAll(".submenu");
 
+
+  function playAudio(audioId) {
+		var audio = document.getElementById(audioId);
+		audio.play();
+
+		event.stopPropagation();
+	}
+
+
   // Function to close all submenus
   function closeAllSubmenus() {
     submenus.forEach((submenu) => {

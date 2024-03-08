@@ -3,13 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const submenus = document.querySelectorAll(".submenu");
 
 
-  function playAudio(audioId) {
-		var audio = document.getElementById(audioId);
-		audio.play();
-
-		event.stopPropagation();
-	}
-
 
   // Function to close all submenus
   function closeAllSubmenus() {
@@ -143,5 +136,15 @@ function flipToEnglish() {
       cardBack.style.display = 'none';
     }
   });
-  
+ 
+ 
+ 
 }
+
+function playAudio(audioId) {
+		var audio = document.getElementById(audioId);
+		audio.play();
+
+		if (event) {
+      event.stopPropagation();
+	}}

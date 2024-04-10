@@ -373,12 +373,13 @@ transition: .4s;
 }
 
 .hero-heading {
-  font: Arial;
-  font-size: 48px; 
-  font-weight: bold; 
+  font-family: Lato;
+  font-style: normal;
+  font-size: 38px; 
+  font-weight: 700; 
   color: #e6e6e6; 
   /* margin-top: 30px; */
-  margin-bottom: 20px; 
+  margin-bottom: 70px; 
   position: relative;
 }
 
@@ -396,10 +397,11 @@ transition: .4s;
 
 
 .hero-paragraph {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px; 
-  font-weight: 300;
-  line-height: 1.6; 
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-size: 22px; 
+  font-weight: 400;
+  line-height: 35px; 
   color: #e6e6e6; 
   margin-bottom: 30px;
   margin-top: 50px; 
@@ -472,7 +474,7 @@ transition: .4s;
     transition: box-shadow 0.3s; /* Smooth transition for the hover effect */
   }
 
-
+ 
 .post-date {
   font-family: Space-mono, monospace;
   font-size: 18px; /* Adjust the font size as needed */
@@ -481,6 +483,7 @@ transition: .4s;
   position: absolute; /* Position the date element */
   bottom: -25px; /* Adjust the vertical position as needed */
   left: 0; /* Position it at the left side */
+  margin-bottom: -10px;
   }
   
   .post-date-hebrew {
